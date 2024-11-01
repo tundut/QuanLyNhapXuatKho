@@ -13,19 +13,22 @@ namespace DoAnCK
 {
     public partial class HangHoaComponent : UserControl
     {
-        public HangHoaComponent(FormTrangChu HomeDisplay)
+        public HangHoaComponent(FormTrangChu TrangChu)
         {
             InitializeComponent();
-            this.HomeDisplay = HomeDisplay;
+            this.TrangChu = TrangChu;
         }
-        private FormTrangChu HomeDisplay;
+        private FormTrangChu TrangChu;
         public HangHoa hh;
         public void SetProductInfo(HangHoa hh)
         {
+            id_lbl.Text = "ID: " + hh.id;
             ten_lbl.Text = hh.ten_hang;
-            label2.Text = "Don gia: " + hh.don_gia.ToString();
+            dongia_lbl.Text = "Đơn giá: " + hh.don_gia.ToString();
             soluong_lbl.Text = "SL: " + hh.so_luong.ToString();
             hanghoa_ptb.ImageLocation = "Resources/default.jpg";
         }
+
+        
     }
 }

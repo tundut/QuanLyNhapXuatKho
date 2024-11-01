@@ -10,4 +10,5 @@ E:\UEH\Sophomore\OOP\DoAnCK\DoAnCK\obj\Debug\DoAnCK.pdb
 E:\UEH\Sophomore\OOP\DoAnCK\DoAnCK\obj\Debug\DoAnCK.HangHoaComponent.resources
 E:\UEH\Sophomore\OOP\DoAnCK\DoAnCK\bin\Debug\Guna.UI2.dll
 E:\UEH\Sophomore\OOP\DoAnCK\DoAnCK\obj\Debug\DoAnCK.csproj.Up2Date
+E:\UEH\Sophomore\OOP\DoAnCK\DoAnCK\obj\Debug\DoAnCK.Form1.resources
 E:\UEH\Sophomore\OOP\DoAnCK\DoAnCK\obj\Debug\DoAnCK.FormTrangChu.resources
