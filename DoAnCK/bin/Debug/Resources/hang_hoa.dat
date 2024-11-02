@@ -3,7 +3,7 @@
   <HangHoa xsi:type="DienTu">
     <id>DT01</id>
     <ten_hang>Quạt máy</ten_hang>
-    <so_luong>5</so_luong>
+    <so_luong>17</so_luong>
     <don_gia>150000</don_gia>
   </HangHoa>
   <HangHoa xsi:type="DienTu">

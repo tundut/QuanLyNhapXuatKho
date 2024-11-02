@@ -3,23 +3,36 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Management;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace DoAnCK
 {
     public partial class FormNhapXuat : System.Windows.Forms.Form
     {
-
-        public KhoHang _kho { get; set; }
+        public bool isnhap { get; set; }
+        
+        public KhoHang _kho = new KhoHang();
         public QuanLyNhapXuat quanlynhapxuat = new QuanLyNhapXuat();
-        public FormNhapXuat(KhoHang kho)
+
+        public FormNhapXuat(KhoHang kho, bool isnhap)
         {
             InitializeComponent();
-            _kho = kho;
+
+            string filePath_hh = "Resources/hang_hoa.dat";
+            using (StreamReader reader = new StreamReader(filePath_hh))
+            {
+                XmlSerializer serializer = new XmlSerializer(typeof(List<HangHoa>));
+                _kho.ds_hang_hoa = (List<HangHoa>)serializer.Deserialize(reader);
+            }
+
+            this.isnhap = isnhap;
+
 
             foreach (HangHoa hh in _kho.ds_hang_hoa)
             {
@@ -29,9 +42,21 @@ namespace DoAnCK
                 dshh_flp.Controls.Add(hh_component);
             }
 
-            foreach (NhaCungCap ncc in _kho.ds_ncc)
+            if (isnhap)
             {
-                ncc_cbb.Items.Add(ncc.ten_ncc);
+                ncc_ch_lbl.Text = "Nhà cung cấp";
+                foreach (NhaCungCap ncc in _kho.ds_ncc)
+                {
+                    ncc_ch_cbb.Items.Add(ncc.ten_ncc);
+                }
+            }
+            else
+            {
+                ncc_ch_lbl.Text = "Cửa hàng";
+                foreach (CuaHang ch in _kho.ds_cua_hang)
+                {
+                    ncc_ch_cbb.Items.Add(ch.ten_ch);
+                }
             }
         }
 
@@ -78,11 +103,20 @@ namespace DoAnCK
             tongtien_lbl.Text = "Tổng tiền: " + String.Format("{0:N0}", tong_tien) + " VNĐ";
         }
 
-        private void ncc_cbb_SelectedIndexChanged(object sender, EventArgs e)
+        private void ncc_ch_cbb_SelectedIndexChanged(object sender, EventArgs e)
         {
-            NhaCungCap ncc = _kho.ds_ncc.Find(x => x.ten_ncc == ncc_cbb.Text);
-            idncc_lbl.Text = "ID: " + ncc.id_ncc;
-            diachincc_lbl.Text = "Địa chỉ: " + ncc.dia_chi_ncc;
+            if (isnhap)
+            {
+                NhaCungCap ncc = _kho.ds_ncc.Find(x => x.ten_ncc == ncc_ch_cbb.Text);
+                id_lbl.Text = "ID: " + ncc.id_ncc;
+                diachi_lbl.Text = "Địa chỉ: " + ncc.dia_chi_ncc;
+            }
+            else
+            {
+                CuaHang ncc = _kho.ds_cua_hang.Find(x => x.ten_ch == ncc_ch_cbb.Text);
+                id_lbl.Text = "ID: " + ncc.id_ch;
+                diachi_lbl.Text = "Địa chỉ: " + ncc.dia_chi_ch;
+            }
         }
 
         private void apdung_btn_Click(object sender, EventArgs e)
@@ -152,6 +186,41 @@ namespace DoAnCK
             search_txb.Text = "";
         }
 
+        private void huy_btn_Click(object sender, EventArgs e)
+        {
+            quanlynhapxuat = new QuanLyNhapXuat();
+            ctlh_flp.Controls.Clear();
+            tinh_tong_tien();
+        }
 
+        private void xuathoadon_btn_Click(object sender, EventArgs e)
+        {
+            if (isnhap)
+            {
+                _kho.capnhatkho(quanlynhapxuat.ds_hang_hoa, true);
+                string filePath_hh = "Resources/hang_hoa.dat";
+                using (StreamWriter writer = new StreamWriter(filePath_hh))
+                {
+                    XmlSerializer serializer = new XmlSerializer(typeof(List<HangHoa>));
+                    serializer.Serialize(writer, _kho.ds_hang_hoa);
+                }
+            }
+
+            else
+            {
+                if (_kho.kha_dung(quanlynhapxuat.ds_hang_hoa))
+                {
+                    _kho.capnhatkho(quanlynhapxuat.ds_hang_hoa, false);
+                    string filePath_hh = "Resources/hang_hoa.dat";
+                    using (StreamWriter writer = new StreamWriter(filePath_hh))
+                    {
+                        XmlSerializer serializer = new XmlSerializer(typeof(List<HangHoa>));
+                        serializer.Serialize(writer, _kho.ds_hang_hoa);
+                    }
+                }
+            }
+
+            this.Close();
+        }
     }
 }

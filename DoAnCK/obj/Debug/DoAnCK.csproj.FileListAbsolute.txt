@@ -15,3 +15,4 @@ E:\UEH\Sophomore\OOP\DoAnCK\DoAnCK\obj\Debug\DoAnCK.HangHoaNhapXuatComponent.res
 E:\UEH\Sophomore\OOP\DoAnCK\DoAnCK\obj\Debug\DoAnCK.HangHoaTrangChuComponent.resources
 E:\UEH\Sophomore\OOP\DoAnCK\DoAnCK\obj\Debug\DoAnCK.FormNhapXuat.resources
 E:\UEH\Sophomore\OOP\DoAnCK\DoAnCK\obj\Debug\DoAnCK.HangHoaLoComponent.resources
+E:\UEH\Sophomore\OOP\DoAnCK\DoAnCK\obj\Debug\DoAnCK.FormDangNhap.resources

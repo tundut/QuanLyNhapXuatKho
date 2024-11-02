@@ -9,18 +9,22 @@ public class NhanVien : ISerializable
     public uint tuoi;
     public bool gioi_tinh;
     public string dia_chi_nv;
+    public string username;
+    public string password;
 
     public NhanVien()
     {
 
     }
-    public NhanVien(string id_nv, string ten_nv, uint tuoi, bool gioi_tinh, string dia_chi_nv)
+    public NhanVien(string id_nv, string ten_nv, uint tuoi, bool gioi_tinh, string dia_chi_nv, string username, string password)
     {
         this.id_nv = id_nv;
         this.ten_nv = ten_nv;
         this.tuoi = tuoi;
         this.gioi_tinh = gioi_tinh;
         this.dia_chi_nv = dia_chi_nv;
+        this.username = username;
+        this.password = password;
     }
 
     public override string ToString()
@@ -38,6 +42,8 @@ public class NhanVien : ISerializable
         info.AddValue("tuoi", tuoi);
         info.AddValue("gioi_tinh", gioi_tinh);
         info.AddValue("dia_chi_nv", dia_chi_nv);
+        info.AddValue("username", username);
+        info.AddValue("password", password);
     }
 
     public NhanVien(SerializationInfo info, StreamingContext context)
@@ -47,5 +53,7 @@ public class NhanVien : ISerializable
         tuoi = info.GetUInt32("tuoi");
         gioi_tinh = info.GetBoolean("gioi_tinh");
         dia_chi_nv = info.GetString("dia_chi_nv");
+        username = info.GetString("username");
+        password = info.GetString("password");
     }
 }

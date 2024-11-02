@@ -26,13 +26,29 @@ namespace DoAnCK
             _kho = kho;
             ngay_lbl.Text = "Ngày " + DateTime.Now.ToString("dd/MM/yyyy");
             OpenChildForm(new FormTrangChu(_kho));
+            //ShowLoginForm();
         }
+        private void ShowLoginForm()
+        {
+            FormDangNhap formDangNhap = new FormDangNhap(_kho);
+            if (formDangNhap.ShowDialog() != DialogResult.OK)
+            {
+                this.Close();
+            }
+            else
+            {
+                nhanvien_lbl.Text = "Nhân viên: " + formDangNhap.current_nv.ten_nv;
+                ngay_lbl.Text = "Ngày " + DateTime.Now.ToString("dd/MM/yyyy");
+                OpenChildForm(new FormTrangChu(_kho));
+            }
+        }
+
         private System.Windows.Forms.Form currentFormChild;
         private void OpenChildForm(System.Windows.Forms.Form childForm)
         {
             if (currentFormChild != null)
             {
-                currentFormChild.Close();
+                currentFormChild.Hide();
             }
             currentFormChild = childForm;
             childForm.TopLevel = false;
@@ -97,7 +113,7 @@ namespace DoAnCK
 
         private void nhaphang_btn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormNhapXuat(_kho));
+            OpenChildForm(new FormNhapXuat(_kho, true));
             trangchu_btn.Checked = false;
             nhaphang_btn.Checked = true;
             xuathang_btn.Checked = false;
@@ -109,7 +125,7 @@ namespace DoAnCK
 
         private void xuathang_btn_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new FormXuatHang(_kho));
+            OpenChildForm(new FormNhapXuat(_kho, false));
             trangchu_btn.Checked = false;
             nhaphang_btn.Checked = false;
             xuathang_btn.Checked = true;

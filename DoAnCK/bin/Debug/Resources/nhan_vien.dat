@@ -6,6 +6,8 @@
     <tuoi>19</tuoi>
     <gioi_tinh>true</gioi_tinh>
     <dia_chi_nv>Quang Ngai</dia_chi_nv>
+    <username>user1</username>
+    <password>pass1</password>
   </NhanVien>
   <NhanVien>
     <id_nv>NV02</id_nv>
@@ -13,6 +15,8 @@
     <tuoi>20</tuoi>
     <gioi_tinh>false</gioi_tinh>
     <dia_chi_nv>TP.HCM</dia_chi_nv>
+    <username>user2</username>
+    <password>pass2</password>
   </NhanVien>
   <NhanVien>
     <id_nv>NV03</id_nv>
@@ -20,6 +24,8 @@
     <tuoi>24</tuoi>
     <gioi_tinh>true</gioi_tinh>
     <dia_chi_nv>Quang Ngai</dia_chi_nv>
+    <username>user3</username>
+    <password>pass3</password>
   </NhanVien>
   <NhanVien>
     <id_nv>NV04</id_nv>
@@ -27,5 +33,7 @@
     <tuoi>35</tuoi>
     <gioi_tinh>true</gioi_tinh>
     <dia_chi_nv>Quang Binh</dia_chi_nv>
+    <username>user4</username>
+    <password>pass4</password>
   </NhanVien>
 </ArrayOfNhanVien>

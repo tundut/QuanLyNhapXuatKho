@@ -12,12 +12,12 @@ namespace DoAnCK
 {
     public partial class HangHoaLoComponent : UserControl
     {
-        public HangHoaLoComponent(FormNhapXuat NhapHang)
+        public HangHoaLoComponent(FormNhapXuat NhapXuat)
         {
             InitializeComponent();
-            this.NhapHang = NhapHang;
+            this.NhapXuat = NhapXuat;
         }
-        private FormNhapXuat NhapHang;
+        private FormNhapXuat NhapXuat;
         public HangHoa hh;
 
         public void SetProductInfo()
@@ -30,18 +30,18 @@ namespace DoAnCK
 
         private void xoa_btn_Click(object sender, EventArgs e)
         {
-            NhapHang.xoa_hh_lo(this);
+            NhapXuat.xoa_hh_lo(this);
         }
 
         private void tang_btn_Click(object sender, EventArgs e)
         {
-            NhapHang.tang_sl(this);
+            NhapXuat.tang_sl(this);
             soluong_txb.Text = hh.so_luong.ToString();
             thanhtien_lbl.Text = String.Format("{0:N0}", hh.don_gia * hh.so_luong);
         }
         private void giam_btn_Click(object sender, EventArgs e)
         {
-            NhapHang.giam_sl(this);
+            NhapXuat.giam_sl(this);
             soluong_txb.Text = hh.so_luong.ToString();
             thanhtien_lbl.Text = String.Format("{0:N0}", hh.don_gia * hh.so_luong);
         }
@@ -54,7 +54,7 @@ namespace DoAnCK
                 hh.so_luong = Convert.ToUInt32(soluong_txb.Text);
                 soluong_txb.Text = hh.so_luong.ToString();
                 thanhtien_lbl.Text = String.Format("{0:N0}", hh.don_gia * hh.so_luong);
-                NhapHang.nhap_sl(this);
+                NhapXuat.nhap_sl(this);
             }
         }
 
