@@ -59,6 +59,7 @@
             // 
             // hoadonnhap_btn
             // 
+            this.hoadonnhap_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.hoadonnhap_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.hoadonnhap_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.hoadonnhap_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -66,10 +67,10 @@
             this.hoadonnhap_btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
             this.hoadonnhap_btn.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
             this.hoadonnhap_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.hoadonnhap_btn.Location = new System.Drawing.Point(0, 70);
+            this.hoadonnhap_btn.Location = new System.Drawing.Point(0, 86);
             this.hoadonnhap_btn.Margin = new System.Windows.Forms.Padding(0);
             this.hoadonnhap_btn.Name = "hoadonnhap_btn";
-            this.hoadonnhap_btn.Size = new System.Drawing.Size(220, 70);
+            this.hoadonnhap_btn.Size = new System.Drawing.Size(293, 86);
             this.hoadonnhap_btn.TabIndex = 8;
             this.hoadonnhap_btn.Text = "Hoá đơn nhập";
             this.hoadonnhap_btn.Click += new System.EventHandler(this.hoadonnhap_btn_Click);
@@ -78,6 +79,7 @@
             // 
             // hoadonxuat_btn
             // 
+            this.hoadonxuat_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.hoadonxuat_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.hoadonxuat_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.hoadonxuat_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -86,10 +88,10 @@
             this.hoadonxuat_btn.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
             this.hoadonxuat_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.hoadonxuat_btn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.hoadonxuat_btn.Location = new System.Drawing.Point(0, 140);
+            this.hoadonxuat_btn.Location = new System.Drawing.Point(0, 172);
             this.hoadonxuat_btn.Margin = new System.Windows.Forms.Padding(0);
             this.hoadonxuat_btn.Name = "hoadonxuat_btn";
-            this.hoadonxuat_btn.Size = new System.Drawing.Size(220, 70);
+            this.hoadonxuat_btn.Size = new System.Drawing.Size(293, 86);
             this.hoadonxuat_btn.TabIndex = 7;
             this.hoadonxuat_btn.Text = "Hoá đơn xuất";
             this.hoadonxuat_btn.Click += new System.EventHandler(this.hoadonxuat_btn_Click);
@@ -109,8 +111,9 @@
             this.sidebar.Controls.Add(this.xuathang_btn);
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.Location = new System.Drawing.Point(0, 0);
+            this.sidebar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(220, 681);
+            this.sidebar.Size = new System.Drawing.Size(292, 838);
             this.sidebar.TabIndex = 2;
             // 
             // hoadon_flp
@@ -119,13 +122,15 @@
             this.hoadon_flp.Controls.Add(this.hoadon_btn);
             this.hoadon_flp.Controls.Add(this.hoadonnhap_btn);
             this.hoadon_flp.Controls.Add(this.hoadonxuat_btn);
-            this.hoadon_flp.Location = new System.Drawing.Point(0, 450);
+            this.hoadon_flp.Location = new System.Drawing.Point(0, 554);
+            this.hoadon_flp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.hoadon_flp.Name = "hoadon_flp";
-            this.hoadon_flp.Size = new System.Drawing.Size(220, 70);
+            this.hoadon_flp.Size = new System.Drawing.Size(293, 86);
             this.hoadon_flp.TabIndex = 6;
             // 
             // hoadon_btn
             // 
+            this.hoadon_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.hoadon_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.hoadon_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.hoadon_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -139,7 +144,7 @@
             this.hoadon_btn.Location = new System.Drawing.Point(0, 0);
             this.hoadon_btn.Margin = new System.Windows.Forms.Padding(0);
             this.hoadon_btn.Name = "hoadon_btn";
-            this.hoadon_btn.Size = new System.Drawing.Size(220, 70);
+            this.hoadon_btn.Size = new System.Drawing.Size(293, 86);
             this.hoadon_btn.TabIndex = 5;
             this.hoadon_btn.Text = "   Hoá đơn";
             this.hoadon_btn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -148,6 +153,7 @@
             // 
             // nhaphang_btn
             // 
+            this.nhaphang_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.nhaphang_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.nhaphang_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.nhaphang_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -158,9 +164,10 @@
             this.nhaphang_btn.Image = ((System.Drawing.Image)(resources.GetObject("nhaphang_btn.Image")));
             this.nhaphang_btn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.nhaphang_btn.ImageSize = new System.Drawing.Size(30, 30);
-            this.nhaphang_btn.Location = new System.Drawing.Point(0, 170);
+            this.nhaphang_btn.Location = new System.Drawing.Point(0, 209);
+            this.nhaphang_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nhaphang_btn.Name = "nhaphang_btn";
-            this.nhaphang_btn.Size = new System.Drawing.Size(220, 70);
+            this.nhaphang_btn.Size = new System.Drawing.Size(293, 86);
             this.nhaphang_btn.TabIndex = 2;
             this.nhaphang_btn.Text = "   Nhập hàng";
             this.nhaphang_btn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -168,6 +175,7 @@
             // 
             // ncc_btn
             // 
+            this.ncc_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ncc_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.ncc_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.ncc_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -178,9 +186,10 @@
             this.ncc_btn.Image = ((System.Drawing.Image)(resources.GetObject("ncc_btn.Image")));
             this.ncc_btn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.ncc_btn.ImageSize = new System.Drawing.Size(30, 30);
-            this.ncc_btn.Location = new System.Drawing.Point(0, 380);
+            this.ncc_btn.Location = new System.Drawing.Point(0, 468);
+            this.ncc_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ncc_btn.Name = "ncc_btn";
-            this.ncc_btn.Size = new System.Drawing.Size(220, 70);
+            this.ncc_btn.Size = new System.Drawing.Size(293, 86);
             this.ncc_btn.TabIndex = 4;
             this.ncc_btn.Text = "   Nhà cung cấp";
             this.ncc_btn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -189,6 +198,7 @@
             // trangchu_btn
             // 
             this.trangchu_btn.Checked = true;
+            this.trangchu_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.trangchu_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.trangchu_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.trangchu_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -199,9 +209,10 @@
             this.trangchu_btn.Image = ((System.Drawing.Image)(resources.GetObject("trangchu_btn.Image")));
             this.trangchu_btn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.trangchu_btn.ImageSize = new System.Drawing.Size(30, 30);
-            this.trangchu_btn.Location = new System.Drawing.Point(0, 100);
+            this.trangchu_btn.Location = new System.Drawing.Point(0, 123);
+            this.trangchu_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.trangchu_btn.Name = "trangchu_btn";
-            this.trangchu_btn.Size = new System.Drawing.Size(220, 70);
+            this.trangchu_btn.Size = new System.Drawing.Size(293, 86);
             this.trangchu_btn.TabIndex = 0;
             this.trangchu_btn.Text = "   Trang chủ";
             this.trangchu_btn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -209,6 +220,7 @@
             // 
             // cuahang_btn
             // 
+            this.cuahang_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cuahang_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.cuahang_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.cuahang_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -219,9 +231,10 @@
             this.cuahang_btn.Image = ((System.Drawing.Image)(resources.GetObject("cuahang_btn.Image")));
             this.cuahang_btn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.cuahang_btn.ImageSize = new System.Drawing.Size(30, 30);
-            this.cuahang_btn.Location = new System.Drawing.Point(0, 310);
+            this.cuahang_btn.Location = new System.Drawing.Point(0, 382);
+            this.cuahang_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cuahang_btn.Name = "cuahang_btn";
-            this.cuahang_btn.Size = new System.Drawing.Size(220, 70);
+            this.cuahang_btn.Size = new System.Drawing.Size(293, 86);
             this.cuahang_btn.TabIndex = 3;
             this.cuahang_btn.Text = "   Cửa hàng";
             this.cuahang_btn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -233,16 +246,18 @@
             this.menu_pnl.Controls.Add(this.pictureBox1);
             this.menu_pnl.Controls.Add(this.menu_lbl);
             this.menu_pnl.Location = new System.Drawing.Point(0, 0);
+            this.menu_pnl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.menu_pnl.Name = "menu_pnl";
-            this.menu_pnl.Size = new System.Drawing.Size(220, 100);
+            this.menu_pnl.Size = new System.Drawing.Size(292, 122);
             this.menu_pnl.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(5, 30);
+            this.pictureBox1.Location = new System.Drawing.Point(7, 37);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox1.Size = new System.Drawing.Size(53, 49);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -253,15 +268,17 @@
             this.menu_lbl.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
             this.menu_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.menu_lbl.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.menu_lbl.Location = new System.Drawing.Point(60, 40);
+            this.menu_lbl.Location = new System.Drawing.Point(80, 49);
+            this.menu_lbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.menu_lbl.Name = "menu_lbl";
-            this.menu_lbl.Size = new System.Drawing.Size(62, 22);
+            this.menu_lbl.Size = new System.Drawing.Size(77, 29);
             this.menu_lbl.TabIndex = 1;
             this.menu_lbl.Text = "Menu";
             this.menu_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // xuathang_btn
             // 
+            this.xuathang_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.xuathang_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.xuathang_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.xuathang_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -272,9 +289,10 @@
             this.xuathang_btn.Image = ((System.Drawing.Image)(resources.GetObject("xuathang_btn.Image")));
             this.xuathang_btn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.xuathang_btn.ImageSize = new System.Drawing.Size(30, 30);
-            this.xuathang_btn.Location = new System.Drawing.Point(0, 240);
+            this.xuathang_btn.Location = new System.Drawing.Point(0, 295);
+            this.xuathang_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.xuathang_btn.Name = "xuathang_btn";
-            this.xuathang_btn.Size = new System.Drawing.Size(220, 70);
+            this.xuathang_btn.Size = new System.Drawing.Size(293, 86);
             this.xuathang_btn.TabIndex = 1;
             this.xuathang_btn.Text = "   Xuất hàng";
             this.xuathang_btn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -292,17 +310,19 @@
             this.topbar.Controls.Add(this.pictureBox2);
             this.topbar.Controls.Add(this.ngay_lbl);
             this.topbar.Controls.Add(this.nhanvien_lbl);
-            this.topbar.Location = new System.Drawing.Point(220, 2);
+            this.topbar.Location = new System.Drawing.Point(293, 2);
+            this.topbar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.topbar.Name = "topbar";
-            this.topbar.Size = new System.Drawing.Size(844, 100);
+            this.topbar.Size = new System.Drawing.Size(1124, 122);
             this.topbar.TabIndex = 3;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(588, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(784, 5);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(242, 89);
+            this.pictureBox2.Size = new System.Drawing.Size(323, 110);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
@@ -312,9 +332,10 @@
             this.ngay_lbl.AutoSize = true;
             this.ngay_lbl.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
             this.ngay_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.ngay_lbl.Location = new System.Drawing.Point(20, 53);
+            this.ngay_lbl.Location = new System.Drawing.Point(27, 65);
+            this.ngay_lbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ngay_lbl.Name = "ngay_lbl";
-            this.ngay_lbl.Size = new System.Drawing.Size(57, 22);
+            this.ngay_lbl.Size = new System.Drawing.Size(71, 29);
             this.ngay_lbl.TabIndex = 3;
             this.ngay_lbl.Text = "Ngày";
             // 
@@ -323,31 +344,34 @@
             this.nhanvien_lbl.AutoSize = true;
             this.nhanvien_lbl.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
             this.nhanvien_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.nhanvien_lbl.Location = new System.Drawing.Point(20, 17);
+            this.nhanvien_lbl.Location = new System.Drawing.Point(27, 21);
+            this.nhanvien_lbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nhanvien_lbl.Name = "nhanvien_lbl";
-            this.nhanvien_lbl.Size = new System.Drawing.Size(109, 22);
+            this.nhanvien_lbl.Size = new System.Drawing.Size(135, 29);
             this.nhanvien_lbl.TabIndex = 2;
             this.nhanvien_lbl.Text = "Nhân viên:";
             // 
             // panelBody
             // 
             this.panelBody.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelBody.Location = new System.Drawing.Point(220, 103);
+            this.panelBody.Location = new System.Drawing.Point(292, 127);
+            this.panelBody.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelBody.Name = "panelBody";
-            this.panelBody.Size = new System.Drawing.Size(844, 578);
+            this.panelBody.Size = new System.Drawing.Size(1127, 711);
             this.panelBody.TabIndex = 5;
             // 
             // Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.ClientSize = new System.Drawing.Size(1064, 681);
+            this.ClientSize = new System.Drawing.Size(1419, 838);
             this.Controls.Add(this.panelBody);
             this.Controls.Add(this.topbar);
             this.Controls.Add(this.sidebar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form";
             this.Text = "Quan Ly Kho";
             this.sidebar.ResumeLayout(false);
