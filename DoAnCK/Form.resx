@@ -228,7 +228,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DQAACw0B7QfALAAABLpJREFUeF7tmluoVVUUho+pgWlmVr5pmuaTF9RU0LIyi7SoF40IwxsqWKGFF3pO
+        DAAACwwBP0AiyAAABLpJREFUeF7tmluoVVUUho+pgWlmVr5pmuaTF9RU0LIyi7SoF40IwxsqWKGFF3pO
         VCjoJTKEkCTqIbp46fJYgiK+J1JQCFJRaQlaaeTu++ccA5ay9zl7b9dcayvzgw/PGWOdOea6zTXnWvZl
         MplMJpPJZDKZ5DQajcE4CZ/AtbjJ1M9LULnBtvmNATt0G67B/fgHDoS2+QxX40hr5vqDzk/A3fgXdov+
         9m0cb832PnR2OO7CS1jkZ9yH6/ABHI+3mzpYC1A5bfMLFrmIO/AWK9Ob0MGZ+D06l/EQPo5t39vaFhfj
@@ -269,7 +269,7 @@
 </value>
   </data>
   <metadata name="hoadon_timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>142, 17</value>
+    <value>20, 15</value>
   </metadata>
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

@@ -1,10 +1,10 @@
 ﻿using DoAnCK;
 using System.Collections.Generic;
 
-class KhoHang
+public class KhoHang
 {
     string ten_kho;
-    public List<HangHoa> ds_san_pham = new List<HangHoa>();
+    public List<HangHoa> ds_hang_hoa = new List<HangHoa>();
     public List<NhanVien> ds_nhan_vien = new List<NhanVien>();
     public List<CuaHang> ds_cua_hang = new List<CuaHang>();
     public List<NhaCungCap> ds_ncc = new List<NhaCungCap>();
@@ -13,7 +13,7 @@ class KhoHang
 
     public bool kha_dung(HangHoa hh)
     {
-        HangHoa hh_kho = ds_san_pham.Find(x => x.id == hh.id);
+        HangHoa hh_kho = ds_hang_hoa.Find(x => x.id == hh.id);
         if (hh.so_luong >= hh_kho.so_luong)
         {
             return true;
@@ -27,7 +27,7 @@ class KhoHang
         {
             foreach (HangHoa hanghoa in ds_hh)
             {
-                HangHoa hh_kho = ds_san_pham.Find(x => x.id == hanghoa.id);
+                HangHoa hh_kho = ds_hang_hoa.Find(x => x.id == hanghoa.id);
                 hh_kho.so_luong += hanghoa.so_luong;
             }
         }
@@ -35,7 +35,7 @@ class KhoHang
         {
             foreach (HangHoa hanghoa in ds_hh)
             {
-                HangHoa hh_kho = ds_san_pham.Find(x => x.id == hanghoa.id);
+                HangHoa hh_kho = ds_hang_hoa.Find(x => x.id == hanghoa.id);
                 hh_kho.so_luong -= hanghoa.so_luong;
             }
         }

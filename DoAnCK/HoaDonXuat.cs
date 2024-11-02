@@ -11,7 +11,7 @@ public class HoaDonXuat : HoaDon
     {
 
     }
-    public HoaDonXuat(string ma_don_hang, QuanLyNhapXuat ds_san_pham, NhanVien nv_lap, CuaHang cua_hang) : base(ma_don_hang, ds_san_pham, nv_lap)
+    public HoaDonXuat(string ma_don_hang, QuanLyNhapXuat ds_hang_hoa, NhanVien nv_lap, CuaHang cua_hang) : base(ma_don_hang, ds_hang_hoa, nv_lap)
     {
         ngay_tao_don = DateTime.Now;
         this.cua_hang = cua_hang;
@@ -28,7 +28,7 @@ public class HoaDonXuat : HoaDon
         hoadon.AppendLine($" - Cua hang nhan: {cua_hang.ten_ch}");
         hoadon.AppendLine($" - Danh sach san pham:");
         hoadon.AppendLine($"{"ID",-5} | {"Ten hang",-20} | {"So luong",-10} | {"Don gia",-15}");
-        foreach (HangHoa hangHoa in ds_san_pham.ds_san_pham)
+        foreach (HangHoa hangHoa in ds_hang_hoa.ds_hang_hoa)
         {
             hoadon.AppendLine(hangHoa.ToString());
             tong_tien += hangHoa.don_gia * hangHoa.so_luong;

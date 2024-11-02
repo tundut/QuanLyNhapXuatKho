@@ -10,7 +10,7 @@ public class DienTu : HangHoa
 
     }
 
-    public DienTu(string id, string ten_hang, uint so_luong, long don_gia) : base(id, ten_hang, so_luong, don_gia)
+    public DienTu(string id, string ten_hang, uint so_luong, ulong don_gia) : base(id, ten_hang, so_luong, don_gia)
     {
 
     }

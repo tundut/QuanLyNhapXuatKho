@@ -13,30 +13,21 @@ using System.Xml.Serialization;
 
 namespace DoAnCK
 {
-    public partial class FormTrangChu : Form
+    public partial class FormTrangChu : System.Windows.Forms.Form
     {
-        KhoHang kho = new KhoHang();
-        public FormTrangChu()
+        public KhoHang _kho {  get; set; }
+        public FormTrangChu(KhoHang kho)
         {
             InitializeComponent();
+            _kho = kho;
 
-
-            string filePath = "Resources/hang_hoa.dat";
-
-            using (StreamReader reader = new StreamReader(filePath))
+            foreach (HangHoa hh in _kho.ds_hang_hoa)
             {
-                XmlSerializer serializer = new XmlSerializer(typeof(List<HangHoa>));
-                kho.ds_san_pham = (List<HangHoa>)serializer.Deserialize(reader);
-            }
-
-            foreach (HangHoa hh in kho.ds_san_pham)
-            {
-                HangHoaComponent hh_component = new HangHoaComponent(this);
+                HangHoaTrangChuComponent hh_component = new HangHoaTrangChuComponent(this);
                 hh_component.hh = hh;
                 hh_component.SetProductInfo(hh);
                 hanghoa_flp.Controls.Add(hh_component);
             }
-
         }
 
         private void tatca_btn_Click(object sender, EventArgs e)
@@ -47,9 +38,9 @@ namespace DoAnCK
             thucpham_btn.Checked = false;
 
             hanghoa_flp.Controls.Clear();
-            foreach (HangHoa hh in kho.ds_san_pham)
+            foreach (HangHoa hh in _kho.ds_hang_hoa)
             {
-                HangHoaComponent hh_component = new HangHoaComponent(this);
+                HangHoaTrangChuComponent hh_component = new HangHoaTrangChuComponent(this);
                 hh_component.hh = hh;
                 hh_component.SetProductInfo(hh);
                 hanghoa_flp.Controls.Add(hh_component);
@@ -64,11 +55,11 @@ namespace DoAnCK
             thucpham_btn.Checked = false;
 
             hanghoa_flp.Controls.Clear();
-            foreach (HangHoa hh in kho.ds_san_pham)
+            foreach (HangHoa hh in _kho.ds_hang_hoa)
             {
                 if (hh is GiaDung)
                 {
-                    HangHoaComponent hh_component = new HangHoaComponent(this);
+                    HangHoaTrangChuComponent hh_component = new HangHoaTrangChuComponent(this);
                     hh_component.hh = hh;
                     hh_component.SetProductInfo(hh);
                     hanghoa_flp.Controls.Add(hh_component);
@@ -84,11 +75,11 @@ namespace DoAnCK
             thucpham_btn.Checked = false;
 
             hanghoa_flp.Controls.Clear();
-            foreach (HangHoa hh in kho.ds_san_pham)
+            foreach (HangHoa hh in _kho.ds_hang_hoa)
             {
                 if (hh is DienTu)
                 {
-                    HangHoaComponent hh_component = new HangHoaComponent(this);
+                    HangHoaTrangChuComponent hh_component = new HangHoaTrangChuComponent(this);
                     hh_component.hh = hh;
                     hh_component.SetProductInfo(hh);
                     hanghoa_flp.Controls.Add(hh_component);
@@ -104,11 +95,11 @@ namespace DoAnCK
             thucpham_btn.Checked = true;
 
             hanghoa_flp.Controls.Clear();
-            foreach (HangHoa hh in kho.ds_san_pham)
+            foreach (HangHoa hh in _kho.ds_hang_hoa)
             {
                 if (hh is ThucPham)
                 {
-                    HangHoaComponent hh_component = new HangHoaComponent(this);
+                    HangHoaTrangChuComponent hh_component = new HangHoaTrangChuComponent(this);
                     hh_component.hh = hh;
                     hh_component.SetProductInfo(hh);
                     hanghoa_flp.Controls.Add(hh_component);
@@ -120,11 +111,11 @@ namespace DoAnCK
         {
             hanghoa_flp.Controls.Clear();
             string searchText = search_tb.Text;
-            foreach (HangHoa hh in kho.ds_san_pham)
+            foreach (HangHoa hh in _kho.ds_hang_hoa)
             {
                 if (hh.ten_hang.ToLower().Contains(searchText.ToLower()))
                 {
-                    HangHoaComponent hh_component = new HangHoaComponent(this);
+                    HangHoaTrangChuComponent hh_component = new HangHoaTrangChuComponent(this);
                     hh_component.hh = hh;
                     hh_component.SetProductInfo(hh);
                     hanghoa_flp.Controls.Add(hh_component);

@@ -12,14 +12,14 @@ public abstract class HangHoa : ICloneable, ISerializable
     public string id { get; set; }
     public string ten_hang { get; set; }
     public uint so_luong { get; set; }
-    public long don_gia { get; set; }
+    public ulong don_gia { get; set; }
 
     protected HangHoa()
     {
 
     }
 
-    public HangHoa(string id, string ten_hang, uint so_luong, long don_gia)
+    public HangHoa(string id, string ten_hang, uint so_luong, ulong don_gia)
     {
         this.id = id;
         this.ten_hang = ten_hang;
@@ -50,6 +50,6 @@ public abstract class HangHoa : ICloneable, ISerializable
         id = info.GetString("id");
         ten_hang = info.GetString("ten_hang");
         so_luong = info.GetUInt32("so_luong");
-        don_gia = info.GetInt64("don_gia");
+        don_gia = info.GetUInt64("don_gia");
     }
 }

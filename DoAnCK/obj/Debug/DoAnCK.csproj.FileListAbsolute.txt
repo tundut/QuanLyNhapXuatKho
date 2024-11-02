@@ -7,8 +7,11 @@ E:\UEH\Sophomore\OOP\DoAnCK\DoAnCK\obj\Debug\DoAnCK.csproj.GenerateResource.cach
 E:\UEH\Sophomore\OOP\DoAnCK\DoAnCK\obj\Debug\DoAnCK.csproj.CoreCompileInputs.cache
 E:\UEH\Sophomore\OOP\DoAnCK\DoAnCK\obj\Debug\DoAnCK.exe
 E:\UEH\Sophomore\OOP\DoAnCK\DoAnCK\obj\Debug\DoAnCK.pdb
-E:\UEH\Sophomore\OOP\DoAnCK\DoAnCK\obj\Debug\DoAnCK.HangHoaComponent.resources
 E:\UEH\Sophomore\OOP\DoAnCK\DoAnCK\bin\Debug\Guna.UI2.dll
 E:\UEH\Sophomore\OOP\DoAnCK\DoAnCK\obj\Debug\DoAnCK.csproj.Up2Date
-E:\UEH\Sophomore\OOP\DoAnCK\DoAnCK\obj\Debug\DoAnCK.Form1.resources
 E:\UEH\Sophomore\OOP\DoAnCK\DoAnCK\obj\Debug\DoAnCK.FormTrangChu.resources
+E:\UEH\Sophomore\OOP\DoAnCK\DoAnCK\obj\Debug\DoAnCK.Form.resources
+E:\UEH\Sophomore\OOP\DoAnCK\DoAnCK\obj\Debug\DoAnCK.HangHoaNhapXuatComponent.resources
+E:\UEH\Sophomore\OOP\DoAnCK\DoAnCK\obj\Debug\DoAnCK.HangHoaTrangChuComponent.resources
+E:\UEH\Sophomore\OOP\DoAnCK\DoAnCK\obj\Debug\DoAnCK.FormNhapXuat.resources
+E:\UEH\Sophomore\OOP\DoAnCK\DoAnCK\obj\Debug\DoAnCK.HangHoaLoComponent.resources

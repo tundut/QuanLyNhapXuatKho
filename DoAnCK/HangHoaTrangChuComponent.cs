@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace DoAnCK
 {
-    public partial class HangHoaComponent : UserControl
+    public partial class HangHoaTrangChuComponent : UserControl
     {
-        public HangHoaComponent(FormTrangChu TrangChu)
+        public HangHoaTrangChuComponent(FormTrangChu TrangChu)
         {
             InitializeComponent();
             this.TrangChu = TrangChu;
@@ -28,7 +28,5 @@ namespace DoAnCK
             soluong_lbl.Text = "SL: " + hh.so_luong.ToString();
             hanghoa_ptb.ImageLocation = "Resources/default.jpg";
         }
-
-        
     }
 }

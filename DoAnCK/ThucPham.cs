@@ -8,7 +8,7 @@ public class ThucPham : HangHoa
     {
 
     }
-    public ThucPham(string id, string ten_hang, uint so_luong, long don_gia) : base(id, ten_hang, so_luong, don_gia)
+    public ThucPham(string id, string ten_hang, uint so_luong, ulong don_gia) : base(id, ten_hang, so_luong, don_gia)
     {
 
     }

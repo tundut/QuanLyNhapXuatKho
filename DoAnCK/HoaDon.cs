@@ -11,7 +11,7 @@ public abstract class HoaDon : ISerializable
 {
     public string ma_don_hang;
     public DateTime ngay_tao_don;
-    public QuanLyNhapXuat ds_san_pham;
+    public QuanLyNhapXuat ds_hang_hoa;
     public NhanVien nv_lap;
     public ulong tong_tien;
 
@@ -19,11 +19,11 @@ public abstract class HoaDon : ISerializable
     {
 
     }
-    public HoaDon(string ma_don_hang, QuanLyNhapXuat ds_san_pham, NhanVien nv_lap)
+    public HoaDon(string ma_don_hang, QuanLyNhapXuat ds_hang_hoa, NhanVien nv_lap)
     {
         this.ma_don_hang = ma_don_hang;
         this.ngay_tao_don = DateTime.Now;
-        this.ds_san_pham = ds_san_pham;
+        this.ds_hang_hoa = ds_hang_hoa;
         this.nv_lap = nv_lap;
     }
 
@@ -33,7 +33,7 @@ public abstract class HoaDon : ISerializable
     {
         info.AddValue("ma_don_hang", ma_don_hang);
         info.AddValue("ngay_tao_don", ngay_tao_don);
-        info.AddValue("ds_san_pham", ds_san_pham);
+        info.AddValue("ds_hang_hoa", ds_hang_hoa);
         info.AddValue("nv_lap", nv_lap);
         info.AddValue("tong_tien", tong_tien);
     }
@@ -42,7 +42,7 @@ public abstract class HoaDon : ISerializable
     {
         ma_don_hang = info.GetString("ma_don_hang");
         ngay_tao_don = (DateTime)info.GetValue("ngay_tao_don", typeof(DateTime));
-        ds_san_pham = (QuanLyNhapXuat)info.GetValue("ds_san_pham", typeof(QuanLyNhapXuat));
+        ds_hang_hoa = (QuanLyNhapXuat)info.GetValue("ds_hang_hoa", typeof(QuanLyNhapXuat));
         nv_lap = (NhanVien)info.GetValue("nv_lap", typeof(NhanVien));
         tong_tien = info.GetUInt64("tong_tien");
     }
