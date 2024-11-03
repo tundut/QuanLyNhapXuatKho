@@ -73,6 +73,12 @@
     <Compile Include="FormDangNhap.Designer.cs">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHoaDon.Designer.cs">
+      <DependentUpon>FormHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormNhaCungCap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,12 @@
     <Compile Include="FormNhapXuat.Designer.cs">
       <DependentUpon>FormNhapXuat.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormThemHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThemHang.Designer.cs">
+      <DependentUpon>FormThemHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +105,12 @@
     </Compile>
     <Compile Include="GiaDung.cs" />
     <Compile Include="HangHoa.cs" />
+    <Compile Include="HangHoaBillComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HangHoaBillComponent.Designer.cs">
+      <DependentUpon>HangHoaBillComponent.cs</DependentUpon>
+    </Compile>
     <Compile Include="HangHoaLoComponent.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -130,11 +148,17 @@
     <EmbeddedResource Include="FormDangNhap.resx">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormHoaDon.resx">
+      <DependentUpon>FormHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormNhaCungCap.resx">
       <DependentUpon>FormNhaCungCap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormNhapXuat.resx">
       <DependentUpon>FormNhapXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThemHang.resx">
+      <DependentUpon>FormThemHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTrangChu.resx">
       <DependentUpon>FormTrangChu.cs</DependentUpon>

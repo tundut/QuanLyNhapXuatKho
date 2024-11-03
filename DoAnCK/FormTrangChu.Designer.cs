@@ -201,6 +201,7 @@
             this.them_btn.Size = new System.Drawing.Size(150, 40);
             this.them_btn.TabIndex = 16;
             this.them_btn.Text = "Thêm hàng hoá";
+            this.them_btn.Click += new System.EventHandler(this.them_btn_Click);
             // 
             // guna2Button2
             // 

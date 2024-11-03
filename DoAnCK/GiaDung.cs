@@ -1,5 +1,6 @@
 ﻿using DoAnCK;
 using System;
+using System.Drawing;
 using System.Runtime.Serialization;
 
 [Serializable]
@@ -9,7 +10,7 @@ public class GiaDung : HangHoa
     {
 
     }
-    public GiaDung(string id, string ten_hang, uint so_luong, ulong don_gia) : base(id, ten_hang, so_luong, don_gia)
+    public GiaDung(string id, string ten_hang, uint so_luong, ulong don_gia, string img) : base(id, ten_hang, so_luong, don_gia, img)
     {
 
     }

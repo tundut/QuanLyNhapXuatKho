@@ -50,6 +50,9 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(144, 224);
             this.guna2Panel1.TabIndex = 0;
+            this.guna2Panel1.Click += new System.EventHandler(this.MouseClick);
+            this.guna2Panel1.MouseEnter += new System.EventHandler(this.MouseEnter);
+            this.guna2Panel1.MouseLeave += new System.EventHandler(this.MouseLeave);
             // 
             // id_lbl
             // 
@@ -62,6 +65,9 @@
             this.id_lbl.TabIndex = 4;
             this.id_lbl.Text = "ID: ";
             this.id_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.id_lbl.Click += new System.EventHandler(this.MouseClick);
+            this.id_lbl.MouseEnter += new System.EventHandler(this.MouseEnter);
+            this.id_lbl.MouseLeave += new System.EventHandler(this.MouseLeave);
             // 
             // soluong_lbl
             // 
@@ -74,6 +80,9 @@
             this.soluong_lbl.TabIndex = 3;
             this.soluong_lbl.Text = "SL: ";
             this.soluong_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.soluong_lbl.Click += new System.EventHandler(this.MouseClick);
+            this.soluong_lbl.MouseEnter += new System.EventHandler(this.MouseEnter);
+            this.soluong_lbl.MouseLeave += new System.EventHandler(this.MouseLeave);
             // 
             // dongia_lbl
             // 
@@ -86,6 +95,9 @@
             this.dongia_lbl.TabIndex = 2;
             this.dongia_lbl.Text = "Don gia: ";
             this.dongia_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.dongia_lbl.Click += new System.EventHandler(this.MouseClick);
+            this.dongia_lbl.MouseEnter += new System.EventHandler(this.MouseEnter);
+            this.dongia_lbl.MouseLeave += new System.EventHandler(this.MouseLeave);
             // 
             // ten_lbl
             // 
@@ -98,6 +110,9 @@
             this.ten_lbl.TabIndex = 1;
             this.ten_lbl.Text = "Ten: ";
             this.ten_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ten_lbl.Click += new System.EventHandler(this.MouseClick);
+            this.ten_lbl.MouseEnter += new System.EventHandler(this.MouseEnter);
+            this.ten_lbl.MouseLeave += new System.EventHandler(this.MouseLeave);
             // 
             // hanghoa_ptb
             // 
@@ -107,13 +122,16 @@
             this.hanghoa_ptb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.hanghoa_ptb.TabIndex = 0;
             this.hanghoa_ptb.TabStop = false;
+            this.hanghoa_ptb.Click += new System.EventHandler(this.MouseClick);
+            this.hanghoa_ptb.MouseEnter += new System.EventHandler(this.MouseEnter);
+            this.hanghoa_ptb.MouseLeave += new System.EventHandler(this.MouseLeave);
             // 
-            // HangHoaComponent
+            // HangHoaTrangChuComponent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2Panel1);
-            this.Name = "HangHoaComponent";
+            this.Name = "HangHoaTrangChuComponent";
             this.Size = new System.Drawing.Size(150, 230);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();

@@ -24,8 +24,10 @@ namespace DoAnCK
             InitializeComponent();
             ngay_lbl.Text = "Ngày " + DateTime.Now.ToString("dd/MM/yyyy");
             OpenChildForm(new FormTrangChu());
-            ShowLoginForm();
+            //ShowLoginForm();
         }
+
+        private NhanVien current_nv;
         private void ShowLoginForm()
         {
             FormDangNhap formDangNhap = new FormDangNhap();
@@ -38,6 +40,7 @@ namespace DoAnCK
                 nhanvien_lbl.Text = "Nhân viên: " + formDangNhap.current_nv.ten_nv;
                 ngay_lbl.Text = "Ngày " + DateTime.Now.ToString("dd/MM/yyyy");
                 OpenChildForm(new FormTrangChu());
+                current_nv = formDangNhap.current_nv;
             }
         }
 
@@ -110,7 +113,7 @@ namespace DoAnCK
 
         private void nhaphang_btn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormNhapXuat(true));
+            OpenChildForm(new FormNhapXuat(current_nv, true));
             trangchu_btn.Checked = false;
             nhaphang_btn.Checked = true;
             xuathang_btn.Checked = false;
@@ -122,7 +125,7 @@ namespace DoAnCK
 
         private void xuathang_btn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormNhapXuat(false));
+            OpenChildForm(new FormNhapXuat(current_nv, false));
             trangchu_btn.Checked = false;
             nhaphang_btn.Checked = false;
             xuathang_btn.Checked = true;

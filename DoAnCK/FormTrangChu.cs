@@ -178,5 +178,11 @@ namespace DoAnCK
         {
             search_tb.Text = "";
         }
+
+        private void them_btn_Click(object sender, EventArgs e)
+        {
+            FormThemHang formthem = new FormThemHang();
+            formthem.Show();
+        }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using DoAnCK;
 using System;
 using System.Runtime.Serialization;
+using System.Drawing;
 
 [Serializable]
 public class DienTu : HangHoa
@@ -10,7 +11,7 @@ public class DienTu : HangHoa
 
     }
 
-    public DienTu(string id, string ten_hang, uint so_luong, ulong don_gia) : base(id, ten_hang, so_luong, don_gia)
+    public DienTu(string id, string ten_hang, uint so_luong, ulong don_gia, string img) : base(id, ten_hang, so_luong, don_gia, img)
     {
 
     }

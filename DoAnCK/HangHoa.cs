@@ -1,6 +1,7 @@
 ﻿using DoAnCK;
 using System;
 using System.ComponentModel;
+using System.Drawing;
 using System.Runtime.Serialization;
 using System.Xml.Serialization;
 [XmlInclude(typeof(DienTu))]
@@ -13,18 +14,20 @@ public abstract class HangHoa : ICloneable, ISerializable
     public string ten_hang;
     public uint so_luong;
     public ulong don_gia;
+    public string img;
 
     protected HangHoa()
     {
 
     }
 
-    public HangHoa(string id, string ten_hang, uint so_luong, ulong don_gia)
+    public HangHoa(string id, string ten_hang, uint so_luong, ulong don_gia, string img)
     {
         this.id = id;
         this.ten_hang = ten_hang;
         this.so_luong = so_luong;
         this.don_gia = don_gia;
+        this.img = img;
     }
 
     public object Clone()
@@ -42,6 +45,7 @@ public abstract class HangHoa : ICloneable, ISerializable
         info.AddValue("ten_hang", ten_hang);
         info.AddValue("so_luong", so_luong);
         info.AddValue("don_gia", don_gia);
+        info.AddValue("img", img);
     }
 
     public HangHoa(SerializationInfo info, StreamingContext context)
@@ -50,5 +54,6 @@ public abstract class HangHoa : ICloneable, ISerializable
         ten_hang = info.GetString("ten_hang");
         so_luong = info.GetUInt32("so_luong");
         don_gia = info.GetUInt64("don_gia");
+        img = info.GetString("img");
     }
 }

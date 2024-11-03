@@ -20,13 +20,16 @@ namespace DoAnCK
         private KhoHang kho = new KhoHang();
         private QuanLyNhapXuat quanlynhapxuat = new QuanLyNhapXuat();
 
-        public FormNhapXuat(bool isnhap)
+        private NhanVien current_nv = new NhanVien();
+
+        public FormNhapXuat(NhanVien current_nv, bool isnhap)
         {
             InitializeComponent();
 
             kho.LoadData();
 
             this.isnhap = isnhap;
+            this.current_nv = current_nv;
 
 
             foreach (HangHoa hh in kho.ds_hang_hoa)
@@ -190,33 +193,80 @@ namespace DoAnCK
 
         private void xuathoadon_btn_Click(object sender, EventArgs e)
         {
-            string filePath_hh = "Resources/hang_hoa.dat";
             if (isnhap)
             {
-                kho.capnhatkho(quanlynhapxuat.ds_hang_hoa, true);
+                NhaCungCap current_ncc = kho.ds_ncc.Find(x => x.ten_ncc == ncc_ch_cbb.Text);
+                if (current_ncc != null)
+                {
+                    kho.capnhatkho(quanlynhapxuat.ds_hang_hoa, true);
+                    FormHoaDon formHoaDon = new FormHoaDon();
+                    formHoaDon.hd_lbl.Text = "Hoá Đơn Nhập";
+                    formHoaDon.ngaylap_lbl.Text = DateTime.Now.ToString();
+                    formHoaDon.idnv_lbl.Text = "ID nhân viên lập: " + current_nv.id_nv;
+                    formHoaDon.idncc_ch_lbl.Text = "ID nhà cung cấp" + current_ncc.id_ncc;
+                    formHoaDon.them_dshd(quanlynhapxuat.ds_hang_hoa);
+                    formHoaDon.Show();
+
+                    dshh_flp.Controls.Clear();
+                    kho.LoadData();
+                    foreach (HangHoa hh in kho.ds_hang_hoa)
+                    {
+                        HangHoaNhapXuatComponent hh_component = new HangHoaNhapXuatComponent(this);
+                        hh_component.hh = hh;
+                        hh_component.SetProductInfo(hh);
+                        dshh_flp.Controls.Add(hh_component);
+                    }
+
+                    ctlh_flp.Controls.Clear();
+                    quanlynhapxuat = new QuanLyNhapXuat();
+                    tinh_tong_tien();
+                }
+                else
+                {
+                    MessageBox.Show("Hãy chọn nhà cung cấp!");
+                }
             }
 
             else
             {
-                if (kho.kha_dung(quanlynhapxuat.ds_hang_hoa))
+                CuaHang current_ch = kho.ds_cua_hang.Find(x => x.ten_ch == ncc_ch_cbb.Text);
+                if (current_ch != null)
                 {
-                    kho.capnhatkho(quanlynhapxuat.ds_hang_hoa, false);
+                    if (kho.kha_dung(quanlynhapxuat.ds_hang_hoa))
+                    {
+                        kho.capnhatkho(quanlynhapxuat.ds_hang_hoa, false);
+                        FormHoaDon formHoaDon = new FormHoaDon();
+                        formHoaDon.hd_lbl.Text = "Hoá Đơn Xuất";
+                        formHoaDon.ngaylap_lbl.Text = DateTime.Now.ToString();
+                        formHoaDon.idnv_lbl.Text = "ID nhân viên lập: " + current_nv.id_nv;
+                        formHoaDon.idncc_ch_lbl.Text = "ID cửa hàng " + current_ch.id_ch;
+                        formHoaDon.them_dshd(quanlynhapxuat.ds_hang_hoa);
+                        formHoaDon.Show();
+
+                        dshh_flp.Controls.Clear();
+                        kho.LoadData();
+                        foreach (HangHoa hh in kho.ds_hang_hoa)
+                        {
+                            HangHoaNhapXuatComponent hh_component = new HangHoaNhapXuatComponent(this);
+                            hh_component.hh = hh;
+                            hh_component.SetProductInfo(hh);
+                            dshh_flp.Controls.Add(hh_component);
+                        }
+
+                        ctlh_flp.Controls.Clear();
+                        quanlynhapxuat = new QuanLyNhapXuat();
+                        tinh_tong_tien();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Số lượng tồn kho không đủ!");
+                    }
                 }
-            }
-
-            dshh_flp.Controls.Clear();
-            kho.LoadData();
-            foreach (HangHoa hh in kho.ds_hang_hoa)
-            {
-                HangHoaNhapXuatComponent hh_component = new HangHoaNhapXuatComponent(this);
-                hh_component.hh = hh;
-                hh_component.SetProductInfo(hh);
-                dshh_flp.Controls.Add(hh_component);
-            }
-
-            ctlh_flp.Controls.Clear();
-            quanlynhapxuat = new QuanLyNhapXuat();
-            tinh_tong_tien();
+                else
+                {
+                    MessageBox.Show("Hãy chọn cửa hàng!");
+                }
+            }  
         }
     }
 }
