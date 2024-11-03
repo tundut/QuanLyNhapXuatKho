@@ -18,11 +18,6 @@ public class NhaCungCap : ISerializable
         this.ten_ncc = ten_ncc;
         this.dia_chi_ncc = dia_chi_ncc;
     }
-    public override string ToString()
-    {
-        return $"{id_ncc,-5} | {ten_ncc,-20} | {dia_chi_ncc,-20}";
-    }
-
     public void GetObjectData(SerializationInfo info, StreamingContext context)
     {
         info.AddValue("id_ncc", id_ncc);

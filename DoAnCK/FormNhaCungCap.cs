@@ -34,8 +34,8 @@ namespace DoAnCK
         }
 
 
-        public NhaCungCap ncc;
-        public void SetNCCInfo(NhaCungCap ncc)
+        private NhaCungCap ncc;
+        private void SetNCCInfo(NhaCungCap ncc)
         {
             this.ncc = ncc;
         }

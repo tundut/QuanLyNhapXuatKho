@@ -15,7 +15,7 @@ namespace DoAnCK
 {
     public partial class FormTrangChu : System.Windows.Forms.Form
     {
-        public KhoHang kho = new KhoHang();
+        private KhoHang kho = new KhoHang();
         public FormTrangChu()
         {
             InitializeComponent();

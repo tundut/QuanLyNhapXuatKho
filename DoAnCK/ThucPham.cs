@@ -12,10 +12,6 @@ public class ThucPham : HangHoa
     {
 
     }
-    public override string ToString()
-    {
-        return $"{id,-5} | {ten_hang,-20} | {so_luong,-10} | {don_gia,-15}";
-    }
 
     public override void GetObjectData(SerializationInfo info, StreamingContext context)
     {

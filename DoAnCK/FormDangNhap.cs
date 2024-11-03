@@ -15,7 +15,7 @@ namespace DoAnCK
 
     public partial class FormDangNhap : System.Windows.Forms.Form
     {
-        public KhoHang kho = new KhoHang();
+        private KhoHang kho = new KhoHang();
 
         public NhanVien current_nv;
 
@@ -23,12 +23,7 @@ namespace DoAnCK
         {
             InitializeComponent();
 
-            string filePath_nv = "Resources/nhan_vien.dat";
-            using (StreamReader reader = new StreamReader(filePath_nv))
-            {
-                XmlSerializer serializer = new XmlSerializer(typeof(List<NhanVien>));
-                kho.ds_nhan_vien = (List<NhanVien>)serializer.Deserialize(reader);
-            }
+            kho.LoadData();
         }
 
         private void btDangNhap_Click(object sender, EventArgs e)

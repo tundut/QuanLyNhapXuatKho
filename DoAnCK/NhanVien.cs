@@ -27,13 +27,6 @@ public class NhanVien : ISerializable
         this.password = password;
     }
 
-    public override string ToString()
-    {
-        string gioi_tinh;
-        if (this.gioi_tinh) gioi_tinh = "Nam";
-        else gioi_tinh = "Nu";
-        return $"{id_nv,-5} | {ten_nv,-20} | {tuoi,-5} | {gioi_tinh,-10} | {dia_chi_nv,-20}";
-    }
 
     public void GetObjectData(SerializationInfo info, StreamingContext context)
     {

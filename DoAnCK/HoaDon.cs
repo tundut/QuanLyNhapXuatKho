@@ -27,8 +27,6 @@ public abstract class HoaDon : ISerializable
         this.nv_lap = nv_lap;
     }
 
-    public abstract StringBuilder ToString();
-
     public virtual void GetObjectData(SerializationInfo info, StreamingContext context)
     {
         info.AddValue("ma_don_hang", ma_don_hang);

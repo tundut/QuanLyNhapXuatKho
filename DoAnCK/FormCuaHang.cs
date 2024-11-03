@@ -14,7 +14,7 @@ namespace DoAnCK
 {
     public partial class FormCuaHang : System.Windows.Forms.Form
     {
-        KhoHang kho = new KhoHang();
+        private KhoHang kho = new KhoHang();
 
         int index;
 
@@ -26,8 +26,8 @@ namespace DoAnCK
             ResetTextBoxes();
         }
 
-        public CuaHang ch;
-        public void SetNCCInfo(CuaHang ch)
+        private CuaHang ch;
+        private void SetNCCInfo(CuaHang ch)
         {
             this.ch = ch;
         }

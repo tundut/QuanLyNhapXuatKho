@@ -15,10 +15,10 @@ namespace DoAnCK
 {
     public partial class FormNhapXuat : System.Windows.Forms.Form
     {
-        public bool isnhap { get; set; }
-        
-        public KhoHang kho = new KhoHang();
-        public QuanLyNhapXuat quanlynhapxuat = new QuanLyNhapXuat();
+        private bool isnhap;
+
+        private KhoHang kho = new KhoHang();
+        private QuanLyNhapXuat quanlynhapxuat = new QuanLyNhapXuat();
 
         public FormNhapXuat(bool isnhap)
         {

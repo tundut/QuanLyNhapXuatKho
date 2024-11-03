@@ -24,7 +24,7 @@ namespace DoAnCK
             InitializeComponent();
             ngay_lbl.Text = "Ngày " + DateTime.Now.ToString("dd/MM/yyyy");
             OpenChildForm(new FormTrangChu());
-            //ShowLoginForm();
+            ShowLoginForm();
         }
         private void ShowLoginForm()
         {
@@ -57,7 +57,6 @@ namespace DoAnCK
             childForm.Show();
         }
 
-        bool sidebarExpand = true;
         bool hoadonExpand = false;
 
 

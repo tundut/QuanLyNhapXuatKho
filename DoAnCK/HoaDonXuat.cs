@@ -17,26 +17,6 @@ public class HoaDonXuat : HoaDon
         this.cua_hang = cua_hang;
     }
 
-    public override StringBuilder ToString()
-    {
-        double tong_tien = 0;
-        StringBuilder hoadon = new StringBuilder();
-        hoadon.AppendLine($"Hoa Don Xuat:");
-        hoadon.AppendLine($" - Ma don hang: {ma_don_hang}");
-        hoadon.AppendLine($" - Ngay tao don: {ngay_tao_don.ToShortDateString()}");
-        hoadon.AppendLine($" - Nhan vien lap: {nv_lap.ten_nv}");
-        hoadon.AppendLine($" - Cua hang nhan: {cua_hang.ten_ch}");
-        hoadon.AppendLine($" - Danh sach san pham:");
-        hoadon.AppendLine($"{"ID",-5} | {"Ten hang",-20} | {"So luong",-10} | {"Don gia",-15}");
-        foreach (HangHoa hangHoa in ds_hang_hoa.ds_hang_hoa)
-        {
-            hoadon.AppendLine(hangHoa.ToString());
-            tong_tien += hangHoa.don_gia * hangHoa.so_luong;
-        }
-        hoadon.AppendLine($" - Tong tien: {tong_tien}");
-
-        return hoadon;
-    }
 
     public virtual void GetObjectData(SerializationInfo info, StreamingContext context)
     {

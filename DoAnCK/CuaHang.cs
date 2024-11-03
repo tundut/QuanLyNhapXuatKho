@@ -20,11 +20,6 @@ public class CuaHang : ISerializable
         this.dia_chi_ch = dia_chi_ch;
     }
 
-    public override string ToString()
-    {
-        return $"{id_ch,-5} | {ten_ch,-20} | {dia_chi_ch,-20}";
-    }
-
     public void GetObjectData(SerializationInfo info, StreamingContext context)
     {
         info.AddValue("id_ch", id_ch);
