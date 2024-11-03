@@ -17,24 +17,19 @@ namespace DoAnCK
     {
         public bool isnhap { get; set; }
         
-        public KhoHang _kho = new KhoHang();
+        public KhoHang kho = new KhoHang();
         public QuanLyNhapXuat quanlynhapxuat = new QuanLyNhapXuat();
 
-        public FormNhapXuat(KhoHang kho, bool isnhap)
+        public FormNhapXuat(bool isnhap)
         {
             InitializeComponent();
 
-            string filePath_hh = "Resources/hang_hoa.dat";
-            using (StreamReader reader = new StreamReader(filePath_hh))
-            {
-                XmlSerializer serializer = new XmlSerializer(typeof(List<HangHoa>));
-                _kho.ds_hang_hoa = (List<HangHoa>)serializer.Deserialize(reader);
-            }
+            kho.LoadData();
 
             this.isnhap = isnhap;
 
 
-            foreach (HangHoa hh in _kho.ds_hang_hoa)
+            foreach (HangHoa hh in kho.ds_hang_hoa)
             {
                 HangHoaNhapXuatComponent hh_component = new HangHoaNhapXuatComponent(this);
                 hh_component.hh = hh;
@@ -45,7 +40,7 @@ namespace DoAnCK
             if (isnhap)
             {
                 ncc_ch_lbl.Text = "Nhà cung cấp";
-                foreach (NhaCungCap ncc in _kho.ds_ncc)
+                foreach (NhaCungCap ncc in kho.ds_ncc)
                 {
                     ncc_ch_cbb.Items.Add(ncc.ten_ncc);
                 }
@@ -53,7 +48,7 @@ namespace DoAnCK
             else
             {
                 ncc_ch_lbl.Text = "Cửa hàng";
-                foreach (CuaHang ch in _kho.ds_cua_hang)
+                foreach (CuaHang ch in  kho.ds_cua_hang)
                 {
                     ncc_ch_cbb.Items.Add(ch.ten_ch);
                 }
@@ -107,13 +102,13 @@ namespace DoAnCK
         {
             if (isnhap)
             {
-                NhaCungCap ncc = _kho.ds_ncc.Find(x => x.ten_ncc == ncc_ch_cbb.Text);
+                NhaCungCap ncc = kho.ds_ncc.Find(x => x.ten_ncc == ncc_ch_cbb.Text);
                 id_lbl.Text = "ID: " + ncc.id_ncc;
                 diachi_lbl.Text = "Địa chỉ: " + ncc.dia_chi_ncc;
             }
             else
             {
-                CuaHang ncc = _kho.ds_cua_hang.Find(x => x.ten_ch == ncc_ch_cbb.Text);
+                CuaHang ncc = kho.ds_cua_hang.Find(x => x.ten_ch == ncc_ch_cbb.Text);
                 id_lbl.Text = "ID: " + ncc.id_ch;
                 diachi_lbl.Text = "Địa chỉ: " + ncc.dia_chi_ch;
             }
@@ -129,7 +124,7 @@ namespace DoAnCK
 
             if (loaihh_cbb.Text == "Điện tử")
             {
-                foreach (HangHoa hh in _kho.ds_hang_hoa)
+                foreach (HangHoa hh in kho.ds_hang_hoa)
                 {
                     if (hh is DienTu && hh.ten_hang.ToLower().Contains(search_txb.Text))
                     {
@@ -142,7 +137,7 @@ namespace DoAnCK
             }
             else if (loaihh_cbb.Text == "Gia dụng")
             {
-                foreach (HangHoa hh in _kho.ds_hang_hoa)
+                foreach (HangHoa hh in kho.ds_hang_hoa)
                 {
                     if (hh is GiaDung && hh.ten_hang.ToLower().Contains(search_txb.Text))
                     {
@@ -155,7 +150,7 @@ namespace DoAnCK
             }
             else if (loaihh_cbb.Text == "Thực phẩm")
             {
-                foreach (HangHoa hh in _kho.ds_hang_hoa)
+                foreach (HangHoa hh in kho.ds_hang_hoa)
                 {
                     if (hh is ThucPham && hh.ten_hang.ToLower().Contains(search_txb.Text))
                     {
@@ -168,7 +163,7 @@ namespace DoAnCK
             }
             else
             {
-                foreach (HangHoa hh in _kho.ds_hang_hoa)
+                foreach (HangHoa hh in kho.ds_hang_hoa)
                 {
                     if (hh.ten_hang.ToLower().Contains(search_txb.Text))
                     {
@@ -195,32 +190,33 @@ namespace DoAnCK
 
         private void xuathoadon_btn_Click(object sender, EventArgs e)
         {
+            string filePath_hh = "Resources/hang_hoa.dat";
             if (isnhap)
             {
-                _kho.capnhatkho(quanlynhapxuat.ds_hang_hoa, true);
-                string filePath_hh = "Resources/hang_hoa.dat";
-                using (StreamWriter writer = new StreamWriter(filePath_hh))
-                {
-                    XmlSerializer serializer = new XmlSerializer(typeof(List<HangHoa>));
-                    serializer.Serialize(writer, _kho.ds_hang_hoa);
-                }
+                kho.capnhatkho(quanlynhapxuat.ds_hang_hoa, true);
             }
 
             else
             {
-                if (_kho.kha_dung(quanlynhapxuat.ds_hang_hoa))
+                if (kho.kha_dung(quanlynhapxuat.ds_hang_hoa))
                 {
-                    _kho.capnhatkho(quanlynhapxuat.ds_hang_hoa, false);
-                    string filePath_hh = "Resources/hang_hoa.dat";
-                    using (StreamWriter writer = new StreamWriter(filePath_hh))
-                    {
-                        XmlSerializer serializer = new XmlSerializer(typeof(List<HangHoa>));
-                        serializer.Serialize(writer, _kho.ds_hang_hoa);
-                    }
+                    kho.capnhatkho(quanlynhapxuat.ds_hang_hoa, false);
                 }
             }
 
-            this.Close();
+            dshh_flp.Controls.Clear();
+            kho.LoadData();
+            foreach (HangHoa hh in kho.ds_hang_hoa)
+            {
+                HangHoaNhapXuatComponent hh_component = new HangHoaNhapXuatComponent(this);
+                hh_component.hh = hh;
+                hh_component.SetProductInfo(hh);
+                dshh_flp.Controls.Add(hh_component);
+            }
+
+            ctlh_flp.Controls.Clear();
+            quanlynhapxuat = new QuanLyNhapXuat();
+            tinh_tong_tien();
         }
     }
 }

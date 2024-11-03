@@ -15,13 +15,19 @@ namespace DoAnCK
 {
     public partial class FormTrangChu : System.Windows.Forms.Form
     {
-        public KhoHang _kho {  get; set; }
-        public FormTrangChu(KhoHang kho)
+        public KhoHang kho = new KhoHang();
+        public FormTrangChu()
         {
             InitializeComponent();
-            _kho = kho;
 
-            foreach (HangHoa hh in _kho.ds_hang_hoa)
+            string filePath_hh = "Resources/hang_hoa.dat";
+            using (StreamReader reader = new StreamReader(filePath_hh))
+            {
+                XmlSerializer serializer = new XmlSerializer(typeof(List<HangHoa>));
+                kho.ds_hang_hoa = (List<HangHoa>)serializer.Deserialize(reader);
+            }
+
+            foreach (HangHoa hh in kho.ds_hang_hoa)
             {
                 HangHoaTrangChuComponent hh_component = new HangHoaTrangChuComponent(this);
                 hh_component.hh = hh;
@@ -38,7 +44,7 @@ namespace DoAnCK
             thucpham_btn.Checked = false;
 
             xoahh_btn.Controls.Clear();
-            foreach (HangHoa hh in _kho.ds_hang_hoa)
+            foreach (HangHoa hh in kho.ds_hang_hoa)
             {
                 HangHoaTrangChuComponent hh_component = new HangHoaTrangChuComponent(this);
                 hh_component.hh = hh;
@@ -55,7 +61,7 @@ namespace DoAnCK
             thucpham_btn.Checked = false;
 
             xoahh_btn.Controls.Clear();
-            foreach (HangHoa hh in _kho.ds_hang_hoa)
+            foreach (HangHoa hh in kho.ds_hang_hoa)
             {
                 if (hh is GiaDung)
                 {
@@ -75,7 +81,7 @@ namespace DoAnCK
             thucpham_btn.Checked = false;
 
             xoahh_btn.Controls.Clear();
-            foreach (HangHoa hh in _kho.ds_hang_hoa)
+            foreach (HangHoa hh in kho.ds_hang_hoa)
             {
                 if (hh is DienTu)
                 {
@@ -95,7 +101,7 @@ namespace DoAnCK
             thucpham_btn.Checked = true;
 
             xoahh_btn.Controls.Clear();
-            foreach (HangHoa hh in _kho.ds_hang_hoa)
+            foreach (HangHoa hh in kho.ds_hang_hoa)
             {
                 if (hh is ThucPham)
                 {
@@ -113,7 +119,7 @@ namespace DoAnCK
             string searchText = search_tb.Text;
             if (dientu_btn.Checked == true)
             {
-                foreach (HangHoa hh in _kho.ds_hang_hoa)
+                foreach (HangHoa hh in kho.ds_hang_hoa)
                 {
                     if (hh is DienTu && hh.ten_hang.ToLower().Contains(searchText.ToLower()))
                     {
@@ -127,7 +133,7 @@ namespace DoAnCK
 
             else if (giadung_btn.Checked == true)
             {
-                foreach (HangHoa hh in _kho.ds_hang_hoa)
+                foreach (HangHoa hh in kho.ds_hang_hoa)
                 {
                     if (hh is GiaDung && hh.ten_hang.ToLower().Contains(searchText.ToLower()))
                     {
@@ -141,7 +147,7 @@ namespace DoAnCK
 
             else if (thucpham_btn.Checked == true)
             {
-                foreach (HangHoa hh in _kho.ds_hang_hoa)
+                foreach (HangHoa hh in kho.ds_hang_hoa)
                 {
                     if (hh is ThucPham && hh.ten_hang.ToLower().Contains(searchText.ToLower()))
                     {
@@ -155,7 +161,7 @@ namespace DoAnCK
 
             else
             {
-                foreach (HangHoa hh in _kho.ds_hang_hoa)
+                foreach (HangHoa hh in kho.ds_hang_hoa)
                 {
                     if (hh.ten_hang.ToLower().Contains(searchText.ToLower()))
                     {

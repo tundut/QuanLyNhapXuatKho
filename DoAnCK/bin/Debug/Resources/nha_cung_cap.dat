@@ -13,6 +13,11 @@
   <NhaCungCap>
     <id_ncc>NCC03</id_ncc>
     <ten_ncc>DEF Corporation</ten_ncc>
-    <dia_chi_ncc>Binh Thanh</dia_chi_ncc>
+    <dia_chi_ncc>Binh Duong</dia_chi_ncc>
+  </NhaCungCap>
+  <NhaCungCap>
+    <id_ncc>NCC04</id_ncc>
+    <ten_ncc>SBOYS</ten_ncc>
+    <dia_chi_ncc>TP.HCM</dia_chi_ncc>
   </NhaCungCap>
 </ArrayOfNhaCungCap>

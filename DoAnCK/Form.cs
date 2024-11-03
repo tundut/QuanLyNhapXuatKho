@@ -19,18 +19,16 @@ namespace DoAnCK
 {
     public partial class Form : System.Windows.Forms.Form
     {
-        KhoHang _kho = new KhoHang();
-        public Form(KhoHang kho)
+        public Form()
         {
             InitializeComponent();
-            _kho = kho;
             ngay_lbl.Text = "Ngày " + DateTime.Now.ToString("dd/MM/yyyy");
-            OpenChildForm(new FormTrangChu(_kho));
+            OpenChildForm(new FormTrangChu());
             //ShowLoginForm();
         }
         private void ShowLoginForm()
         {
-            FormDangNhap formDangNhap = new FormDangNhap(_kho);
+            FormDangNhap formDangNhap = new FormDangNhap();
             if (formDangNhap.ShowDialog() != DialogResult.OK)
             {
                 this.Close();
@@ -39,7 +37,7 @@ namespace DoAnCK
             {
                 nhanvien_lbl.Text = "Nhân viên: " + formDangNhap.current_nv.ten_nv;
                 ngay_lbl.Text = "Ngày " + DateTime.Now.ToString("dd/MM/yyyy");
-                OpenChildForm(new FormTrangChu(_kho));
+                OpenChildForm(new FormTrangChu());
             }
         }
 
@@ -48,7 +46,7 @@ namespace DoAnCK
         {
             if (currentFormChild != null)
             {
-                currentFormChild.Hide();
+                currentFormChild.Close();
             }
             currentFormChild = childForm;
             childForm.TopLevel = false;
@@ -100,7 +98,7 @@ namespace DoAnCK
 
         private void trangchu_btn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormTrangChu(_kho));
+            OpenChildForm(new FormTrangChu());
             trangchu_btn.Checked = true;
             nhaphang_btn.Checked = false;
             xuathang_btn.Checked = false;
@@ -113,7 +111,7 @@ namespace DoAnCK
 
         private void nhaphang_btn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormNhapXuat(_kho, true));
+            OpenChildForm(new FormNhapXuat(true));
             trangchu_btn.Checked = false;
             nhaphang_btn.Checked = true;
             xuathang_btn.Checked = false;
@@ -125,7 +123,7 @@ namespace DoAnCK
 
         private void xuathang_btn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormNhapXuat(_kho, false));
+            OpenChildForm(new FormNhapXuat(false));
             trangchu_btn.Checked = false;
             nhaphang_btn.Checked = false;
             xuathang_btn.Checked = true;
@@ -137,7 +135,7 @@ namespace DoAnCK
 
         private void cuahang_btn_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new FormCuaHang(_kho));
+            OpenChildForm(new FormCuaHang());
             trangchu_btn.Checked = false;
             nhaphang_btn.Checked = false;
             xuathang_btn.Checked = false;
@@ -149,7 +147,7 @@ namespace DoAnCK
 
         private void ncc_btn_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new FormNhaCungCap(_kho));
+            OpenChildForm(new FormNhaCungCap());
             trangchu_btn.Checked = false;
             nhaphang_btn.Checked = false;
             xuathang_btn.Checked = false;
