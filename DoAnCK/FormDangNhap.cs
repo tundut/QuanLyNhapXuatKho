@@ -35,8 +35,8 @@ namespace DoAnCK
 
             if (current_nv != null)
             {
-                this.DialogResult = DialogResult.OK; // Nếu đăng nhập thành công
-                this.Close(); // Đóng form đăng nhập
+                this.DialogResult = DialogResult.OK;
+                this.Close();
             }
             else
             {

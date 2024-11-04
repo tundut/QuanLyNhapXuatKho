@@ -11,7 +11,7 @@ public class HoaDonXuat : HoaDon
     {
 
     }
-    public HoaDonXuat(QuanLyNhapXuat qlnx, NhanVien nv_lap, CuaHang cua_hang, ulong tong_tien) : base(qlnx, nv_lap, tong_tien)
+    public HoaDonXuat(QuanLyNhapXuat qlnx, string id_hoa_don, NhanVien nv_lap, CuaHang cua_hang, ulong tong_tien) : base(qlnx, id_hoa_don, nv_lap, tong_tien)
     {
         ngay_tao_don = DateTime.Now;
         this.cua_hang = cua_hang;

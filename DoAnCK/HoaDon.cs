@@ -19,9 +19,10 @@ public abstract class HoaDon : ISerializable
     {
 
     }
-    public HoaDon(QuanLyNhapXuat qlnx, NhanVien nv_lap, ulong tong_tien)
+    public HoaDon(QuanLyNhapXuat qlnx, string id_hoa_don, NhanVien nv_lap, ulong tong_tien)
     {
         this.ngay_tao_don = DateTime.Now;
+        this.id_hoa_don = id_hoa_don;
         this.qlnx = qlnx;
         this.nv_lap = nv_lap;
         this.tong_tien = tong_tien;

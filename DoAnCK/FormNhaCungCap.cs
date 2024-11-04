@@ -12,9 +12,9 @@ namespace DoAnCK
 {
     public partial class FormNhaCungCap : System.Windows.Forms.Form
     {
-        KhoHang kho = new KhoHang();
+        private KhoHang kho = new KhoHang();
 
-        int index;
+        private int index;
 
         public FormNhaCungCap()
         {
@@ -46,7 +46,7 @@ namespace DoAnCK
 
             foreach (NhaCungCap ncc in kho.ds_ncc)
             {
-                dataNCC.Rows.Add(ncc.id_ncc, ncc.ten_ncc, ncc.dia_chi_ncc);
+                dataNCC.Rows.Add(ncc.id_ncc, ncc.ten_ncc, ncc.sdt_ncc, ncc.dia_chi_ncc);
             }
 
             dataNCC.Enabled = dataNCC.Rows.Count > 0;
@@ -79,6 +79,7 @@ namespace DoAnCK
             NhaCungCap nccToUpdate = kho.ds_ncc[index];
             nccToUpdate.id_ncc = txtId.Text;
             nccToUpdate.ten_ncc = txtTen.Text;
+            nccToUpdate.sdt_ncc = txtSDT.Text;
             nccToUpdate.dia_chi_ncc = txtDiaChi.Text;
 
             dataNCC.Refresh();
@@ -98,7 +99,7 @@ namespace DoAnCK
                 string sdt = txtSDT.Text;
                 string diaChi = txtDiaChi.Text;
 
-                NhaCungCap ncc = new NhaCungCap(id, ten, diaChi);
+                NhaCungCap ncc = new NhaCungCap(id, ten, sdt, diaChi);
                 kho.ds_ncc.Add(ncc);
                 dataNCC.Rows.Add(id, ten, sdt, diaChi);
 
@@ -123,11 +124,6 @@ namespace DoAnCK
             txtTen.Clear();
             txtSDT.Clear();
             txtDiaChi.Clear();
-
-            txtId.Enabled = false;
-            txtTen.Enabled = false;
-            txtSDT.Enabled = false;
-            txtDiaChi.Enabled = false;
         }
         private void ToggleTextBoxState(bool enabled)
         {

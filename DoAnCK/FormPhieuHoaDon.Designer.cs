@@ -61,7 +61,7 @@
             this.panel1.Location = new System.Drawing.Point(2, 2);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(430, 195);
+            this.panel1.Size = new System.Drawing.Size(431, 195);
             this.panel1.TabIndex = 18;
             // 
             // label5
@@ -203,18 +203,18 @@
             this.dshd_flp.Location = new System.Drawing.Point(0, 0);
             this.dshd_flp.Margin = new System.Windows.Forms.Padding(2);
             this.dshd_flp.Name = "dshd_flp";
-            this.dshd_flp.Size = new System.Drawing.Size(430, 851);
+            this.dshd_flp.Size = new System.Drawing.Size(444, 851);
             this.dshd_flp.TabIndex = 0;
             this.dshd_flp.WrapContents = false;
             // 
-            // FormHoaDon
+            // FormPhieuHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(430, 851);
+            this.ClientSize = new System.Drawing.Size(444, 851);
             this.Controls.Add(this.dshd_flp);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "FormHoaDon";
+            this.Name = "FormPhieuHoaDon";
             this.Text = "FormHoaDon";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

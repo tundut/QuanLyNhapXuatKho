@@ -16,7 +16,7 @@ namespace DoAnCK
     {
         private KhoHang kho = new KhoHang();
 
-        int index;
+        private int index;
 
         public FormCuaHang()
         {
@@ -65,6 +65,7 @@ namespace DoAnCK
             CuaHang chToUpdate = kho.ds_cua_hang[index];
             chToUpdate.id_ch = txtId.Text;
             chToUpdate.ten_ch = txtTen.Text;
+            chToUpdate.sdt_ch = txtSDT.Text;
             chToUpdate.dia_chi_ch = txtDiaChi.Text;
 
 
@@ -85,7 +86,7 @@ namespace DoAnCK
                 string sdt = txtSDT.Text;
                 string diaChi = txtDiaChi.Text;
 
-                CuaHang ch = new CuaHang(id, ten, diaChi);
+                CuaHang ch = new CuaHang(id, ten, sdt, diaChi);
                 kho.ds_cua_hang.Add(ch);
                 dataCH.Rows.Add(id, ten, sdt, diaChi);
 
@@ -117,11 +118,6 @@ namespace DoAnCK
             txtTen.Clear();
             txtSDT.Clear();
             txtDiaChi.Clear();
-
-            txtId.Enabled = false;
-            txtTen.Enabled = false;
-            txtSDT.Enabled = false;
-            txtDiaChi.Enabled = false;
         }
         private void ToggleTextBoxState(bool enabled)
         {
@@ -151,7 +147,7 @@ namespace DoAnCK
         {
             foreach (CuaHang ch in kho.ds_cua_hang)
             {
-                dataCH.Rows.Add(ch.id_ch, ch.ten_ch, ch.dia_chi_ch);
+                dataCH.Rows.Add(ch.id_ch, ch.ten_ch, ch.sdt_ch, ch.dia_chi_ch);
             }
 
             dataCH.Enabled = dataCH.Rows.Count > 0;

@@ -13,9 +13,9 @@ namespace DoAnCK
     public partial class FormHoaDon : System.Windows.Forms.Form
     {
         KhoHang kho = new KhoHang();
-        bool isnhap;
+        private bool isnhap;
 
-        int index;
+        private int index;
 
         public FormHoaDon(bool isnhap)
         {
@@ -59,6 +59,7 @@ namespace DoAnCK
                 formHoaDon.hd_lbl.Text = "Hoá Đơn Nhập";
                 formHoaDon.ngaylap_lbl.Text = hdn.ngay_tao_don.ToString();
                 formHoaDon.idnv_lbl.Text = "ID nhân viên lập: " + hdn.nv_lap.id_nv;
+                formHoaDon.idhd_lbl.Text = "ID hoá đơn: " + hdn.id_hoa_don;
                 formHoaDon.idncc_ch_lbl.Text = "ID nhà cung cấp: " + hdn.nha_cung_cap.id_ncc;
                 formHoaDon.them_dshd(hdn.qlnx.ds_hang_hoa);
                 formHoaDon.Show();
@@ -70,6 +71,7 @@ namespace DoAnCK
                 formHoaDon.hd_lbl.Text = "Hoá Đơn Nhập";
                 formHoaDon.ngaylap_lbl.Text = hdx.ngay_tao_don.ToString();
                 formHoaDon.idnv_lbl.Text = "ID nhân viên lập: " + hdx.nv_lap.id_nv;
+                formHoaDon.idhd_lbl.Text = "ID hoá đơn: " + hdx.id_hoa_don;
                 formHoaDon.idncc_ch_lbl.Text = "ID nhà cung cấp: " + hdx.cua_hang.id_ch;
                 formHoaDon.them_dshd(hdx.qlnx.ds_hang_hoa);
                 formHoaDon.Show();

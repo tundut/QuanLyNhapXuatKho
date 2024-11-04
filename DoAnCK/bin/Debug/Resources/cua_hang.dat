@@ -2,17 +2,20 @@
 <ArrayOfCuaHang xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <CuaHang>
     <id_ch>CH01</id_ch>
-    <ten_ch>Cua hang 1</ten_ch>
-    <dia_chi_ch>Binh Thanh</dia_chi_ch>
+    <ten_ch>Cửa hàng 01</ten_ch>
+    <sdt_ch>0123456789</sdt_ch>
+    <dia_chi_ch>Quận 3</dia_chi_ch>
   </CuaHang>
   <CuaHang>
     <id_ch>CH02</id_ch>
-    <ten_ch>Cua hang 2</ten_ch>
-    <dia_chi_ch>Quan 3</dia_chi_ch>
+    <ten_ch>Cửa hàng 02</ten_ch>
+    <sdt_ch>0123586755</sdt_ch>
+    <dia_chi_ch>Bình Chánh</dia_chi_ch>
   </CuaHang>
   <CuaHang>
     <id_ch>CH03</id_ch>
-    <ten_ch>Cua hang 3</ten_ch>
-    <dia_chi_ch>Quan 10</dia_chi_ch>
+    <ten_ch>Cửa hàng 03</ten_ch>
+    <sdt_ch>0867243244</sdt_ch>
+    <dia_chi_ch>Quận 10</dia_chi_ch>
   </CuaHang>
 </ArrayOfCuaHang>

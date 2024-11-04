@@ -11,7 +11,7 @@ public class HoaDonNhap : HoaDon
     {
 
     }
-    public HoaDonNhap(QuanLyNhapXuat qlnx, NhanVien nv_lap, NhaCungCap nha_cung_cap, ulong tong_tien) : base(qlnx, nv_lap, tong_tien)
+    public HoaDonNhap(QuanLyNhapXuat qlnx, string id_hoa_don, NhanVien nv_lap, NhaCungCap nha_cung_cap, ulong tong_tien) : base(qlnx, id_hoa_don, nv_lap, tong_tien)
     {
         this.nha_cung_cap = nha_cung_cap;
         ngay_tao_don = DateTime.Now;

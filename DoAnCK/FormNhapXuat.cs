@@ -30,32 +30,6 @@ namespace DoAnCK
 
             this.isnhap = isnhap;
             this.current_nv = current_nv;
-
-
-            foreach (HangHoa hh in kho.ds_hang_hoa)
-            {
-                HangHoaNhapXuatComponent hh_component = new HangHoaNhapXuatComponent(this);
-                hh_component.hh = hh;
-                hh_component.SetProductInfo(hh);
-                dshh_flp.Controls.Add(hh_component);
-            }
-
-            if (isnhap)
-            {
-                ncc_ch_lbl.Text = "Nhà cung cấp";
-                foreach (NhaCungCap ncc in kho.ds_ncc)
-                {
-                    ncc_ch_cbb.Items.Add(ncc.ten_ncc);
-                }
-            }
-            else
-            {
-                ncc_ch_lbl.Text = "Cửa hàng";
-                foreach (CuaHang ch in  kho.ds_cua_hang)
-                {
-                    ncc_ch_cbb.Items.Add(ch.ten_ch);
-                }
-            }
         }
 
         public void them_hh_lo(HangHoa hh)
@@ -199,15 +173,18 @@ namespace DoAnCK
                 if (current_ncc != null)
                 {
                     kho.capnhatkho(quanlynhapxuat.ds_hang_hoa, true);
+                    string id_hoa_don = "HDN" + (kho.ds_hoa_don_nhap.Count + 1);
+
                     FormPhieuHoaDon formHoaDon = new FormPhieuHoaDon();
                     formHoaDon.hd_lbl.Text = "Hoá Đơn Nhập";
                     formHoaDon.ngaylap_lbl.Text = DateTime.Now.ToString();
                     formHoaDon.idnv_lbl.Text = "ID nhân viên lập: " + current_nv.id_nv;
+                    formHoaDon.idhd_lbl.Text = "ID hoá đơn: " + id_hoa_don;
                     formHoaDon.idncc_ch_lbl.Text = "ID nhà cung cấp: " + current_ncc.id_ncc;
                     formHoaDon.them_dshd(quanlynhapxuat.ds_hang_hoa);
                     formHoaDon.Show();
 
-                    HoaDonNhap hoaDonNhap = new HoaDonNhap(quanlynhapxuat, current_nv, current_ncc, quanlynhapxuat.tinh_tong_tien());
+                    HoaDonNhap hoaDonNhap = new HoaDonNhap(quanlynhapxuat, id_hoa_don, current_nv, current_ncc, quanlynhapxuat.tinh_tong_tien());
                     kho.ThemHoaDonNhap(hoaDonNhap);
 
                     dshh_flp.Controls.Clear();
@@ -238,15 +215,18 @@ namespace DoAnCK
                     if (kho.kha_dung(quanlynhapxuat.ds_hang_hoa))
                     {
                         kho.capnhatkho(quanlynhapxuat.ds_hang_hoa, false);
+                        string id_hoa_don = "HDX" + (kho.ds_hoa_don_xuat.Count + 1);
+
                         FormPhieuHoaDon formHoaDon = new FormPhieuHoaDon();
                         formHoaDon.hd_lbl.Text = "Hoá Đơn Xuất";
                         formHoaDon.ngaylap_lbl.Text = DateTime.Now.ToString();
                         formHoaDon.idnv_lbl.Text = "ID nhân viên lập: " + current_nv.id_nv;
+                        formHoaDon.idhd_lbl.Text = "ID hoá đơn: " + id_hoa_don;
                         formHoaDon.idncc_ch_lbl.Text = "ID cửa hàng: " + current_ch.id_ch;
                         formHoaDon.them_dshd(quanlynhapxuat.ds_hang_hoa);
                         formHoaDon.Show();
 
-                        HoaDonXuat hoaDonXuat = new HoaDonXuat(quanlynhapxuat, current_nv, current_ch, quanlynhapxuat.tinh_tong_tien());
+                        HoaDonXuat hoaDonXuat = new HoaDonXuat(quanlynhapxuat, id_hoa_don, current_nv, current_ch, quanlynhapxuat.tinh_tong_tien());
                         kho.ThemHoaDonXuat(hoaDonXuat);
 
 
@@ -274,6 +254,34 @@ namespace DoAnCK
                     MessageBox.Show("Hãy chọn cửa hàng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }  
+        }
+
+        private void FormNhapXuat_Load(object sender, EventArgs e)
+        {
+            foreach (HangHoa hh in kho.ds_hang_hoa)
+            {
+                HangHoaNhapXuatComponent hh_component = new HangHoaNhapXuatComponent(this);
+                hh_component.hh = hh;
+                hh_component.SetProductInfo(hh);
+                dshh_flp.Controls.Add(hh_component);
+            }
+
+            if (isnhap)
+            {
+                ncc_ch_lbl.Text = "Nhà cung cấp";
+                foreach (NhaCungCap ncc in kho.ds_ncc)
+                {
+                    ncc_ch_cbb.Items.Add(ncc.ten_ncc);
+                }
+            }
+            else
+            {
+                ncc_ch_lbl.Text = "Cửa hàng";
+                foreach (CuaHang ch in kho.ds_cua_hang)
+                {
+                    ncc_ch_cbb.Items.Add(ch.ten_ch);
+                }
+            }
         }
     }
 }

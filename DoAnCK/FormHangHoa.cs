@@ -17,13 +17,12 @@ namespace DoAnCK
         private KhoHang kho = new KhoHang();
         private HangHoa hh;
         private string img_filepath;
-        public FormHangHoa(HangHoa hh)
+        private FormTrangChu formTrangChu;
+        public FormHangHoa(HangHoa hh, FormTrangChu formTrangChu)
         {
             InitializeComponent();
-            cbb_hanghoa.Items.Add("Điện tử");
-            cbb_hanghoa.Items.Add("Gia dụng");
-            cbb_hanghoa.Items.Add("Thực phẩm");
-
+            
+            this.formTrangChu = formTrangChu;
             this.hh = hh;
             kho.LoadData();
         }
@@ -68,6 +67,7 @@ namespace DoAnCK
             if (hh != null)
             {
                 MessageBox.Show("Hàng hoá đã tồn tại");
+                txt_id.Text = "";
             }
         }
 
@@ -92,7 +92,7 @@ namespace DoAnCK
             else
             {
                 DialogResult xacnhan = MessageBox.Show("Bạn có chắc chắn muốn thêm hàng hoá?", "Xác nhận", MessageBoxButtons.OKCancel);
-                if (xacnhan != DialogResult.OK)
+                if (xacnhan == DialogResult.OK)
                 {
                     if (loai_hh == "Điện tử")
                     {
@@ -125,6 +125,7 @@ namespace DoAnCK
 
                         kho.them_hh(hh);
                     }
+                    formTrangChu.Reload_flp();
                     this.Close();
                 } 
             }
@@ -133,16 +134,21 @@ namespace DoAnCK
         private void xoa_btn_Click(object sender, EventArgs e)
         {
             DialogResult xacnhan = MessageBox.Show("Bạn có chắc chắn muốn xoá hàng hoá?", "Xác nhận", MessageBoxButtons.OKCancel);
-            if (xacnhan != DialogResult.OK)
+            if (xacnhan == DialogResult.OK)
             {
                 hh = kho.ds_hang_hoa.Find(x => x.id == hh.id);
                 kho.xoa_hh(hh);
+                formTrangChu.Reload_flp();
                 this.Close();
             }
         }
 
         private void FormHangHoa_Load(object sender, EventArgs e)
         {
+            cbb_hanghoa.Items.Add("Điện tử");
+            cbb_hanghoa.Items.Add("Gia dụng");
+            cbb_hanghoa.Items.Add("Thực phẩm");
+
             if (hh == null)
             {
                 xoa_btn.Visible = false;

@@ -19,19 +19,19 @@ namespace DoAnCK
         public FormTrangChu()
         {
             InitializeComponent();
-            string filePath_hh = "Resources/hang_hoa.dat";
-            using (StreamReader reader = new StreamReader(filePath_hh))
-            {
-                XmlSerializer serializer = new XmlSerializer(typeof(List<HangHoa>));
-                kho.ds_hang_hoa = (List<HangHoa>)serializer.Deserialize(reader);
-            }
+            kho.LoadData();
+        }
 
+        public void Reload_flp()
+        {
+            dshh_flp.Controls.Clear();
+            kho.LoadData();
             foreach (HangHoa hh in kho.ds_hang_hoa)
             {
                 HangHoaTrangChuComponent hh_component = new HangHoaTrangChuComponent(this);
                 hh_component.hh = hh;
                 hh_component.SetProductInfo(hh);
-                xoahh_btn.Controls.Add(hh_component);
+                dshh_flp.Controls.Add(hh_component);
             }
         }
 
@@ -42,13 +42,13 @@ namespace DoAnCK
             dientu_btn.Checked = false;
             thucpham_btn.Checked = false;
 
-            xoahh_btn.Controls.Clear();
+            dshh_flp.Controls.Clear();
             foreach (HangHoa hh in kho.ds_hang_hoa)
             {
                 HangHoaTrangChuComponent hh_component = new HangHoaTrangChuComponent(this);
                 hh_component.hh = hh;
                 hh_component.SetProductInfo(hh);
-                xoahh_btn.Controls.Add(hh_component);
+                dshh_flp.Controls.Add(hh_component);
             }
         }
 
@@ -59,7 +59,7 @@ namespace DoAnCK
             dientu_btn.Checked = false;
             thucpham_btn.Checked = false;
 
-            xoahh_btn.Controls.Clear();
+            dshh_flp.Controls.Clear();
             foreach (HangHoa hh in kho.ds_hang_hoa)
             {
                 if (hh is GiaDung)
@@ -67,7 +67,7 @@ namespace DoAnCK
                     HangHoaTrangChuComponent hh_component = new HangHoaTrangChuComponent(this);
                     hh_component.hh = hh;
                     hh_component.SetProductInfo(hh);
-                    xoahh_btn.Controls.Add(hh_component);
+                    dshh_flp.Controls.Add(hh_component);
                 }
             }
         }
@@ -79,7 +79,7 @@ namespace DoAnCK
             dientu_btn.Checked = true;
             thucpham_btn.Checked = false;
 
-            xoahh_btn.Controls.Clear();
+            dshh_flp.Controls.Clear();
             foreach (HangHoa hh in kho.ds_hang_hoa)
             {
                 if (hh is DienTu)
@@ -87,7 +87,7 @@ namespace DoAnCK
                     HangHoaTrangChuComponent hh_component = new HangHoaTrangChuComponent(this);
                     hh_component.hh = hh;
                     hh_component.SetProductInfo(hh);
-                    xoahh_btn.Controls.Add(hh_component);
+                    dshh_flp.Controls.Add(hh_component);
                 }
             }
         }
@@ -99,7 +99,7 @@ namespace DoAnCK
             dientu_btn.Checked = false;
             thucpham_btn.Checked = true;
 
-            xoahh_btn.Controls.Clear();
+            dshh_flp.Controls.Clear();
             foreach (HangHoa hh in kho.ds_hang_hoa)
             {
                 if (hh is ThucPham)
@@ -107,14 +107,14 @@ namespace DoAnCK
                     HangHoaTrangChuComponent hh_component = new HangHoaTrangChuComponent(this);
                     hh_component.hh = hh;
                     hh_component.SetProductInfo(hh);
-                    xoahh_btn.Controls.Add(hh_component);
+                    dshh_flp.Controls.Add(hh_component);
                 }
             }
         }
 
         private void search_tb_TextChanged(object sender, EventArgs e)
         { 
-            xoahh_btn.Controls.Clear();
+            dshh_flp.Controls.Clear();
             string searchText = search_tb.Text;
             if (dientu_btn.Checked == true)
             {
@@ -125,7 +125,7 @@ namespace DoAnCK
                         HangHoaTrangChuComponent hh_component = new HangHoaTrangChuComponent(this);
                         hh_component.hh = hh;
                         hh_component.SetProductInfo(hh);
-                        xoahh_btn.Controls.Add(hh_component);
+                        dshh_flp.Controls.Add(hh_component);
                     }
                 }
             }
@@ -139,7 +139,7 @@ namespace DoAnCK
                         HangHoaTrangChuComponent hh_component = new HangHoaTrangChuComponent(this);
                         hh_component.hh = hh;
                         hh_component.SetProductInfo(hh);
-                        xoahh_btn.Controls.Add(hh_component);
+                        dshh_flp.Controls.Add(hh_component);
                     }
                 }
             }
@@ -153,7 +153,7 @@ namespace DoAnCK
                         HangHoaTrangChuComponent hh_component = new HangHoaTrangChuComponent(this);
                         hh_component.hh = hh;
                         hh_component.SetProductInfo(hh);
-                        xoahh_btn.Controls.Add(hh_component);
+                        dshh_flp.Controls.Add(hh_component);
                     }
                 }
             }
@@ -167,7 +167,7 @@ namespace DoAnCK
                         HangHoaTrangChuComponent hh_component = new HangHoaTrangChuComponent(this);
                         hh_component.hh = hh;
                         hh_component.SetProductInfo(hh);
-                        xoahh_btn.Controls.Add(hh_component);
+                        dshh_flp.Controls.Add(hh_component);
                     }
                 }
             }
@@ -180,8 +180,26 @@ namespace DoAnCK
 
         private void them_btn_Click(object sender, EventArgs e)
         {
-            FormHangHoa formthem = new FormHangHoa(null);
+            FormHangHoa formthem = new FormHangHoa(null, this);
             formthem.Show();
+        }
+
+        private void FormTrangChu_Load(object sender, EventArgs e)
+        {
+            string filePath_hh = "Resources/hang_hoa.dat";
+            using (StreamReader reader = new StreamReader(filePath_hh))
+            {
+                XmlSerializer serializer = new XmlSerializer(typeof(List<HangHoa>));
+                kho.ds_hang_hoa = (List<HangHoa>)serializer.Deserialize(reader);
+            }
+
+            foreach (HangHoa hh in kho.ds_hang_hoa)
+            {
+                HangHoaTrangChuComponent hh_component = new HangHoaTrangChuComponent(this);
+                hh_component.hh = hh;
+                hh_component.SetProductInfo(hh);
+                dshh_flp.Controls.Add(hh_component);
+            }
         }
     }
 }

@@ -37,7 +37,7 @@
             this.giadung_btn = new Guna.UI2.WinForms.Guna2Button();
             this.tatca_btn = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.xoahh_btn = new System.Windows.Forms.FlowLayoutPanel();
+            this.dshh_flp = new System.Windows.Forms.FlowLayoutPanel();
             this.them_btn = new Guna.UI2.WinForms.Guna2Button();
             this.dssp_pnl.SuspendLayout();
             this.SuspendLayout();
@@ -60,14 +60,14 @@
             this.search_tb.IconLeft = ((System.Drawing.Image)(resources.GetObject("search_tb.IconLeft")));
             this.search_tb.IconLeftOffset = new System.Drawing.Point(-3, -1);
             this.search_tb.IconLeftSize = new System.Drawing.Size(35, 35);
-            this.search_tb.Location = new System.Drawing.Point(27, 12);
-            this.search_tb.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.search_tb.Location = new System.Drawing.Point(20, 10);
+            this.search_tb.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.search_tb.Name = "search_tb";
             this.search_tb.PasswordChar = '\0';
             this.search_tb.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
             this.search_tb.PlaceholderText = "";
             this.search_tb.SelectedText = "";
-            this.search_tb.Size = new System.Drawing.Size(267, 49);
+            this.search_tb.Size = new System.Drawing.Size(200, 40);
             this.search_tb.TabIndex = 5;
             this.search_tb.TextChanged += new System.EventHandler(this.search_tb_TextChanged);
             this.search_tb.MouseClick += new System.Windows.Forms.MouseEventHandler(this.search_tb_MouseClick);
@@ -77,10 +77,9 @@
             this.dssp_pnl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.dssp_pnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.dssp_pnl.Controls.Add(this.dshh_lbl);
-            this.dssp_pnl.Location = new System.Drawing.Point(0, 74);
-            this.dssp_pnl.Margin = new System.Windows.Forms.Padding(4);
+            this.dssp_pnl.Location = new System.Drawing.Point(0, 60);
             this.dssp_pnl.Name = "dssp_pnl";
-            this.dssp_pnl.Size = new System.Drawing.Size(1125, 61);
+            this.dssp_pnl.Size = new System.Drawing.Size(844, 50);
             this.dssp_pnl.TabIndex = 6;
             // 
             // dshh_lbl
@@ -88,8 +87,7 @@
             this.dshh_lbl.AutoSize = true;
             this.dshh_lbl.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold);
             this.dshh_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.dshh_lbl.Location = new System.Drawing.Point(400, 14);
-            this.dshh_lbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.dshh_lbl.Location = new System.Drawing.Point(300, 11);
             this.dshh_lbl.Name = "dshh_lbl";
             this.dshh_lbl.Size = new System.Drawing.Size(222, 26);
             this.dshh_lbl.TabIndex = 4;
@@ -106,10 +104,9 @@
             this.thucpham_btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.thucpham_btn.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold);
             this.thucpham_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.thucpham_btn.Location = new System.Drawing.Point(880, 148);
-            this.thucpham_btn.Margin = new System.Windows.Forms.Padding(4);
+            this.thucpham_btn.Location = new System.Drawing.Point(660, 120);
             this.thucpham_btn.Name = "thucpham_btn";
-            this.thucpham_btn.Size = new System.Drawing.Size(200, 49);
+            this.thucpham_btn.Size = new System.Drawing.Size(150, 40);
             this.thucpham_btn.TabIndex = 13;
             this.thucpham_btn.Text = "Thực phẩm";
             this.thucpham_btn.Click += new System.EventHandler(this.thucpham_btn_Click);
@@ -125,10 +122,9 @@
             this.dientu_btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.dientu_btn.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold);
             this.dientu_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.dientu_btn.Location = new System.Drawing.Point(600, 148);
-            this.dientu_btn.Margin = new System.Windows.Forms.Padding(4);
+            this.dientu_btn.Location = new System.Drawing.Point(450, 120);
             this.dientu_btn.Name = "dientu_btn";
-            this.dientu_btn.Size = new System.Drawing.Size(200, 49);
+            this.dientu_btn.Size = new System.Drawing.Size(150, 40);
             this.dientu_btn.TabIndex = 12;
             this.dientu_btn.Text = "Điện tử";
             this.dientu_btn.Click += new System.EventHandler(this.dientu_btn_Click);
@@ -144,10 +140,9 @@
             this.giadung_btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.giadung_btn.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold);
             this.giadung_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.giadung_btn.Location = new System.Drawing.Point(320, 148);
-            this.giadung_btn.Margin = new System.Windows.Forms.Padding(4);
+            this.giadung_btn.Location = new System.Drawing.Point(240, 120);
             this.giadung_btn.Name = "giadung_btn";
-            this.giadung_btn.Size = new System.Drawing.Size(200, 49);
+            this.giadung_btn.Size = new System.Drawing.Size(150, 40);
             this.giadung_btn.TabIndex = 11;
             this.giadung_btn.Text = "Gia dụng";
             this.giadung_btn.Click += new System.EventHandler(this.giadung_btn_Click);
@@ -164,10 +159,9 @@
             this.tatca_btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tatca_btn.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold);
             this.tatca_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.tatca_btn.Location = new System.Drawing.Point(40, 148);
-            this.tatca_btn.Margin = new System.Windows.Forms.Padding(4);
+            this.tatca_btn.Location = new System.Drawing.Point(30, 120);
             this.tatca_btn.Name = "tatca_btn";
-            this.tatca_btn.Size = new System.Drawing.Size(200, 49);
+            this.tatca_btn.Size = new System.Drawing.Size(150, 40);
             this.tatca_btn.TabIndex = 10;
             this.tatca_btn.Text = "Tất cả";
             this.tatca_btn.Click += new System.EventHandler(this.tatca_btn_Click);
@@ -176,20 +170,18 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Location = new System.Drawing.Point(0, 209);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(0, 170);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1125, 6);
+            this.panel2.Size = new System.Drawing.Size(844, 5);
             this.panel2.TabIndex = 15;
             // 
-            // xoahh_btn
+            // dshh_flp
             // 
-            this.xoahh_btn.AutoScroll = true;
-            this.xoahh_btn.Location = new System.Drawing.Point(20, 234);
-            this.xoahh_btn.Margin = new System.Windows.Forms.Padding(4);
-            this.xoahh_btn.Name = "xoahh_btn";
-            this.xoahh_btn.Size = new System.Drawing.Size(1080, 455);
-            this.xoahh_btn.TabIndex = 14;
+            this.dshh_flp.AutoScroll = true;
+            this.dshh_flp.Location = new System.Drawing.Point(15, 190);
+            this.dshh_flp.Name = "dshh_flp";
+            this.dshh_flp.Size = new System.Drawing.Size(810, 370);
+            this.dshh_flp.TabIndex = 14;
             // 
             // them_btn
             // 
@@ -202,24 +194,23 @@
             this.them_btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(132)))), ((int)(((byte)(49)))));
             this.them_btn.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold);
             this.them_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.them_btn.Location = new System.Drawing.Point(853, 12);
-            this.them_btn.Margin = new System.Windows.Forms.Padding(4);
+            this.them_btn.Location = new System.Drawing.Point(640, 10);
             this.them_btn.Name = "them_btn";
             this.them_btn.PressedColor = System.Drawing.Color.Purple;
-            this.them_btn.Size = new System.Drawing.Size(200, 49);
+            this.them_btn.Size = new System.Drawing.Size(150, 40);
             this.them_btn.TabIndex = 16;
             this.them_btn.Text = "Thêm hàng hoá";
             this.them_btn.Click += new System.EventHandler(this.them_btn_Click);
             // 
             // FormTrangChu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.ClientSize = new System.Drawing.Size(1125, 711);
+            this.ClientSize = new System.Drawing.Size(844, 578);
             this.Controls.Add(this.them_btn);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.xoahh_btn);
+            this.Controls.Add(this.dshh_flp);
             this.Controls.Add(this.thucpham_btn);
             this.Controls.Add(this.dientu_btn);
             this.Controls.Add(this.giadung_btn);
@@ -227,9 +218,9 @@
             this.Controls.Add(this.dssp_pnl);
             this.Controls.Add(this.search_tb);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormTrangChu";
             this.Text = "FormTrangChu";
+            this.Load += new System.EventHandler(this.FormTrangChu_Load);
             this.dssp_pnl.ResumeLayout(false);
             this.dssp_pnl.PerformLayout();
             this.ResumeLayout(false);
@@ -244,8 +235,8 @@
         private Guna.UI2.WinForms.Guna2Button giadung_btn;
         private Guna.UI2.WinForms.Guna2Button tatca_btn;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.FlowLayoutPanel xoahh_btn;
         private Guna.UI2.WinForms.Guna2TextBox search_tb;
         private Guna.UI2.WinForms.Guna2Button them_btn;
+        private System.Windows.Forms.FlowLayoutPanel dshh_flp;
     }
 }

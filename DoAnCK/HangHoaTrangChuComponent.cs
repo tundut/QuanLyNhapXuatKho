@@ -57,7 +57,7 @@ namespace DoAnCK
 
         private void MouseClick(object sender, EventArgs e)
         {
-            FormHangHoa formHangHoa = new FormHangHoa(hh);
+            FormHangHoa formHangHoa = new FormHangHoa(hh, TrangChu);
 
             formHangHoa.Show();
         }

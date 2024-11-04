@@ -60,8 +60,7 @@ namespace DoAnCK
             childForm.Show();
         }
 
-        bool hoadonExpand = false;
-
+        private bool hoadonExpand = false;
 
         private void hoadon_timer_Tick(object sender, EventArgs e)
         {

@@ -5,7 +5,6 @@ using System.Xml.Serialization;
 
 public class KhoHang
 {
-    string ten_kho;
     public List<HangHoa> ds_hang_hoa = new List<HangHoa>();
     public List<NhanVien> ds_nhan_vien = new List<NhanVien>();
     public List<CuaHang> ds_cua_hang = new List<CuaHang>();
@@ -107,16 +106,12 @@ public class KhoHang
 
     public void ThemHoaDonNhap(HoaDonNhap hoaDon)
     {
-        string id_hoa_don = "HDN" + (ds_hoa_don_nhap.Count + 1);
-        hoaDon.id_hoa_don = id_hoa_don;
         ds_hoa_don_nhap.Add(hoaDon);
         LuuDanhSachHDN();
     }
 
     public void ThemHoaDonXuat(HoaDonXuat hoaDon)
     {
-        string id_hoa_don = "HDX" + (ds_hoa_don_xuat.Count + 1);
-        hoaDon.id_hoa_don = id_hoa_don;
         ds_hoa_don_xuat.Add(hoaDon);
         LuuDanhSachHDX();
     }
