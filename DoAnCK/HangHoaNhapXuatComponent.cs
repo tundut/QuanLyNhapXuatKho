@@ -24,7 +24,14 @@ namespace DoAnCK
             ten_lbl.Text = hh.ten_hang;
             dongia_lbl.Text = "Đơn giá: " + hh.don_gia.ToString();
             soluong_lbl.Text = "SL: " + hh.so_luong.ToString();
-            hanghoa_ptb.ImageLocation = "Resources/default.jpg";
+            if (hh.img != null)
+            {
+                hanghoa_ptb.ImageLocation = hh.img;
+            }
+            else
+            {
+                hanghoa_ptb.ImageLocation = "Resources/default.jpg";
+            }
         }
 
 

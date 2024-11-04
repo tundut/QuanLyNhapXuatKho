@@ -19,7 +19,6 @@ namespace DoAnCK
         public FormTrangChu()
         {
             InitializeComponent();
-
             string filePath_hh = "Resources/hang_hoa.dat";
             using (StreamReader reader = new StreamReader(filePath_hh))
             {
@@ -181,8 +180,9 @@ namespace DoAnCK
 
         private void them_btn_Click(object sender, EventArgs e)
         {
-            FormThemHang formthem = new FormThemHang();
+            FormHangHoa formthem = new FormHangHoa(null);
             formthem.Show();
         }
+
     }
 }

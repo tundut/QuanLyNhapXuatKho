@@ -16,7 +16,7 @@ public abstract class HangHoa : ICloneable, ISerializable
     public ulong don_gia;
     public string img;
 
-    protected HangHoa()
+    public HangHoa()
     {
 
     }

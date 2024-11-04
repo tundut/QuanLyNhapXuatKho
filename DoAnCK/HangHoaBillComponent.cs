@@ -12,9 +12,9 @@ namespace DoAnCK
 {
     public partial class BillComponent : UserControl
     {
-        private FormHoaDon HoaDon;
+        private FormPhieuHoaDon HoaDon;
         public HangHoa hh;
-        public BillComponent(FormHoaDon HoaDon)
+        public BillComponent(FormPhieuHoaDon HoaDon)
         {
             InitializeComponent();
             this.HoaDon = HoaDon;

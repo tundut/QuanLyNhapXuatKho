@@ -86,6 +86,41 @@ public class KhoHang
         }
     }
 
+    public void LuuDanhSachHDX()
+    {
+        string filePath = "Resources/hoa_don_xuat.dat";
+        using (StreamWriter writer = new StreamWriter(filePath))
+        {
+            XmlSerializer serializer = new XmlSerializer(typeof(List<HoaDonXuat>));
+            serializer.Serialize(writer, ds_hoa_don_xuat);
+        }
+    }
+    public void LuuDanhSachHDN()
+    {
+        string filePath = "Resources/hoa_don_nhap.dat";
+        using (StreamWriter writer = new StreamWriter(filePath))
+        {
+            XmlSerializer serializer = new XmlSerializer(typeof(List<HoaDonNhap>));
+            serializer.Serialize(writer, ds_hoa_don_nhap);
+        }
+    }
+
+    public void ThemHoaDonNhap(HoaDonNhap hoaDon)
+    {
+        string id_hoa_don = "HDN" + (ds_hoa_don_nhap.Count + 1);
+        hoaDon.id_hoa_don = id_hoa_don;
+        ds_hoa_don_nhap.Add(hoaDon);
+        LuuDanhSachHDN();
+    }
+
+    public void ThemHoaDonXuat(HoaDonXuat hoaDon)
+    {
+        string id_hoa_don = "HDX" + (ds_hoa_don_xuat.Count + 1);
+        hoaDon.id_hoa_don = id_hoa_don;
+        ds_hoa_don_xuat.Add(hoaDon);
+        LuuDanhSachHDX();
+    }
+
     public void LoadData()
     {
         string filePath_hh = "Resources/hang_hoa.dat";
@@ -135,6 +170,18 @@ public class KhoHang
     {
         hh.so_luong = 0;
         ds_hang_hoa.Add(hh);
+        string filePath = "./Resources/hang_hoa.dat";
+        using (StreamWriter writer = new StreamWriter(filePath))
+        {
+            XmlSerializer serializer = new XmlSerializer(typeof(List<HangHoa>));
+            serializer.Serialize(writer, ds_hang_hoa);
+        }
+    }
+
+    public void xoa_hh(HangHoa hh)
+    {
+        hh.so_luong = 0;
+        ds_hang_hoa.Remove(hh);
         string filePath = "./Resources/hang_hoa.dat";
         using (StreamWriter writer = new StreamWriter(filePath))
         {

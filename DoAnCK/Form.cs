@@ -24,7 +24,7 @@ namespace DoAnCK
             InitializeComponent();
             ngay_lbl.Text = "Ngày " + DateTime.Now.ToString("dd/MM/yyyy");
             OpenChildForm(new FormTrangChu());
-            //ShowLoginForm();
+            ShowLoginForm();
         }
 
         private NhanVien current_nv;
@@ -161,7 +161,7 @@ namespace DoAnCK
 
         private void hoadonnhap_btn_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new FormHoaDon(_kho));
+            OpenChildForm(new FormHoaDon(true));
             trangchu_btn.Checked = false;
             nhaphang_btn.Checked = false;
             xuathang_btn.Checked = false;
@@ -173,7 +173,7 @@ namespace DoAnCK
 
         private void hoadonxuat_btn_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new FormHoaDon(_kho));
+            OpenChildForm(new FormHoaDon(false));
             trangchu_btn.Checked = false;
             nhaphang_btn.Checked = false;
             xuathang_btn.Checked = false;

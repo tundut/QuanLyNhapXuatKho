@@ -40,7 +40,7 @@ namespace DoAnCK
             }
             else
             {
-                MessageBox.Show("Đăng nhập thất bại. Vui lòng thử lại.");
+                MessageBox.Show("Sai tên tài khoản hoặc mật khẩu. Vui lòng thử lại.", "Lỗi đăng nhập", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

@@ -46,7 +46,7 @@
             this.guna2Panel1.Controls.Add(this.hanghoa_ptb);
             this.guna2Panel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Panel1.Location = new System.Drawing.Point(4, 4);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(152, 202);
             this.guna2Panel1.TabIndex = 1;
@@ -62,7 +62,7 @@
             this.soluong_lbl.Location = new System.Drawing.Point(100, 183);
             this.soluong_lbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.soluong_lbl.Name = "soluong_lbl";
-            this.soluong_lbl.Size = new System.Drawing.Size(28, 15);
+            this.soluong_lbl.Size = new System.Drawing.Size(26, 13);
             this.soluong_lbl.TabIndex = 3;
             this.soluong_lbl.Text = "SL: ";
             this.soluong_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -78,7 +78,7 @@
             this.dongia_lbl.Location = new System.Drawing.Point(4, 162);
             this.dongia_lbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.dongia_lbl.Name = "dongia_lbl";
-            this.dongia_lbl.Size = new System.Drawing.Size(66, 17);
+            this.dongia_lbl.Size = new System.Drawing.Size(56, 15);
             this.dongia_lbl.TabIndex = 2;
             this.dongia_lbl.Text = "Don gia: ";
             this.dongia_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -94,7 +94,7 @@
             this.ten_lbl.Location = new System.Drawing.Point(4, 142);
             this.ten_lbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ten_lbl.Name = "ten_lbl";
-            this.ten_lbl.Size = new System.Drawing.Size(43, 18);
+            this.ten_lbl.Size = new System.Drawing.Size(33, 15);
             this.ten_lbl.TabIndex = 1;
             this.ten_lbl.Text = "Ten: ";
             this.ten_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -105,7 +105,7 @@
             // hanghoa_ptb
             // 
             this.hanghoa_ptb.Location = new System.Drawing.Point(4, 4);
-            this.hanghoa_ptb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.hanghoa_ptb.Margin = new System.Windows.Forms.Padding(4);
             this.hanghoa_ptb.Name = "hanghoa_ptb";
             this.hanghoa_ptb.Size = new System.Drawing.Size(144, 133);
             this.hanghoa_ptb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -120,7 +120,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2Panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HangHoaNhapXuatComponent";
             this.Size = new System.Drawing.Size(160, 209);
             this.guna2Panel1.ResumeLayout(false);

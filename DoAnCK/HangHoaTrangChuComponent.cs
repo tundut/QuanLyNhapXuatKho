@@ -57,12 +57,9 @@ namespace DoAnCK
 
         private void MouseClick(object sender, EventArgs e)
         {
-            guna2Panel1.FillColor = ColorTranslator.FromHtml("#888888");
-            id_lbl.BackColor = ColorTranslator.FromHtml("#888888");
-            hanghoa_ptb.BackColor = ColorTranslator.FromHtml("#888888");
-            ten_lbl.BackColor = ColorTranslator.FromHtml("#888888");
-            dongia_lbl.BackColor = ColorTranslator.FromHtml("#888888");
-            soluong_lbl.BackColor = ColorTranslator.FromHtml("#888888");
+            FormHangHoa formHangHoa = new FormHangHoa(hh);
+
+            formHangHoa.Show();
         }
     }
 }

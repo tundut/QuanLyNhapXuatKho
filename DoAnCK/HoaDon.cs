@@ -9,9 +9,9 @@ using System;
 [Serializable]
 public abstract class HoaDon : ISerializable
 {
-    public string ma_don_hang;
+    public string id_hoa_don;
     public DateTime ngay_tao_don;
-    public QuanLyNhapXuat ds_hang_hoa;
+    public QuanLyNhapXuat qlnx;
     public NhanVien nv_lap;
     public ulong tong_tien;
 
@@ -19,28 +19,28 @@ public abstract class HoaDon : ISerializable
     {
 
     }
-    public HoaDon(string ma_don_hang, QuanLyNhapXuat ds_hang_hoa, NhanVien nv_lap)
+    public HoaDon(QuanLyNhapXuat qlnx, NhanVien nv_lap, ulong tong_tien)
     {
-        this.ma_don_hang = ma_don_hang;
         this.ngay_tao_don = DateTime.Now;
-        this.ds_hang_hoa = ds_hang_hoa;
+        this.qlnx = qlnx;
         this.nv_lap = nv_lap;
+        this.tong_tien = tong_tien;
     }
 
     public virtual void GetObjectData(SerializationInfo info, StreamingContext context)
     {
-        info.AddValue("ma_don_hang", ma_don_hang);
+        info.AddValue("id_hoa_don", id_hoa_don);
         info.AddValue("ngay_tao_don", ngay_tao_don);
-        info.AddValue("ds_hang_hoa", ds_hang_hoa);
+        info.AddValue("qlnx", qlnx);
         info.AddValue("nv_lap", nv_lap);
         info.AddValue("tong_tien", tong_tien);
     }
 
     public HoaDon(SerializationInfo info, StreamingContext context)
     {
-        ma_don_hang = info.GetString("ma_don_hang");
+        id_hoa_don = info.GetString("id_hoa_don");
         ngay_tao_don = (DateTime)info.GetValue("ngay_tao_don", typeof(DateTime));
-        ds_hang_hoa = (QuanLyNhapXuat)info.GetValue("ds_hang_hoa", typeof(QuanLyNhapXuat));
+        qlnx = (QuanLyNhapXuat)info.GetValue("qlnx", typeof(QuanLyNhapXuat));
         nv_lap = (NhanVien)info.GetValue("nv_lap", typeof(NhanVien));
         tong_tien = info.GetUInt64("tong_tien");
     }

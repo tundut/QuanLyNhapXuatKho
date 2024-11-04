@@ -18,5 +18,6 @@ E:\UEH\Sophomore\OOP\DoAnCK\DoAnCK\obj\Debug\DoAnCK.HangHoaLoComponent.resources
 E:\UEH\Sophomore\OOP\DoAnCK\DoAnCK\obj\Debug\DoAnCK.FormDangNhap.resources
 E:\UEH\Sophomore\OOP\DoAnCK\DoAnCK\obj\Debug\DoAnCK.FormCuaHang.resources
 E:\UEH\Sophomore\OOP\DoAnCK\DoAnCK\obj\Debug\DoAnCK.FormNhaCungCap.resources
+E:\UEH\Sophomore\OOP\DoAnCK\DoAnCK\obj\Debug\DoAnCK.FormPhieuHoaDon.resources
 E:\UEH\Sophomore\OOP\DoAnCK\DoAnCK\obj\Debug\DoAnCK.FormHoaDon.resources
-E:\UEH\Sophomore\OOP\DoAnCK\DoAnCK\obj\Debug\DoAnCK.FormThemHang.resources
+E:\UEH\Sophomore\OOP\DoAnCK\DoAnCK\obj\Debug\DoAnCK.FormHangHoa.resources

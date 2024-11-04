@@ -199,13 +199,16 @@ namespace DoAnCK
                 if (current_ncc != null)
                 {
                     kho.capnhatkho(quanlynhapxuat.ds_hang_hoa, true);
-                    FormHoaDon formHoaDon = new FormHoaDon();
+                    FormPhieuHoaDon formHoaDon = new FormPhieuHoaDon();
                     formHoaDon.hd_lbl.Text = "Hoá Đơn Nhập";
                     formHoaDon.ngaylap_lbl.Text = DateTime.Now.ToString();
                     formHoaDon.idnv_lbl.Text = "ID nhân viên lập: " + current_nv.id_nv;
-                    formHoaDon.idncc_ch_lbl.Text = "ID nhà cung cấp" + current_ncc.id_ncc;
+                    formHoaDon.idncc_ch_lbl.Text = "ID nhà cung cấp: " + current_ncc.id_ncc;
                     formHoaDon.them_dshd(quanlynhapxuat.ds_hang_hoa);
                     formHoaDon.Show();
+
+                    HoaDonNhap hoaDonNhap = new HoaDonNhap(quanlynhapxuat, current_nv, current_ncc, quanlynhapxuat.tinh_tong_tien());
+                    kho.ThemHoaDonNhap(hoaDonNhap);
 
                     dshh_flp.Controls.Clear();
                     kho.LoadData();
@@ -223,7 +226,7 @@ namespace DoAnCK
                 }
                 else
                 {
-                    MessageBox.Show("Hãy chọn nhà cung cấp!");
+                    MessageBox.Show("Hãy chọn nhà cung cấp!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 
@@ -235,13 +238,17 @@ namespace DoAnCK
                     if (kho.kha_dung(quanlynhapxuat.ds_hang_hoa))
                     {
                         kho.capnhatkho(quanlynhapxuat.ds_hang_hoa, false);
-                        FormHoaDon formHoaDon = new FormHoaDon();
+                        FormPhieuHoaDon formHoaDon = new FormPhieuHoaDon();
                         formHoaDon.hd_lbl.Text = "Hoá Đơn Xuất";
                         formHoaDon.ngaylap_lbl.Text = DateTime.Now.ToString();
                         formHoaDon.idnv_lbl.Text = "ID nhân viên lập: " + current_nv.id_nv;
-                        formHoaDon.idncc_ch_lbl.Text = "ID cửa hàng " + current_ch.id_ch;
+                        formHoaDon.idncc_ch_lbl.Text = "ID cửa hàng: " + current_ch.id_ch;
                         formHoaDon.them_dshd(quanlynhapxuat.ds_hang_hoa);
                         formHoaDon.Show();
+
+                        HoaDonXuat hoaDonXuat = new HoaDonXuat(quanlynhapxuat, current_nv, current_ch, quanlynhapxuat.tinh_tong_tien());
+                        kho.ThemHoaDonXuat(hoaDonXuat);
+
 
                         dshh_flp.Controls.Clear();
                         kho.LoadData();
@@ -259,12 +266,12 @@ namespace DoAnCK
                     }
                     else
                     {
-                        MessageBox.Show("Số lượng tồn kho không đủ!");
+                        MessageBox.Show("Số lượng tồn kho không đủ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Hãy chọn cửa hàng!");
+                    MessageBox.Show("Hãy chọn cửa hàng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }  
         }
