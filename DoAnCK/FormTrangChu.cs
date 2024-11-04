@@ -183,6 +183,5 @@ namespace DoAnCK
             FormHangHoa formthem = new FormHangHoa(null);
             formthem.Show();
         }
-
     }
 }

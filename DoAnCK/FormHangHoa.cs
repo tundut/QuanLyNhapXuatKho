@@ -179,7 +179,6 @@ namespace DoAnCK
                 bt_xacnhanthemhang.Visible = false;
                 xoa_btn.Visible = true;
             }
-            this.Close();
         }
     }
 }

@@ -36,11 +36,4 @@
     <so_luong>23</so_luong>
     <don_gia>10000</don_gia>
   </HangHoa>
-  <HangHoa xsi:type="DienTu">
-    <id>DT03</id>
-    <ten_hang>hi</ten_hang>
-    <so_luong>7</so_luong>
-    <don_gia>100000</don_gia>
-    <img>C:\Users\ducng\Downloads\download.jpg</img>
-  </HangHoa>
 </ArrayOfHangHoa>
