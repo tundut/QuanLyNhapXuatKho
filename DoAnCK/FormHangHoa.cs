@@ -41,7 +41,7 @@ namespace DoAnCK
 
                 ptb_anhhanghoa.Image = Image.FromFile(filePath);
                 bt_anh.Visible = false;
-                img_filepath = filePath;
+                img_filepath = @".\" + filePath.Substring(filePath.IndexOf("Resources"));
             }
         }
 
