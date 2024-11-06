@@ -391,4 +391,250 @@
       <dia_chi_ncc>Bình Chánh</dia_chi_ncc>
     </nha_cung_cap>
   </HoaDonNhap>
+  <HoaDonNhap>
+    <id_hoa_don>HDN3</id_hoa_don>
+    <ngay_tao_don>2024-11-05T17:12:22.9805038+07:00</ngay_tao_don>
+    <qlnx>
+      <ds_hang_hoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT02</id>
+          <ten_hang>Lò vi sóng</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>2000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Lò vi sóng.jpg</img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT01</id>
+          <ten_hang>Bếp từ</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>1000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Bếp từ.jpg</img>
+        </HangHoa>
+      </ds_hang_hoa>
+    </qlnx>
+    <nv_lap>
+      <id_nv>NV01</id_nv>
+      <ten_nv>Nguyễn Phan Tuấn Đức</ten_nv>
+      <tuoi>19</tuoi>
+      <gioi_tinh>true</gioi_tinh>
+      <dia_chi_nv>Quảng Ngãi</dia_chi_nv>
+      <username>user1</username>
+      <password>pass1</password>
+    </nv_lap>
+    <tong_tien>3000000</tong_tien>
+    <nha_cung_cap>
+      <id_ncc>NCC01</id_ncc>
+      <ten_ncc>Nhà cung cấp 01</ten_ncc>
+      <sdt_ncc>0153654356</sdt_ncc>
+      <dia_chi_ncc>Bình Dương</dia_chi_ncc>
+    </nha_cung_cap>
+  </HoaDonNhap>
+  <HoaDonNhap>
+    <id_hoa_don>HDN4</id_hoa_don>
+    <ngay_tao_don>2024-11-05T20:54:20.476876+07:00</ngay_tao_don>
+    <qlnx>
+      <ds_hang_hoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT01</id>
+          <ten_hang>Bếp từ</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>1000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Bếp từ.jpg</img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT02</id>
+          <ten_hang>Lò vi sóng</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>2000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Lò vi sóng.jpg</img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT03</id>
+          <ten_hang>Máy giặt</ten_hang>
+          <so_luong>5</so_luong>
+          <don_gia>3000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Máy giặt.jpg</img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT04</id>
+          <ten_hang>Máy in</ten_hang>
+          <so_luong>5</so_luong>
+          <don_gia>2500000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Máy in.jpg</img>
+        </HangHoa>
+      </ds_hang_hoa>
+    </qlnx>
+    <nv_lap>
+      <id_nv>NV01</id_nv>
+      <ten_nv>Nguyễn Phan Tuấn Đức</ten_nv>
+      <tuoi>19</tuoi>
+      <gioi_tinh>true</gioi_tinh>
+      <dia_chi_nv>Quảng Ngãi</dia_chi_nv>
+      <username>user1</username>
+      <password>pass1</password>
+    </nv_lap>
+    <tong_tien>30500000</tong_tien>
+    <nha_cung_cap>
+      <id_ncc>NCC02</id_ncc>
+      <ten_ncc>Nhà cung cấp 02</ten_ncc>
+      <sdt_ncc>0784324426</sdt_ncc>
+      <dia_chi_ncc>Thủ Đức</dia_chi_ncc>
+    </nha_cung_cap>
+  </HoaDonNhap>
+  <HoaDonNhap>
+    <id_hoa_don>HDN5</id_hoa_don>
+    <ngay_tao_don>2024-11-05T21:05:41.5744009+07:00</ngay_tao_don>
+    <qlnx>
+      <ds_hang_hoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT01</id>
+          <ten_hang>Bếp từ</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>1000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Bếp từ.jpg</img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT03</id>
+          <ten_hang>Máy giặt</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>3000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Máy giặt.jpg</img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT02</id>
+          <ten_hang>Lò vi sóng</ten_hang>
+          <so_luong>6</so_luong>
+          <don_gia>2000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Lò vi sóng.jpg</img>
+        </HangHoa>
+      </ds_hang_hoa>
+    </qlnx>
+    <nv_lap>
+      <id_nv>NV01</id_nv>
+      <ten_nv>Nguyễn Phan Tuấn Đức</ten_nv>
+      <tuoi>19</tuoi>
+      <gioi_tinh>true</gioi_tinh>
+      <dia_chi_nv>Quảng Ngãi</dia_chi_nv>
+      <username>user1</username>
+      <password>pass1</password>
+    </nv_lap>
+    <tong_tien>16000000</tong_tien>
+    <nha_cung_cap>
+      <id_ncc>NCC03</id_ncc>
+      <ten_ncc>Nhà cung cấp 03</ten_ncc>
+      <sdt_ncc>0566544233</sdt_ncc>
+      <dia_chi_ncc>Bình Chánh</dia_chi_ncc>
+    </nha_cung_cap>
+  </HoaDonNhap>
+  <HoaDonNhap>
+    <id_hoa_don>HDN6</id_hoa_don>
+    <ngay_tao_don>2024-11-05T21:08:22.4280933+07:00</ngay_tao_don>
+    <qlnx>
+      <ds_hang_hoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT01</id>
+          <ten_hang>Bếp từ</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>1000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Bếp từ.jpg</img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT02</id>
+          <ten_hang>Lò vi sóng</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>2000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Lò vi sóng.jpg</img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT03</id>
+          <ten_hang>Máy giặt</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>3000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Máy giặt.jpg</img>
+        </HangHoa>
+      </ds_hang_hoa>
+    </qlnx>
+    <nv_lap>
+      <id_nv>NV01</id_nv>
+      <ten_nv>Nguyễn Phan Tuấn Đức</ten_nv>
+      <tuoi>19</tuoi>
+      <gioi_tinh>true</gioi_tinh>
+      <dia_chi_nv>Quảng Ngãi</dia_chi_nv>
+      <username>user1</username>
+      <password>pass1</password>
+    </nv_lap>
+    <tong_tien>6000000</tong_tien>
+    <nha_cung_cap>
+      <id_ncc>NCC02</id_ncc>
+      <ten_ncc>Nhà cung cấp 02</ten_ncc>
+      <sdt_ncc>0784324426</sdt_ncc>
+      <dia_chi_ncc>Thủ Đức</dia_chi_ncc>
+    </nha_cung_cap>
+  </HoaDonNhap>
+  <HoaDonNhap>
+    <id_hoa_don>HDN7</id_hoa_don>
+    <ngay_tao_don>2024-11-05T21:08:36.9962678+07:00</ngay_tao_don>
+    <qlnx>
+      <ds_hang_hoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT03</id>
+          <ten_hang>Máy giặt</ten_hang>
+          <so_luong>4</so_luong>
+          <don_gia>3000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Máy giặt.jpg</img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT01</id>
+          <ten_hang>Bếp từ</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>1000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Bếp từ.jpg</img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT02</id>
+          <ten_hang>Lò vi sóng</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>2000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Lò vi sóng.jpg</img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT04</id>
+          <ten_hang>Máy in</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>2500000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Máy in.jpg</img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT06</id>
+          <ten_hang>Máy quạt</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>500000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Quạt.jpg</img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT05</id>
+          <ten_hang>Nồi cơm điện</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>1500000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\nồi cơm điện.jpg</img>
+        </HangHoa>
+      </ds_hang_hoa>
+    </qlnx>
+    <nv_lap>
+      <id_nv>NV01</id_nv>
+      <ten_nv>Nguyễn Phan Tuấn Đức</ten_nv>
+      <tuoi>19</tuoi>
+      <gioi_tinh>true</gioi_tinh>
+      <dia_chi_nv>Quảng Ngãi</dia_chi_nv>
+      <username>user1</username>
+      <password>pass1</password>
+    </nv_lap>
+    <tong_tien>19500000</tong_tien>
+    <nha_cung_cap>
+      <id_ncc>NCC03</id_ncc>
+      <ten_ncc>Nhà cung cấp 03</ten_ncc>
+      <sdt_ncc>0566544233</sdt_ncc>
+      <dia_chi_ncc>Bình Chánh</dia_chi_ncc>
+    </nha_cung_cap>
+  </HoaDonNhap>
 </ArrayOfHoaDonNhap>

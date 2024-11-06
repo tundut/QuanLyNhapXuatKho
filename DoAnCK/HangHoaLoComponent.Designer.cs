@@ -44,7 +44,7 @@
             this.id_lbl.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.id_lbl.Location = new System.Drawing.Point(0, 5);
             this.id_lbl.Name = "id_lbl";
-            this.id_lbl.Size = new System.Drawing.Size(29, 24);
+            this.id_lbl.Size = new System.Drawing.Size(25, 19);
             this.id_lbl.TabIndex = 0;
             this.id_lbl.Text = "ID";
             // 
@@ -54,7 +54,7 @@
             this.ten_lbl.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.ten_lbl.Location = new System.Drawing.Point(60, 5);
             this.ten_lbl.Name = "ten_lbl";
-            this.ten_lbl.Size = new System.Drawing.Size(46, 24);
+            this.ten_lbl.Size = new System.Drawing.Size(38, 19);
             this.ten_lbl.TabIndex = 1;
             this.ten_lbl.Text = "Tên";
             // 
@@ -64,7 +64,7 @@
             this.thanhtien_lbl.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.thanhtien_lbl.Location = new System.Drawing.Point(288, 5);
             this.thanhtien_lbl.Name = "thanhtien_lbl";
-            this.thanhtien_lbl.Size = new System.Drawing.Size(111, 24);
+            this.thanhtien_lbl.Size = new System.Drawing.Size(90, 19);
             this.thanhtien_lbl.TabIndex = 3;
             this.thanhtien_lbl.Text = "Thành tiền";
             // 
@@ -130,12 +130,12 @@
             // 
             // soluong_txb
             // 
-            this.soluong_txb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.soluong_txb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.soluong_txb.BackColor = System.Drawing.Color.White;
+            this.soluong_txb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.soluong_txb.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.soluong_txb.Location = new System.Drawing.Point(201, 5);
+            this.soluong_txb.Location = new System.Drawing.Point(201, 3);
             this.soluong_txb.Name = "soluong_txb";
-            this.soluong_txb.Size = new System.Drawing.Size(29, 23);
+            this.soluong_txb.Size = new System.Drawing.Size(29, 26);
             this.soluong_txb.TabIndex = 7;
             this.soluong_txb.Text = "SL";
             this.soluong_txb.TextChanged += new System.EventHandler(this.soluong_txb_TextChanged);

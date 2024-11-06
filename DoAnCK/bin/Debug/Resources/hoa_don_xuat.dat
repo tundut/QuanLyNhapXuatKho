@@ -52,4 +52,579 @@
       <dia_chi_ch>Quận 10</dia_chi_ch>
     </cua_hang>
   </HoaDonXuat>
+  <HoaDonXuat>
+    <id_hoa_don>HDX2</id_hoa_don>
+    <ngay_tao_don>2024-11-05T20:51:39.9596009+07:00</ngay_tao_don>
+    <qlnx>
+      <ds_hang_hoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT01</id>
+          <ten_hang>Bếp từ</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>1000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Bếp từ.jpg</img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT02</id>
+          <ten_hang>Lò vi sóng</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>2000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Lò vi sóng.jpg</img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT03</id>
+          <ten_hang>Máy giặt</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>3000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Máy giặt.jpg</img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT04</id>
+          <ten_hang>Máy in</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>2500000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Máy in.jpg</img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT05</id>
+          <ten_hang>Nồi cơm điện</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>1500000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\nồi cơm điện.jpg</img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT06</id>
+          <ten_hang>Máy quạt</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>500000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Quạt.jpg</img>
+        </HangHoa>
+      </ds_hang_hoa>
+    </qlnx>
+    <nv_lap>
+      <id_nv>NV01</id_nv>
+      <ten_nv>Nguyễn Phan Tuấn Đức</ten_nv>
+      <tuoi>19</tuoi>
+      <gioi_tinh>true</gioi_tinh>
+      <dia_chi_nv>Quảng Ngãi</dia_chi_nv>
+      <username>user1</username>
+      <password>pass1</password>
+    </nv_lap>
+    <tong_tien>10500000</tong_tien>
+    <cua_hang>
+      <id_ch>CH02</id_ch>
+      <ten_ch>Cửa hàng 02</ten_ch>
+      <sdt_ch>0123586755</sdt_ch>
+      <dia_chi_ch>Bình Chánh</dia_chi_ch>
+    </cua_hang>
+  </HoaDonXuat>
+  <HoaDonXuat>
+    <id_hoa_don>HDX3</id_hoa_don>
+    <ngay_tao_don>2024-11-05T20:53:08.2259201+07:00</ngay_tao_don>
+    <qlnx>
+      <ds_hang_hoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT01</id>
+          <ten_hang>Bếp từ</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>1000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Bếp từ.jpg</img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT02</id>
+          <ten_hang>Lò vi sóng</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>2000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Lò vi sóng.jpg</img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT03</id>
+          <ten_hang>Máy giặt</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>3000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Máy giặt.jpg</img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT04</id>
+          <ten_hang>Máy in</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>2500000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Máy in.jpg</img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT06</id>
+          <ten_hang>Máy quạt</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>500000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Quạt.jpg</img>
+        </HangHoa>
+      </ds_hang_hoa>
+    </qlnx>
+    <nv_lap>
+      <id_nv>NV01</id_nv>
+      <ten_nv>Nguyễn Phan Tuấn Đức</ten_nv>
+      <tuoi>19</tuoi>
+      <gioi_tinh>true</gioi_tinh>
+      <dia_chi_nv>Quảng Ngãi</dia_chi_nv>
+      <username>user1</username>
+      <password>pass1</password>
+    </nv_lap>
+    <tong_tien>9000000</tong_tien>
+    <cua_hang>
+      <id_ch>CH03</id_ch>
+      <ten_ch>Cửa hàng 03</ten_ch>
+      <sdt_ch>0867243244</sdt_ch>
+      <dia_chi_ch>Quận 10</dia_chi_ch>
+    </cua_hang>
+  </HoaDonXuat>
+  <HoaDonXuat>
+    <id_hoa_don>HDX4</id_hoa_don>
+    <ngay_tao_don>2024-11-05T20:55:57.1644109+07:00</ngay_tao_don>
+    <qlnx>
+      <ds_hang_hoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT01</id>
+          <ten_hang>Bếp từ</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>1000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Bếp từ.jpg</img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT02</id>
+          <ten_hang>Lò vi sóng</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>2000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Lò vi sóng.jpg</img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT03</id>
+          <ten_hang>Máy giặt</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>3000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Máy giặt.jpg</img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT04</id>
+          <ten_hang>Máy in</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>2500000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Máy in.jpg</img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT05</id>
+          <ten_hang>Nồi cơm điện</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>1500000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\nồi cơm điện.jpg</img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT06</id>
+          <ten_hang>Máy quạt</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>500000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Quạt.jpg</img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT07</id>
+          <ten_hang>Tivi</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>6000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Tivi.jpg</img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT08</id>
+          <ten_hang>Tủ lạnh</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>5000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Tủ lạnh.jpg</img>
+        </HangHoa>
+      </ds_hang_hoa>
+    </qlnx>
+    <nv_lap>
+      <id_nv>NV01</id_nv>
+      <ten_nv>Nguyễn Phan Tuấn Đức</ten_nv>
+      <tuoi>19</tuoi>
+      <gioi_tinh>true</gioi_tinh>
+      <dia_chi_nv>Quảng Ngãi</dia_chi_nv>
+      <username>user1</username>
+      <password>pass1</password>
+    </nv_lap>
+    <tong_tien>21500000</tong_tien>
+    <cua_hang>
+      <id_ch>CH03</id_ch>
+      <ten_ch>Cửa hàng 03</ten_ch>
+      <sdt_ch>0867243244</sdt_ch>
+      <dia_chi_ch>Quận 10</dia_chi_ch>
+    </cua_hang>
+  </HoaDonXuat>
+  <HoaDonXuat>
+    <id_hoa_don>HDX5</id_hoa_don>
+    <ngay_tao_don>2024-11-05T20:57:23.2181439+07:00</ngay_tao_don>
+    <qlnx>
+      <ds_hang_hoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT01</id>
+          <ten_hang>Bếp từ</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>1000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Bếp từ.jpg</img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT02</id>
+          <ten_hang>Lò vi sóng</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>2000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Lò vi sóng.jpg</img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT03</id>
+          <ten_hang>Máy giặt</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>3000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Máy giặt.jpg</img>
+        </HangHoa>
+      </ds_hang_hoa>
+    </qlnx>
+    <nv_lap>
+      <id_nv>NV01</id_nv>
+      <ten_nv>Nguyễn Phan Tuấn Đức</ten_nv>
+      <tuoi>19</tuoi>
+      <gioi_tinh>true</gioi_tinh>
+      <dia_chi_nv>Quảng Ngãi</dia_chi_nv>
+      <username>user1</username>
+      <password>pass1</password>
+    </nv_lap>
+    <tong_tien>6000000</tong_tien>
+    <cua_hang>
+      <id_ch>CH02</id_ch>
+      <ten_ch>Cửa hàng 02</ten_ch>
+      <sdt_ch>0123586755</sdt_ch>
+      <dia_chi_ch>Bình Chánh</dia_chi_ch>
+    </cua_hang>
+  </HoaDonXuat>
+  <HoaDonXuat>
+    <id_hoa_don>HDX6</id_hoa_don>
+    <ngay_tao_don>2024-11-05T20:57:44.8004326+07:00</ngay_tao_don>
+    <qlnx>
+      <ds_hang_hoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT01</id>
+          <ten_hang>Bếp từ</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>1000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Bếp từ.jpg</img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT02</id>
+          <ten_hang>Lò vi sóng</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>2000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Lò vi sóng.jpg</img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT03</id>
+          <ten_hang>Máy giặt</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>3000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Máy giặt.jpg</img>
+        </HangHoa>
+      </ds_hang_hoa>
+    </qlnx>
+    <nv_lap>
+      <id_nv>NV01</id_nv>
+      <ten_nv>Nguyễn Phan Tuấn Đức</ten_nv>
+      <tuoi>19</tuoi>
+      <gioi_tinh>true</gioi_tinh>
+      <dia_chi_nv>Quảng Ngãi</dia_chi_nv>
+      <username>user1</username>
+      <password>pass1</password>
+    </nv_lap>
+    <tong_tien>6000000</tong_tien>
+    <cua_hang>
+      <id_ch>CH03</id_ch>
+      <ten_ch>Cửa hàng 03</ten_ch>
+      <sdt_ch>0867243244</sdt_ch>
+      <dia_chi_ch>Quận 10</dia_chi_ch>
+    </cua_hang>
+  </HoaDonXuat>
+  <HoaDonXuat>
+    <id_hoa_don>HDX7</id_hoa_don>
+    <ngay_tao_don>2024-11-05T21:05:05.1193814+07:00</ngay_tao_don>
+    <qlnx>
+      <ds_hang_hoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT01</id>
+          <ten_hang>Bếp từ</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>1000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Bếp từ.jpg</img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT04</id>
+          <ten_hang>Máy in</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>2500000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Máy in.jpg</img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT02</id>
+          <ten_hang>Lò vi sóng</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>2000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Lò vi sóng.jpg</img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT03</id>
+          <ten_hang>Máy giặt</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>3000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Máy giặt.jpg</img>
+        </HangHoa>
+      </ds_hang_hoa>
+    </qlnx>
+    <nv_lap>
+      <id_nv>NV01</id_nv>
+      <ten_nv>Nguyễn Phan Tuấn Đức</ten_nv>
+      <tuoi>19</tuoi>
+      <gioi_tinh>true</gioi_tinh>
+      <dia_chi_nv>Quảng Ngãi</dia_chi_nv>
+      <username>user1</username>
+      <password>pass1</password>
+    </nv_lap>
+    <tong_tien>8500000</tong_tien>
+    <cua_hang>
+      <id_ch>CH03</id_ch>
+      <ten_ch>Cửa hàng 03</ten_ch>
+      <sdt_ch>0867243244</sdt_ch>
+      <dia_chi_ch>Quận 10</dia_chi_ch>
+    </cua_hang>
+  </HoaDonXuat>
+  <HoaDonXuat>
+    <id_hoa_don>HDX8</id_hoa_don>
+    <ngay_tao_don>2024-11-05T21:06:39.8570756+07:00</ngay_tao_don>
+    <qlnx>
+      <ds_hang_hoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT01</id>
+          <ten_hang>Bếp từ</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>1000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Bếp từ.jpg</img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT02</id>
+          <ten_hang>Lò vi sóng</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>2000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Lò vi sóng.jpg</img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT03</id>
+          <ten_hang>Máy giặt</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>3000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Máy giặt.jpg</img>
+        </HangHoa>
+      </ds_hang_hoa>
+    </qlnx>
+    <nv_lap>
+      <id_nv>NV01</id_nv>
+      <ten_nv>Nguyễn Phan Tuấn Đức</ten_nv>
+      <tuoi>19</tuoi>
+      <gioi_tinh>true</gioi_tinh>
+      <dia_chi_nv>Quảng Ngãi</dia_chi_nv>
+      <username>user1</username>
+      <password>pass1</password>
+    </nv_lap>
+    <tong_tien>6000000</tong_tien>
+    <cua_hang>
+      <id_ch>CH03</id_ch>
+      <ten_ch>Cửa hàng 03</ten_ch>
+      <sdt_ch>0867243244</sdt_ch>
+      <dia_chi_ch>Quận 10</dia_chi_ch>
+    </cua_hang>
+  </HoaDonXuat>
+  <HoaDonXuat>
+    <id_hoa_don>HDX9</id_hoa_don>
+    <ngay_tao_don>2024-11-05T21:11:05.4466763+07:00</ngay_tao_don>
+    <qlnx>
+      <ds_hang_hoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT01</id>
+          <ten_hang>Bếp từ</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>1000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Bếp từ.jpg</img>
+        </HangHoa>
+      </ds_hang_hoa>
+    </qlnx>
+    <nv_lap>
+      <id_nv>NV01</id_nv>
+      <ten_nv>Nguyễn Phan Tuấn Đức</ten_nv>
+      <tuoi>19</tuoi>
+      <gioi_tinh>true</gioi_tinh>
+      <dia_chi_nv>Quảng Ngãi</dia_chi_nv>
+      <username>user1</username>
+      <password>pass1</password>
+    </nv_lap>
+    <tong_tien>1000000</tong_tien>
+    <cua_hang>
+      <id_ch>CH03</id_ch>
+      <ten_ch>Cửa hàng 03</ten_ch>
+      <sdt_ch>0867243244</sdt_ch>
+      <dia_chi_ch>Quận 10</dia_chi_ch>
+    </cua_hang>
+  </HoaDonXuat>
+  <HoaDonXuat>
+    <id_hoa_don>HDX10</id_hoa_don>
+    <ngay_tao_don>2024-11-05T21:12:06.9931396+07:00</ngay_tao_don>
+    <qlnx>
+      <ds_hang_hoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT01</id>
+          <ten_hang>Bếp từ</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>1000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Bếp từ.jpg</img>
+        </HangHoa>
+      </ds_hang_hoa>
+    </qlnx>
+    <nv_lap>
+      <id_nv>NV01</id_nv>
+      <ten_nv>Nguyễn Phan Tuấn Đức</ten_nv>
+      <tuoi>19</tuoi>
+      <gioi_tinh>true</gioi_tinh>
+      <dia_chi_nv>Quảng Ngãi</dia_chi_nv>
+      <username>user1</username>
+      <password>pass1</password>
+    </nv_lap>
+    <tong_tien>1000000</tong_tien>
+    <cua_hang>
+      <id_ch>CH03</id_ch>
+      <ten_ch>Cửa hàng 03</ten_ch>
+      <sdt_ch>0867243244</sdt_ch>
+      <dia_chi_ch>Quận 10</dia_chi_ch>
+    </cua_hang>
+  </HoaDonXuat>
+  <HoaDonXuat>
+    <id_hoa_don>HDX11</id_hoa_don>
+    <ngay_tao_don>2024-11-05T21:15:20.1735672+07:00</ngay_tao_don>
+    <qlnx>
+      <ds_hang_hoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT01</id>
+          <ten_hang>Bếp từ</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>1000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Bếp từ.jpg</img>
+        </HangHoa>
+      </ds_hang_hoa>
+    </qlnx>
+    <nv_lap>
+      <id_nv>NV01</id_nv>
+      <ten_nv>Nguyễn Phan Tuấn Đức</ten_nv>
+      <tuoi>19</tuoi>
+      <gioi_tinh>true</gioi_tinh>
+      <dia_chi_nv>Quảng Ngãi</dia_chi_nv>
+      <username>user1</username>
+      <password>pass1</password>
+    </nv_lap>
+    <tong_tien>1000000</tong_tien>
+    <cua_hang>
+      <id_ch>CH03</id_ch>
+      <ten_ch>Cửa hàng 03</ten_ch>
+      <sdt_ch>0867243244</sdt_ch>
+      <dia_chi_ch>Quận 10</dia_chi_ch>
+    </cua_hang>
+  </HoaDonXuat>
+  <HoaDonXuat>
+    <id_hoa_don>HDX12</id_hoa_don>
+    <ngay_tao_don>2024-11-05T21:19:29.345486+07:00</ngay_tao_don>
+    <qlnx>
+      <ds_hang_hoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT01</id>
+          <ten_hang>Bếp từ</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>1000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Bếp từ.jpg</img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT02</id>
+          <ten_hang>Lò vi sóng</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>2000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Lò vi sóng.jpg</img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT03</id>
+          <ten_hang>Máy giặt</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>3000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Máy giặt.jpg</img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT04</id>
+          <ten_hang>Máy in</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>2500000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Máy in.jpg</img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT05</id>
+          <ten_hang>Nồi cơm điện</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>1500000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\nồi cơm điện.jpg</img>
+        </HangHoa>
+      </ds_hang_hoa>
+    </qlnx>
+    <nv_lap>
+      <id_nv>NV01</id_nv>
+      <ten_nv>Nguyễn Phan Tuấn Đức</ten_nv>
+      <tuoi>19</tuoi>
+      <gioi_tinh>true</gioi_tinh>
+      <dia_chi_nv>Quảng Ngãi</dia_chi_nv>
+      <username>user1</username>
+      <password>pass1</password>
+    </nv_lap>
+    <tong_tien>10000000</tong_tien>
+    <cua_hang>
+      <id_ch>CH03</id_ch>
+      <ten_ch>Cửa hàng 03</ten_ch>
+      <sdt_ch>0867243244</sdt_ch>
+      <dia_chi_ch>Quận 10</dia_chi_ch>
+    </cua_hang>
+  </HoaDonXuat>
+  <HoaDonXuat>
+    <id_hoa_don>HDX13</id_hoa_don>
+    <ngay_tao_don>2024-11-05T21:22:11.6397037+07:00</ngay_tao_don>
+    <qlnx>
+      <ds_hang_hoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT01</id>
+          <ten_hang>Bếp từ</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>1000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Bếp từ.jpg</img>
+        </HangHoa>
+      </ds_hang_hoa>
+    </qlnx>
+    <nv_lap>
+      <id_nv>NV01</id_nv>
+      <ten_nv>Nguyễn Phan Tuấn Đức</ten_nv>
+      <tuoi>19</tuoi>
+      <gioi_tinh>true</gioi_tinh>
+      <dia_chi_nv>Quảng Ngãi</dia_chi_nv>
+      <username>user1</username>
+      <password>pass1</password>
+    </nv_lap>
+    <tong_tien>1000000</tong_tien>
+    <cua_hang>
+      <id_ch>CH03</id_ch>
+      <ten_ch>Cửa hàng 03</ten_ch>
+      <sdt_ch>0867243244</sdt_ch>
+      <dia_chi_ch>Quận 10</dia_chi_ch>
+    </cua_hang>
+  </HoaDonXuat>
 </ArrayOfHoaDonXuat>

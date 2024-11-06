@@ -59,7 +59,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(844, 80);
             this.panel1.TabIndex = 3;
@@ -81,7 +81,7 @@
             this.daichincclabel.AutoSize = true;
             this.daichincclabel.Font = new System.Drawing.Font("Arial", 10F);
             this.daichincclabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.daichincclabel.Location = new System.Drawing.Point(465, 176);
+            this.daichincclabel.Location = new System.Drawing.Point(468, 167);
             this.daichincclabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.daichincclabel.Name = "daichincclabel";
             this.daichincclabel.Size = new System.Drawing.Size(53, 16);
@@ -105,7 +105,7 @@
             this.tenNCClabel.AutoSize = true;
             this.tenNCClabel.Font = new System.Drawing.Font("Arial", 10F);
             this.tenNCClabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.tenNCClabel.Location = new System.Drawing.Point(48, 168);
+            this.tenNCClabel.Location = new System.Drawing.Point(33, 170);
             this.tenNCClabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.tenNCClabel.Name = "tenNCClabel";
             this.tenNCClabel.Size = new System.Drawing.Size(129, 16);
@@ -161,7 +161,7 @@
             this.txtDiaChi.PasswordChar = '\0';
             this.txtDiaChi.PlaceholderText = "";
             this.txtDiaChi.SelectedText = "";
-            this.txtDiaChi.Size = new System.Drawing.Size(172, 52);
+            this.txtDiaChi.Size = new System.Drawing.Size(172, 32);
             this.txtDiaChi.TabIndex = 21;
             // 
             // txtTen
@@ -215,7 +215,7 @@
             this.SDTNCC,
             this.DCNCC});
             this.dataNCC.Location = new System.Drawing.Point(0, 230);
-            this.dataNCC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataNCC.Margin = new System.Windows.Forms.Padding(2);
             this.dataNCC.Name = "dataNCC";
             this.dataNCC.ReadOnly = true;
             this.dataNCC.RowHeadersWidth = 51;
@@ -267,7 +267,7 @@
             this.panel2.Controls.Add(this.btnthem);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 509);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(844, 69);
             this.panel2.TabIndex = 28;
@@ -283,7 +283,7 @@
             this.btnHuy.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.btnHuy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.btnHuy.Location = new System.Drawing.Point(700, 20);
-            this.btnHuy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(2);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(120, 35);
             this.btnHuy.TabIndex = 4;
@@ -301,7 +301,7 @@
             this.btnLuu.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.btnLuu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.btnLuu.Location = new System.Drawing.Point(530, 20);
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(2);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(120, 35);
             this.btnLuu.TabIndex = 3;
@@ -319,7 +319,7 @@
             this.btnCapNhat.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.btnCapNhat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.btnCapNhat.Location = new System.Drawing.Point(360, 20);
-            this.btnCapNhat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCapNhat.Margin = new System.Windows.Forms.Padding(2);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(120, 35);
             this.btnCapNhat.TabIndex = 2;
@@ -337,7 +337,7 @@
             this.xoabtn.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.xoabtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.xoabtn.Location = new System.Drawing.Point(190, 20);
-            this.xoabtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.xoabtn.Margin = new System.Windows.Forms.Padding(2);
             this.xoabtn.Name = "xoabtn";
             this.xoabtn.Size = new System.Drawing.Size(120, 35);
             this.xoabtn.TabIndex = 1;
@@ -355,7 +355,7 @@
             this.btnthem.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.btnthem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.btnthem.Location = new System.Drawing.Point(20, 20);
-            this.btnthem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnthem.Margin = new System.Windows.Forms.Padding(2);
             this.btnthem.Name = "btnthem";
             this.btnthem.Size = new System.Drawing.Size(120, 35);
             this.btnthem.TabIndex = 0;
@@ -380,7 +380,7 @@
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormNhaCungCap";
             this.Text = "FormNhaCungCap";
             this.Load += new System.EventHandler(this.NhaCungCap_Load);

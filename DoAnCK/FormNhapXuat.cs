@@ -75,6 +75,65 @@ namespace DoAnCK
             tongtien_lbl.Text = "Tổng tiền: " + String.Format("{0:N0}", tong_tien) + " VNĐ";
         }
 
+        private void Reload_flp()
+        {
+            dshh_flp.Controls.Clear();
+            kho.LoadData();
+
+            if (loaihh_cbb.Text == "Điện tử")
+            {
+                foreach (HangHoa hh in kho.ds_hang_hoa)
+                {
+                    if (hh is DienTu && (hh.ten_hang.ToLower().Contains(search_txb.Text) || search_txb.Text == "Search"))
+                    {
+                        HangHoaNhapXuatComponent hh_component = new HangHoaNhapXuatComponent(this);
+                        hh_component.hh = hh;
+                        hh_component.SetProductInfo(hh);
+                        dshh_flp.Controls.Add(hh_component);
+                    }
+                }
+            }
+            else if (loaihh_cbb.Text == "Gia dụng")
+            {
+                foreach (HangHoa hh in kho.ds_hang_hoa)
+                {
+                    if (hh is GiaDung && (hh.ten_hang.ToLower().Contains(search_txb.Text) || search_txb.Text == "Search"))
+                    {
+                        HangHoaNhapXuatComponent hh_component = new HangHoaNhapXuatComponent(this);
+                        hh_component.hh = hh;
+                        hh_component.SetProductInfo(hh);
+                        dshh_flp.Controls.Add(hh_component);
+                    }
+                }
+            }
+            else if (loaihh_cbb.Text == "Thực phẩm")
+            {
+                foreach (HangHoa hh in kho.ds_hang_hoa)
+                {
+                    if (hh is ThucPham && (hh.ten_hang.ToLower().Contains(search_txb.Text) || search_txb.Text == "Search"))
+                    {
+                        HangHoaNhapXuatComponent hh_component = new HangHoaNhapXuatComponent(this);
+                        hh_component.hh = hh;
+                        hh_component.SetProductInfo(hh);
+                        dshh_flp.Controls.Add(hh_component);
+                    }
+                }
+            }
+            else
+            {
+                foreach (HangHoa hh in kho.ds_hang_hoa)
+                {
+                    if (hh.ten_hang.ToLower().Contains(search_txb.Text) || search_txb.Text == "Search")
+                    {
+                        HangHoaNhapXuatComponent hh_component = new HangHoaNhapXuatComponent(this);
+                        hh_component.hh = hh;
+                        hh_component.SetProductInfo(hh);
+                        dshh_flp.Controls.Add(hh_component);
+                    }
+                }
+            }
+        }
+
         private void ncc_ch_cbb_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (isnhap)
@@ -91,66 +150,14 @@ namespace DoAnCK
             }
         }
 
-        private void apdung_btn_Click(object sender, EventArgs e)
+        private void search_txb_TextChanged(object sender, EventArgs e)
         {
-            dshh_flp.Controls.Clear();
-            if (search_txb.Text == "Search")
-            {
-                search_txb.Text = "";
-            }    
+            Reload_flp();
+        }
 
-            if (loaihh_cbb.Text == "Điện tử")
-            {
-                foreach (HangHoa hh in kho.ds_hang_hoa)
-                {
-                    if (hh is DienTu && hh.ten_hang.ToLower().Contains(search_txb.Text))
-                    {
-                        HangHoaNhapXuatComponent hh_component = new HangHoaNhapXuatComponent(this);
-                        hh_component.hh = hh;
-                        hh_component.SetProductInfo(hh);
-                        dshh_flp.Controls.Add(hh_component);
-                    }
-                }
-            }
-            else if (loaihh_cbb.Text == "Gia dụng")
-            {
-                foreach (HangHoa hh in kho.ds_hang_hoa)
-                {
-                    if (hh is GiaDung && hh.ten_hang.ToLower().Contains(search_txb.Text))
-                    {
-                        HangHoaNhapXuatComponent hh_component = new HangHoaNhapXuatComponent(this);
-                        hh_component.hh = hh;
-                        hh_component.SetProductInfo(hh);
-                        dshh_flp.Controls.Add(hh_component);
-                    }
-                }
-            }
-            else if (loaihh_cbb.Text == "Thực phẩm")
-            {
-                foreach (HangHoa hh in kho.ds_hang_hoa)
-                {
-                    if (hh is ThucPham && hh.ten_hang.ToLower().Contains(search_txb.Text))
-                    {
-                        HangHoaNhapXuatComponent hh_component = new HangHoaNhapXuatComponent(this);
-                        hh_component.hh = hh;
-                        hh_component.SetProductInfo(hh);
-                        dshh_flp.Controls.Add(hh_component);
-                    }
-                }
-            }
-            else
-            {
-                foreach (HangHoa hh in kho.ds_hang_hoa)
-                {
-                    if (hh.ten_hang.ToLower().Contains(search_txb.Text))
-                    {
-                        HangHoaNhapXuatComponent hh_component = new HangHoaNhapXuatComponent(this);
-                        hh_component.hh = hh;
-                        hh_component.SetProductInfo(hh);
-                        dshh_flp.Controls.Add(hh_component);
-                    }
-                }
-            }
+        private void loaihh_cbb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Reload_flp();
         }
 
         private void search_tb_Click(object sender, EventArgs e)
@@ -173,11 +180,12 @@ namespace DoAnCK
                 if (current_ncc != null)
                 {
                     kho.capnhatkho(quanlynhapxuat.ds_hang_hoa, true);
+                    
                     string id_hoa_don = "HDN" + (kho.ds_hoa_don_nhap.Count + 1);
 
                     FormPhieuHoaDon formHoaDon = new FormPhieuHoaDon();
                     formHoaDon.hd_lbl.Text = "Hoá Đơn Nhập";
-                    formHoaDon.ngaylap_lbl.Text = DateTime.Now.ToString();
+                    formHoaDon.ngaylap_lbl.Text = "Ngày lập: " + DateTime.Now.ToString();
                     formHoaDon.idnv_lbl.Text = "ID nhân viên lập: " + current_nv.id_nv;
                     formHoaDon.idhd_lbl.Text = "ID hoá đơn: " + id_hoa_don;
                     formHoaDon.idncc_ch_lbl.Text = "ID nhà cung cấp: " + current_ncc.id_ncc;
@@ -187,18 +195,8 @@ namespace DoAnCK
                     HoaDonNhap hoaDonNhap = new HoaDonNhap(quanlynhapxuat, id_hoa_don, current_nv, current_ncc, quanlynhapxuat.tinh_tong_tien());
                     kho.ThemHoaDonNhap(hoaDonNhap);
 
-                    dshh_flp.Controls.Clear();
-                    kho.LoadData();
-                    foreach (HangHoa hh in kho.ds_hang_hoa)
-                    {
-                        HangHoaNhapXuatComponent hh_component = new HangHoaNhapXuatComponent(this);
-                        hh_component.hh = hh;
-                        hh_component.SetProductInfo(hh);
-                        dshh_flp.Controls.Add(hh_component);
-                    }
-
+                    Reload_flp();
                     ctlh_flp.Controls.Clear();
-                    quanlynhapxuat = new QuanLyNhapXuat();
                     tinh_tong_tien();
                 }
                 else
@@ -215,11 +213,12 @@ namespace DoAnCK
                     if (kho.kha_dung(quanlynhapxuat.ds_hang_hoa))
                     {
                         kho.capnhatkho(quanlynhapxuat.ds_hang_hoa, false);
+
                         string id_hoa_don = "HDX" + (kho.ds_hoa_don_xuat.Count + 1);
 
                         FormPhieuHoaDon formHoaDon = new FormPhieuHoaDon();
                         formHoaDon.hd_lbl.Text = "Hoá Đơn Xuất";
-                        formHoaDon.ngaylap_lbl.Text = DateTime.Now.ToString();
+                        formHoaDon.ngaylap_lbl.Text = "Ngày lập: " + DateTime.Now.ToString();
                         formHoaDon.idnv_lbl.Text = "ID nhân viên lập: " + current_nv.id_nv;
                         formHoaDon.idhd_lbl.Text = "ID hoá đơn: " + id_hoa_don;
                         formHoaDon.idncc_ch_lbl.Text = "ID cửa hàng: " + current_ch.id_ch;
@@ -229,19 +228,8 @@ namespace DoAnCK
                         HoaDonXuat hoaDonXuat = new HoaDonXuat(quanlynhapxuat, id_hoa_don, current_nv, current_ch, quanlynhapxuat.tinh_tong_tien());
                         kho.ThemHoaDonXuat(hoaDonXuat);
 
-
-                        dshh_flp.Controls.Clear();
-                        kho.LoadData();
-                        foreach (HangHoa hh in kho.ds_hang_hoa)
-                        {
-                            HangHoaNhapXuatComponent hh_component = new HangHoaNhapXuatComponent(this);
-                            hh_component.hh = hh;
-                            hh_component.SetProductInfo(hh);
-                            dshh_flp.Controls.Add(hh_component);
-                        }
-
+                        Reload_flp();
                         ctlh_flp.Controls.Clear();
-                        quanlynhapxuat = new QuanLyNhapXuat();
                         tinh_tong_tien();
                     }
                     else
@@ -253,7 +241,8 @@ namespace DoAnCK
                 {
                     MessageBox.Show("Hãy chọn cửa hàng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }  
+            }
+
         }
 
         private void FormNhapXuat_Load(object sender, EventArgs e)
@@ -283,5 +272,7 @@ namespace DoAnCK
                 }
             }
         }
+
+        
     }
 }

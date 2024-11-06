@@ -26,12 +26,58 @@ namespace DoAnCK
         {
             dshh_flp.Controls.Clear();
             kho.LoadData();
-            foreach (HangHoa hh in kho.ds_hang_hoa)
+
+            if (dientu_btn.Checked)
             {
-                HangHoaTrangChuComponent hh_component = new HangHoaTrangChuComponent(this);
-                hh_component.hh = hh;
-                hh_component.SetProductInfo(hh);
-                dshh_flp.Controls.Add(hh_component);
+                foreach (HangHoa hh in kho.ds_hang_hoa)
+                {
+                    if (hh is DienTu && (hh.ten_hang.ToLower().Contains(search_tb.Text) || search_tb.Text == "Search"))
+                    {
+                        HangHoaTrangChuComponent hh_component = new HangHoaTrangChuComponent(this);
+                        hh_component.hh = hh;
+                        hh_component.SetProductInfo(hh);
+                        dshh_flp.Controls.Add(hh_component);
+                    }
+                }
+            }
+            else if (giadung_btn.Checked)
+            {
+                foreach (HangHoa hh in kho.ds_hang_hoa)
+                {
+                    if (hh is GiaDung && (hh.ten_hang.ToLower().Contains(search_tb.Text) || search_tb.Text == "Search"))
+                    {
+                        HangHoaTrangChuComponent hh_component = new HangHoaTrangChuComponent(this);
+                        hh_component.hh = hh;
+                        hh_component.SetProductInfo(hh);
+                        dshh_flp.Controls.Add(hh_component);
+                    }
+                }
+            }
+            else if (thucpham_btn.Checked)
+            {
+                foreach (HangHoa hh in kho.ds_hang_hoa)
+                {
+                    if (hh is ThucPham && (hh.ten_hang.ToLower().Contains(search_tb.Text) || search_tb.Text == "Search"))
+                    {
+                        HangHoaTrangChuComponent hh_component = new HangHoaTrangChuComponent(this);
+                        hh_component.hh = hh;
+                        hh_component.SetProductInfo(hh);
+                        dshh_flp.Controls.Add(hh_component);
+                    }
+                }
+            }
+            else if (tatca_btn.Checked)
+            {
+                foreach (HangHoa hh in kho.ds_hang_hoa)
+                {
+                    if (hh.ten_hang.ToLower().Contains(search_tb.Text) || search_tb.Text == "Search")
+                    {
+                        HangHoaTrangChuComponent hh_component = new HangHoaTrangChuComponent(this);
+                        hh_component.hh = hh;
+                        hh_component.SetProductInfo(hh);
+                        dshh_flp.Controls.Add(hh_component);
+                    }
+                }
             }
         }
 
@@ -43,13 +89,7 @@ namespace DoAnCK
             thucpham_btn.Checked = false;
 
             dshh_flp.Controls.Clear();
-            foreach (HangHoa hh in kho.ds_hang_hoa)
-            {
-                HangHoaTrangChuComponent hh_component = new HangHoaTrangChuComponent(this);
-                hh_component.hh = hh;
-                hh_component.SetProductInfo(hh);
-                dshh_flp.Controls.Add(hh_component);
-            }
+            Reload_flp();
         }
 
         private void giadung_btn_Click(object sender, EventArgs e)
@@ -60,16 +100,7 @@ namespace DoAnCK
             thucpham_btn.Checked = false;
 
             dshh_flp.Controls.Clear();
-            foreach (HangHoa hh in kho.ds_hang_hoa)
-            {
-                if (hh is GiaDung)
-                {
-                    HangHoaTrangChuComponent hh_component = new HangHoaTrangChuComponent(this);
-                    hh_component.hh = hh;
-                    hh_component.SetProductInfo(hh);
-                    dshh_flp.Controls.Add(hh_component);
-                }
-            }
+            Reload_flp();
         }
 
         private void dientu_btn_Click(object sender, EventArgs e)
@@ -80,16 +111,7 @@ namespace DoAnCK
             thucpham_btn.Checked = false;
 
             dshh_flp.Controls.Clear();
-            foreach (HangHoa hh in kho.ds_hang_hoa)
-            {
-                if (hh is DienTu)
-                {
-                    HangHoaTrangChuComponent hh_component = new HangHoaTrangChuComponent(this);
-                    hh_component.hh = hh;
-                    hh_component.SetProductInfo(hh);
-                    dshh_flp.Controls.Add(hh_component);
-                }
-            }
+            Reload_flp();
         }
 
         private void thucpham_btn_Click(object sender, EventArgs e)
@@ -100,77 +122,14 @@ namespace DoAnCK
             thucpham_btn.Checked = true;
 
             dshh_flp.Controls.Clear();
-            foreach (HangHoa hh in kho.ds_hang_hoa)
-            {
-                if (hh is ThucPham)
-                {
-                    HangHoaTrangChuComponent hh_component = new HangHoaTrangChuComponent(this);
-                    hh_component.hh = hh;
-                    hh_component.SetProductInfo(hh);
-                    dshh_flp.Controls.Add(hh_component);
-                }
-            }
+            Reload_flp();
         }
 
         private void search_tb_TextChanged(object sender, EventArgs e)
         { 
             dshh_flp.Controls.Clear();
             string searchText = search_tb.Text;
-            if (dientu_btn.Checked == true)
-            {
-                foreach (HangHoa hh in kho.ds_hang_hoa)
-                {
-                    if (hh is DienTu && hh.ten_hang.ToLower().Contains(searchText.ToLower()))
-                    {
-                        HangHoaTrangChuComponent hh_component = new HangHoaTrangChuComponent(this);
-                        hh_component.hh = hh;
-                        hh_component.SetProductInfo(hh);
-                        dshh_flp.Controls.Add(hh_component);
-                    }
-                }
-            }
-
-            else if (giadung_btn.Checked == true)
-            {
-                foreach (HangHoa hh in kho.ds_hang_hoa)
-                {
-                    if (hh is GiaDung && hh.ten_hang.ToLower().Contains(searchText.ToLower()))
-                    {
-                        HangHoaTrangChuComponent hh_component = new HangHoaTrangChuComponent(this);
-                        hh_component.hh = hh;
-                        hh_component.SetProductInfo(hh);
-                        dshh_flp.Controls.Add(hh_component);
-                    }
-                }
-            }
-
-            else if (thucpham_btn.Checked == true)
-            {
-                foreach (HangHoa hh in kho.ds_hang_hoa)
-                {
-                    if (hh is ThucPham && hh.ten_hang.ToLower().Contains(searchText.ToLower()))
-                    {
-                        HangHoaTrangChuComponent hh_component = new HangHoaTrangChuComponent(this);
-                        hh_component.hh = hh;
-                        hh_component.SetProductInfo(hh);
-                        dshh_flp.Controls.Add(hh_component);
-                    }
-                }
-            }
-
-            else
-            {
-                foreach (HangHoa hh in kho.ds_hang_hoa)
-                {
-                    if (hh.ten_hang.ToLower().Contains(searchText.ToLower()))
-                    {
-                        HangHoaTrangChuComponent hh_component = new HangHoaTrangChuComponent(this);
-                        hh_component.hh = hh;
-                        hh_component.SetProductInfo(hh);
-                        dshh_flp.Controls.Add(hh_component);
-                    }
-                }
-            }
+            Reload_flp();
         }
 
         private void search_tb_MouseClick(object sender, MouseEventArgs e)

@@ -21,3 +21,4 @@ E:\UEH\Sophomore\OOP\DoAnCK\DoAnCK\obj\Debug\DoAnCK.FormNhaCungCap.resources
 E:\UEH\Sophomore\OOP\DoAnCK\DoAnCK\obj\Debug\DoAnCK.FormPhieuHoaDon.resources
 E:\UEH\Sophomore\OOP\DoAnCK\DoAnCK\obj\Debug\DoAnCK.FormHoaDon.resources
 E:\UEH\Sophomore\OOP\DoAnCK\DoAnCK\obj\Debug\DoAnCK.FormHangHoa.resources
+E:\UEH\Sophomore\OOP\DoAnCK\DoAnCK\obj\Debug\DoAnCK.HangHoaBillComponent2.resources

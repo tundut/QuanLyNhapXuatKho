@@ -24,7 +24,7 @@ namespace DoAnCK
         {
             id_lbl.Text = "ID: " + hh.id;
             ten_lbl.Text = hh.ten_hang;
-            dongia_lbl.Text = "Đơn giá: " + hh.don_gia.ToString();
+            dongia_lbl.Text = "Đơn giá: " + String.Format("{0:N0}", hh.don_gia);
             soluong_lbl.Text = "SL: " + hh.so_luong.ToString();
             if (hh.img != null)
             {

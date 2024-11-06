@@ -46,6 +46,7 @@
             this.guna2Panel1.Controls.Add(this.dongia_lbl);
             this.guna2Panel1.Controls.Add(this.ten_lbl);
             this.guna2Panel1.Controls.Add(this.hanghoa_ptb);
+            this.guna2Panel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Panel1.Location = new System.Drawing.Point(3, 3);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(144, 224);

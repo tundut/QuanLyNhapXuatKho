@@ -57,7 +57,7 @@ namespace DoAnCK
                 HoaDonNhap hdn = kho.ds_hoa_don_nhap[index];
                 FormPhieuHoaDon formHoaDon = new FormPhieuHoaDon();
                 formHoaDon.hd_lbl.Text = "Hoá Đơn Nhập";
-                formHoaDon.ngaylap_lbl.Text = hdn.ngay_tao_don.ToString();
+                formHoaDon.ngaylap_lbl.Text = "Ngày lập: " + DateTime.Now.ToString();
                 formHoaDon.idnv_lbl.Text = "ID nhân viên lập: " + hdn.nv_lap.id_nv;
                 formHoaDon.idhd_lbl.Text = "ID hoá đơn: " + hdn.id_hoa_don;
                 formHoaDon.idncc_ch_lbl.Text = "ID nhà cung cấp: " + hdn.nha_cung_cap.id_ncc;
@@ -69,7 +69,7 @@ namespace DoAnCK
                 HoaDonXuat hdx = kho.ds_hoa_don_xuat[index];
                 FormPhieuHoaDon formHoaDon = new FormPhieuHoaDon();
                 formHoaDon.hd_lbl.Text = "Hoá Đơn Nhập";
-                formHoaDon.ngaylap_lbl.Text = hdx.ngay_tao_don.ToString();
+                formHoaDon.ngaylap_lbl.Text = "Ngày lập: " + DateTime.Now.ToString();
                 formHoaDon.idnv_lbl.Text = "ID nhân viên lập: " + hdx.nv_lap.id_nv;
                 formHoaDon.idhd_lbl.Text = "ID hoá đơn: " + hdx.id_hoa_don;
                 formHoaDon.idncc_ch_lbl.Text = "ID nhà cung cấp: " + hdx.cua_hang.id_ch;

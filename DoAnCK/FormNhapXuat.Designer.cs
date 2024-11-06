@@ -40,7 +40,6 @@
             this.id_lbl = new System.Windows.Forms.Label();
             this.ncc_ch_lbl = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.apdung_btn = new Guna.UI2.WinForms.Guna2Button();
             this.search_lbl = new System.Windows.Forms.Label();
             this.loaisp_lbl = new System.Windows.Forms.Label();
             this.ctlh_flp = new System.Windows.Forms.FlowLayoutPanel();
@@ -145,7 +144,7 @@
             this.search_txb.IconLeft = ((System.Drawing.Image)(resources.GetObject("search_txb.IconLeft")));
             this.search_txb.IconLeftOffset = new System.Drawing.Point(-3, -1);
             this.search_txb.IconLeftSize = new System.Drawing.Size(35, 35);
-            this.search_txb.Location = new System.Drawing.Point(440, 25);
+            this.search_txb.Location = new System.Drawing.Point(440, 40);
             this.search_txb.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.search_txb.Name = "search_txb";
             this.search_txb.PasswordChar = '\0';
@@ -154,6 +153,7 @@
             this.search_txb.SelectedText = "";
             this.search_txb.Size = new System.Drawing.Size(200, 40);
             this.search_txb.TabIndex = 22;
+            this.search_txb.TextChanged += new System.EventHandler(this.search_txb_TextChanged);
             this.search_txb.Click += new System.EventHandler(this.search_tb_Click);
             // 
             // loaihh_cbb
@@ -173,11 +173,12 @@
             "Điện tử",
             "Gia dụng",
             "Thực phẩm"});
-            this.loaihh_cbb.Location = new System.Drawing.Point(660, 27);
+            this.loaihh_cbb.Location = new System.Drawing.Point(660, 40);
             this.loaihh_cbb.Name = "loaihh_cbb";
             this.loaihh_cbb.Size = new System.Drawing.Size(150, 36);
             this.loaihh_cbb.StartIndex = 0;
             this.loaihh_cbb.TabIndex = 23;
+            this.loaihh_cbb.SelectedIndexChanged += new System.EventHandler(this.loaihh_cbb_SelectedIndexChanged);
             // 
             // id_lbl
             // 
@@ -209,30 +210,12 @@
             this.panel2.Size = new System.Drawing.Size(5, 578);
             this.panel2.TabIndex = 26;
             // 
-            // apdung_btn
-            // 
-            this.apdung_btn.BorderRadius = 10;
-            this.apdung_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.apdung_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.apdung_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.apdung_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.apdung_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.apdung_btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.apdung_btn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.apdung_btn.ForeColor = System.Drawing.Color.White;
-            this.apdung_btn.Location = new System.Drawing.Point(450, 75);
-            this.apdung_btn.Name = "apdung_btn";
-            this.apdung_btn.Size = new System.Drawing.Size(120, 30);
-            this.apdung_btn.TabIndex = 27;
-            this.apdung_btn.Text = "Áp dụng";
-            this.apdung_btn.Click += new System.EventHandler(this.apdung_btn_Click);
-            // 
             // search_lbl
             // 
             this.search_lbl.AutoSize = true;
             this.search_lbl.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.search_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.search_lbl.Location = new System.Drawing.Point(450, 5);
+            this.search_lbl.Location = new System.Drawing.Point(450, 15);
             this.search_lbl.Name = "search_lbl";
             this.search_lbl.Size = new System.Drawing.Size(114, 19);
             this.search_lbl.TabIndex = 28;
@@ -243,7 +226,7 @@
             this.loaisp_lbl.AutoSize = true;
             this.loaisp_lbl.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.loaisp_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.loaisp_lbl.Location = new System.Drawing.Point(660, 5);
+            this.loaisp_lbl.Location = new System.Drawing.Point(660, 15);
             this.loaisp_lbl.Name = "loaisp_lbl";
             this.loaisp_lbl.Size = new System.Drawing.Size(118, 19);
             this.loaisp_lbl.TabIndex = 29;
@@ -400,7 +383,6 @@
             this.Controls.Add(this.ctlh_flp);
             this.Controls.Add(this.loaisp_lbl);
             this.Controls.Add(this.search_lbl);
-            this.Controls.Add(this.apdung_btn);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.ncc_ch_lbl);
             this.Controls.Add(this.id_lbl);
@@ -432,7 +414,6 @@
         private System.Windows.Forms.Label id_lbl;
         private System.Windows.Forms.Label ncc_ch_lbl;
         private System.Windows.Forms.Panel panel2;
-        private Guna.UI2.WinForms.Guna2Button apdung_btn;
         private System.Windows.Forms.Label search_lbl;
         private System.Windows.Forms.Label loaisp_lbl;
         private System.Windows.Forms.Label ctlh_lbl;

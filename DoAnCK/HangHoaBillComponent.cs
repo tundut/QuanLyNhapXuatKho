@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace DoAnCK
 {
-    public partial class BillComponent : UserControl
+    public partial class HangHoaBillComponent : UserControl
     {
         private FormPhieuHoaDon HoaDon;
         public HangHoa hh;
-        public BillComponent(FormPhieuHoaDon HoaDon)
+        public HangHoaBillComponent(FormPhieuHoaDon HoaDon)
         {
             InitializeComponent();
             this.HoaDon = HoaDon;

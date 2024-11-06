@@ -18,6 +18,7 @@ namespace DoAnCK
         private HangHoa hh;
         private string img_filepath;
         private FormTrangChu formTrangChu;
+
         public FormHangHoa(HangHoa hh, FormTrangChu formTrangChu)
         {
             InitializeComponent();

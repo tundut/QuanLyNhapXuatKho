@@ -80,7 +80,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.ImageLocation = "";
             this.pictureBox1.Location = new System.Drawing.Point(285, 21);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(274, 110);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -103,6 +103,7 @@
             // btDangNhap
             // 
             this.btDangNhap.BorderRadius = 20;
+            this.btDangNhap.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btDangNhap.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btDangNhap.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btDangNhap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -171,7 +172,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lbMatKhau);
             this.Controls.Add(this.lbTenDangNhap);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormDangNhap";
             this.Text = "FormDangNhap";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
