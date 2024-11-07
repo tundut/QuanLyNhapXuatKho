@@ -115,6 +115,20 @@ public class KhoHang
         LuuDanhSachHDX();
     }
 
+    public void them_hh(HangHoa hh)
+    {
+        hh.so_luong = 0;
+        ds_hang_hoa.Add(hh);
+        LuuDanhSachHH();
+    }
+
+    public void xoa_hh(HangHoa hh)
+    {
+        hh.so_luong = 0;
+        ds_hang_hoa.Remove(hh);
+        LuuDanhSachHH();
+    }
+
     public void LoadData()
     {
         string filePath_hh = "Resources/hang_hoa.dat";
@@ -157,30 +171,6 @@ public class KhoHang
         {
             XmlSerializer serializer = new XmlSerializer(typeof(List<NhanVien>));
             ds_nhan_vien = (List<NhanVien>)serializer.Deserialize(reader);
-        }
-    }
-
-    public void them_hh(HangHoa hh)
-    {
-        hh.so_luong = 0;
-        ds_hang_hoa.Add(hh);
-        string filePath = "./Resources/hang_hoa.dat";
-        using (StreamWriter writer = new StreamWriter(filePath))
-        {
-            XmlSerializer serializer = new XmlSerializer(typeof(List<HangHoa>));
-            serializer.Serialize(writer, ds_hang_hoa);
-        }
-    }
-
-    public void xoa_hh(HangHoa hh)
-    {
-        hh.so_luong = 0;
-        ds_hang_hoa.Remove(hh);
-        string filePath = "./Resources/hang_hoa.dat";
-        using (StreamWriter writer = new StreamWriter(filePath))
-        {
-            XmlSerializer serializer = new XmlSerializer(typeof(List<HangHoa>));
-            serializer.Serialize(writer, ds_hang_hoa);
         }
     }
 }

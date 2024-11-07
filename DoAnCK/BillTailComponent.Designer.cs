@@ -1,6 +1,6 @@
 ﻿namespace DoAnCK
 {
-    partial class HangHoaBillComponent2
+    partial class BillTailComponent
     {
         /// <summary> 
         /// Required designer variable.

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DoAnCK
 {
-    public partial class HangHoaBillComponent2 : UserControl
+    public partial class BillTailComponent : UserControl
     {
-        public HangHoaBillComponent2()
+        public BillTailComponent()
         {
             InitializeComponent();
         }
