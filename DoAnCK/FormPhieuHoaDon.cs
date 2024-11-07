@@ -30,11 +30,11 @@ namespace DoAnCK
             }
 
 
-            HangHoaBillComponent2 hangHoaBillComponent2 = new HangHoaBillComponent2();
+            BillTailComponent billTailComponent = new BillTailComponent();
 
-            hangHoaBillComponent2.soluong_endbill.Text = "Số Lượng:   " + so_luong;
-            hangHoaBillComponent2.thanhtien_endbill.Text = "Thành Tiền:   " + String.Format("{0:N0}", tong_tien) + " VNĐ";
-            dshd_flp.Controls.Add(hangHoaBillComponent2);
+            billTailComponent.soluong_endbill.Text = "Số Lượng:   " + so_luong;
+            billTailComponent.thanhtien_endbill.Text = "Thành Tiền:   " + String.Format("{0:N0}", tong_tien) + " VNĐ";
+            dshd_flp.Controls.Add(billTailComponent);
         }
     }
 }
