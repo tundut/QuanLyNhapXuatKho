@@ -1,7 +1,4 @@
-﻿using DoAnCK;
-using System;
-using System.ComponentModel;
-using System.Drawing;
+﻿using System;
 using System.Runtime.Serialization;
 using System.Xml.Serialization;
 [XmlInclude(typeof(DienTu))]

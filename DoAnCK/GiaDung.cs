@@ -1,6 +1,4 @@
-﻿using DoAnCK;
-using System;
-using System.Drawing;
+﻿using System;
 using System.Runtime.Serialization;
 
 [Serializable]

@@ -1,7 +1,5 @@
-﻿using DoAnCK;
-using System;
+﻿using System;
 using System.Runtime.Serialization;
-using System.Drawing;
 
 [Serializable]
 public class DienTu : HangHoa

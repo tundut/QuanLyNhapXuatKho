@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Runtime.Serialization;
-using System.Drawing;
 
 [Serializable]
 public class ThucPham : HangHoa

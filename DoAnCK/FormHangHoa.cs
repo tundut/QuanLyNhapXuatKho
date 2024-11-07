@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DoAnCK
@@ -86,7 +78,7 @@ namespace DoAnCK
             string loai_hh = cbb_hanghoa.Text;
              
 
-            if (txt_ten.Text == "" || txt_id.Text == "" || txt_dongia.Text == "" || img_filepath == "" || cbb_hanghoa.Text == "")
+            if (txt_ten.Text == "" || txt_id.Text == "" || txt_dongia.Text == "" || cbb_hanghoa.Text == "")
             {
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -158,7 +150,10 @@ namespace DoAnCK
             }
             else
             {
-                ptb_anhhanghoa.Image = Image.FromFile(hh.img);
+                if (hh.img != null)
+                {
+                    ptb_anhhanghoa.Image = Image.FromFile(hh.img);
+                }
                 bt_anh.Visible = false;
                 txt_id.Text = hh.id;
                 txt_ten.Text = hh.ten_hang;

@@ -1,7 +1,6 @@
 ﻿using DoAnCK;
 using System;
 using System.Runtime.Serialization;
-using System.Text;
 
 [Serializable]
 public class HoaDonNhap : HoaDon
