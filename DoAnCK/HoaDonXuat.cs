@@ -1,5 +1,6 @@
 ﻿using System.Runtime.Serialization;
 using System;
+using System.Web.Management;
 
 namespace DoAnCK
 {
@@ -14,6 +15,10 @@ namespace DoAnCK
             this.cua_hang = cua_hang;
         }
 
+        public override string SetID()
+        {
+            return "HDX";
+        }
 
         public override void GetObjectData(SerializationInfo info, StreamingContext context)
         {

@@ -14,6 +14,12 @@ namespace DoAnCK
             ngay_tao_don = DateTime.Now;
         }
 
+        public override string SetID()
+        {
+            return "HDN";
+        }
+
+
         public override void GetObjectData(SerializationInfo info, StreamingContext context)
         {
             base.GetObjectData(info, context);

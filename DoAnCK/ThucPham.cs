@@ -11,6 +11,18 @@ public class ThucPham : HangHoa
 
     }
 
+    public override HangHoa Show()
+    {
+        if (this is ThucPham)
+        {
+            return this;
+        }
+        else
+        {
+            return null;
+        }
+    }
+
     public override void GetObjectData(SerializationInfo info, StreamingContext context)
     {
         base.GetObjectData(info, context);

@@ -11,6 +11,19 @@ public class GiaDung : HangHoa
 
     }
 
+    public override HangHoa Show()
+    {
+        if (this is GiaDung)
+        {
+            return this;
+        }
+        else
+        {
+            return null;
+        }
+
+    }
+
     public override void GetObjectData(SerializationInfo info, StreamingContext context)
     {
         base.GetObjectData(info, context);

@@ -170,7 +170,10 @@ namespace DoAnCK
                 {
                     kho.capnhatkho(qlnx, true);
                     
-                    string id_hoa_don = "HDN" + (kho.ds_hoa_don_nhap.Count + 1);
+                    HoaDonNhap hoaDonNhap = new HoaDonNhap(qlnx, null, current_nv, current_ncc, qlnx.tinh_tong_tien());
+                    string id_hoa_don = hoaDonNhap.SetID() + (kho.ds_hoa_don_nhap.Count + 1);
+                    
+                    kho.ThemHoaDonNhap(hoaDonNhap);
 
                     FormPhieuHoaDon formHoaDon = new FormPhieuHoaDon();
                     formHoaDon.hd_lbl.Text = "Hoá Đơn Nhập";
@@ -181,8 +184,6 @@ namespace DoAnCK
                     formHoaDon.them_dshh(qlnx);
                     formHoaDon.Show();
 
-                    HoaDonNhap hoaDonNhap = new HoaDonNhap(qlnx, id_hoa_don, current_nv, current_ncc, qlnx.tinh_tong_tien());
-                    kho.ThemHoaDonNhap(hoaDonNhap);
 
                     Reload_flp();
                     ctlh_flp.Controls.Clear();
@@ -203,7 +204,9 @@ namespace DoAnCK
                     {
                         kho.capnhatkho(qlnx, false);
 
-                        string id_hoa_don = "HDX" + (kho.ds_hoa_don_xuat.Count + 1);
+                        HoaDonXuat hoaDonXuat = new HoaDonXuat(qlnx, null, current_nv, current_ch, qlnx.tinh_tong_tien());
+                        string id_hoa_don = hoaDonXuat.SetID() + (kho.ds_hoa_don_xuat.Count + 1);
+                        kho.ThemHoaDonXuat(hoaDonXuat);
 
                         FormPhieuHoaDon formHoaDon = new FormPhieuHoaDon();
                         formHoaDon.hd_lbl.Text = "Hoá Đơn Xuất";
@@ -213,9 +216,6 @@ namespace DoAnCK
                         formHoaDon.idncc_ch_lbl.Text = "ID cửa hàng: " + current_ch.id_ch;
                         formHoaDon.them_dshh(qlnx);
                         formHoaDon.Show();
-
-                        HoaDonXuat hoaDonXuat = new HoaDonXuat(qlnx, id_hoa_don, current_nv, current_ch, qlnx.tinh_tong_tien());
-                        kho.ThemHoaDonXuat(hoaDonXuat);
 
                         Reload_flp();
                         ctlh_flp.Controls.Clear();

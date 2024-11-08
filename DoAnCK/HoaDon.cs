@@ -25,6 +25,8 @@ namespace DoAnCK
             this.tong_tien = tong_tien;
         }
 
+        public abstract string SetID();
+
         public virtual void GetObjectData(SerializationInfo info, StreamingContext context)
         {
             info.AddValue("id_hoa_don", id_hoa_don);
