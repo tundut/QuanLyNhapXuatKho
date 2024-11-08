@@ -12,10 +12,7 @@ public class NhanVien : ISerializable
     public string username;
     public string password;
 
-    public NhanVien()
-    {
-
-    }
+    public NhanVien() { }
     public NhanVien(string id_nv, string ten_nv, uint tuoi, bool gioi_tinh, string dia_chi_nv, string username, string password)
     {
         this.id_nv = id_nv;
@@ -39,7 +36,7 @@ public class NhanVien : ISerializable
         info.AddValue("password", password);
     }
 
-    public NhanVien(SerializationInfo info, StreamingContext context)
+    private NhanVien(SerializationInfo info, StreamingContext context)
     {
         id_nv = info.GetString("id_nv");
         ten_nv = info.GetString("ten_nv");

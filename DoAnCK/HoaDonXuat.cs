@@ -1,31 +1,29 @@
 ﻿using System.Runtime.Serialization;
-using DoAnCK;
 using System;
 
-[Serializable]
-public class HoaDonXuat : HoaDon
+namespace DoAnCK
 {
-    public CuaHang cua_hang;
-    public HoaDonXuat()
+    [Serializable]
+    public class HoaDonXuat : HoaDon
     {
+        public CuaHang cua_hang;
+        private HoaDonXuat() { }
+        public HoaDonXuat(QuanLyNhapXuat qlnx, string id_hoa_don, NhanVien nv_lap, CuaHang cua_hang, ulong tong_tien) : base(qlnx, id_hoa_don, nv_lap, tong_tien)
+        {
+            ngay_tao_don = DateTime.Now;
+            this.cua_hang = cua_hang;
+        }
 
+
+        public override void GetObjectData(SerializationInfo info, StreamingContext context)
+        {
+            base.GetObjectData(info, context);
+            info.AddValue("cua_hang", cua_hang);
+        }
+
+        private HoaDonXuat(SerializationInfo info, StreamingContext context) : base(info, context)
+        {
+            cua_hang = (CuaHang)info.GetValue("cua_hang", typeof(CuaHang));
+        }
     }
-    public HoaDonXuat(QuanLyNhapXuat qlnx, string id_hoa_don, NhanVien nv_lap, CuaHang cua_hang, ulong tong_tien) : base(qlnx, id_hoa_don, nv_lap, tong_tien)
-    {
-        ngay_tao_don = DateTime.Now;
-        this.cua_hang = cua_hang;
-    }
-
-
-    public override void GetObjectData(SerializationInfo info, StreamingContext context)
-    {
-        base.GetObjectData(info, context);
-        info.AddValue("cua_hang", cua_hang);
-    }
-
-    public HoaDonXuat(SerializationInfo info, StreamingContext context) : base(info, context)
-    {
-        cua_hang = (CuaHang)info.GetValue("cua_hang", typeof(CuaHang));
-    }
-
 }

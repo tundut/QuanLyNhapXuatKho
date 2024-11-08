@@ -6,10 +6,8 @@ namespace DoAnCK
     public partial class FormNhapXuat : System.Windows.Forms.Form
     {
         private bool isnhap;
-
         private KhoHang kho = new KhoHang();
-        private QuanLyNhapXuat quanlynhapxuat = new QuanLyNhapXuat();
-
+        private QuanLyNhapXuat qlnx = new QuanLyNhapXuat();
         private NhanVien current_nv = new NhanVien();
 
         public FormNhapXuat(NhanVien current_nv, bool isnhap)
@@ -24,44 +22,44 @@ namespace DoAnCK
 
         public void them_hh_lo(HangHoa hh)
         {
-            if (quanlynhapxuat.ton_tai(hh) == false)
+            if (qlnx.ton_tai(hh) == false)
             {
                 HangHoaLoComponent hh_lo = new HangHoaLoComponent(this);
                 hh_lo.hh = (HangHoa)hh.Clone();
                 hh_lo.hh.so_luong = 1;
                 hh_lo.SetProductInfo();
                 ctlh_flp.Controls.Add(hh_lo);
-                quanlynhapxuat.them_hh(hh_lo.hh);
+                qlnx.them_hh(hh_lo.hh);
                 tinh_tong_tien();
             }
         }
         public void xoa_hh_lo(HangHoaLoComponent hh_lo)
         {
             ctlh_flp.Controls.Remove(hh_lo);
-            quanlynhapxuat.xoa_hh(hh_lo.hh);
+            qlnx.xoa_hh(hh_lo.hh);
             tinh_tong_tien();
         }
 
         public void tang_sl(HangHoaLoComponent hh_lo)
         {
-            quanlynhapxuat.tang_sl(hh_lo.hh);
+            qlnx.tang_sl(hh_lo.hh);
             tinh_tong_tien();
         }
 
         public void giam_sl(HangHoaLoComponent hh_lo)
         {
-            quanlynhapxuat.giam_sl(hh_lo.hh);
+            qlnx.giam_sl(hh_lo.hh);
             tinh_tong_tien();
         }
         public void nhap_sl(HangHoaLoComponent hh_lo)
         {
-            quanlynhapxuat.cap_nhat_sl(hh_lo.hh, hh_lo.hh.so_luong);
+            qlnx.cap_nhat_sl(hh_lo.hh, hh_lo.hh.so_luong);
             tinh_tong_tien();
         }
 
         public void tinh_tong_tien()
         {
-            ulong tong_tien = quanlynhapxuat.tinh_tong_tien();
+            ulong tong_tien = qlnx.tinh_tong_tien();
             tongtien_lbl.Text = "Tổng tiền: " + String.Format("{0:N0}", tong_tien) + " VNĐ";
         }
 
@@ -124,6 +122,7 @@ namespace DoAnCK
             }
         }
 
+        #region Event
         private void ncc_ch_cbb_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (isnhap)
@@ -157,7 +156,7 @@ namespace DoAnCK
 
         private void huy_btn_Click(object sender, EventArgs e)
         {
-            quanlynhapxuat = new QuanLyNhapXuat();
+            qlnx = new QuanLyNhapXuat();
             ctlh_flp.Controls.Clear();
             tinh_tong_tien();
         }
@@ -169,7 +168,7 @@ namespace DoAnCK
                 NhaCungCap current_ncc = kho.ds_ncc.Find(x => x.ten_ncc == ncc_ch_cbb.Text);
                 if (current_ncc != null)
                 {
-                    kho.capnhatkho(quanlynhapxuat.ds_hang_hoa, true);
+                    kho.capnhatkho(qlnx, true);
                     
                     string id_hoa_don = "HDN" + (kho.ds_hoa_don_nhap.Count + 1);
 
@@ -179,10 +178,10 @@ namespace DoAnCK
                     formHoaDon.idnv_lbl.Text = "ID nhân viên lập: " + current_nv.id_nv;
                     formHoaDon.idhd_lbl.Text = "ID hoá đơn: " + id_hoa_don;
                     formHoaDon.idncc_ch_lbl.Text = "ID nhà cung cấp: " + current_ncc.id_ncc;
-                    formHoaDon.them_dshd(quanlynhapxuat.ds_hang_hoa);
+                    formHoaDon.them_dshh(qlnx);
                     formHoaDon.Show();
 
-                    HoaDonNhap hoaDonNhap = new HoaDonNhap(quanlynhapxuat, id_hoa_don, current_nv, current_ncc, quanlynhapxuat.tinh_tong_tien());
+                    HoaDonNhap hoaDonNhap = new HoaDonNhap(qlnx, id_hoa_don, current_nv, current_ncc, qlnx.tinh_tong_tien());
                     kho.ThemHoaDonNhap(hoaDonNhap);
 
                     Reload_flp();
@@ -200,9 +199,9 @@ namespace DoAnCK
                 CuaHang current_ch = kho.ds_cua_hang.Find(x => x.ten_ch == ncc_ch_cbb.Text);
                 if (current_ch != null)
                 {
-                    if (kho.kha_dung(quanlynhapxuat.ds_hang_hoa))
+                    if (kho.kha_dung(qlnx))
                     {
-                        kho.capnhatkho(quanlynhapxuat.ds_hang_hoa, false);
+                        kho.capnhatkho(qlnx, false);
 
                         string id_hoa_don = "HDX" + (kho.ds_hoa_don_xuat.Count + 1);
 
@@ -212,10 +211,10 @@ namespace DoAnCK
                         formHoaDon.idnv_lbl.Text = "ID nhân viên lập: " + current_nv.id_nv;
                         formHoaDon.idhd_lbl.Text = "ID hoá đơn: " + id_hoa_don;
                         formHoaDon.idncc_ch_lbl.Text = "ID cửa hàng: " + current_ch.id_ch;
-                        formHoaDon.them_dshd(quanlynhapxuat.ds_hang_hoa);
+                        formHoaDon.them_dshh(qlnx);
                         formHoaDon.Show();
 
-                        HoaDonXuat hoaDonXuat = new HoaDonXuat(quanlynhapxuat, id_hoa_don, current_nv, current_ch, quanlynhapxuat.tinh_tong_tien());
+                        HoaDonXuat hoaDonXuat = new HoaDonXuat(qlnx, id_hoa_don, current_nv, current_ch, qlnx.tinh_tong_tien());
                         kho.ThemHoaDonXuat(hoaDonXuat);
 
                         Reload_flp();
@@ -262,7 +261,6 @@ namespace DoAnCK
                 }
             }
         }
-
-        
+        #endregion
     }
 }

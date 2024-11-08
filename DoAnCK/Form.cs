@@ -47,7 +47,7 @@ namespace DoAnCK
         }
 
         private bool hoadonExpand = false;
-
+        #region Event
         private void hoadon_timer_Tick(object sender, EventArgs e)
         {
             if (hoadonExpand == false && hoadon_flp.Height < 210)
@@ -167,6 +167,6 @@ namespace DoAnCK
             hoadonnhap_btn.Checked = false;
             hoadonxuat_btn.Checked = true;
         }
-
+        #endregion
     }
 }

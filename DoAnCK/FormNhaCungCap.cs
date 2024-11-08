@@ -6,25 +6,16 @@ namespace DoAnCK
     public partial class FormNhaCungCap : System.Windows.Forms.Form
     {
         private KhoHang kho = new KhoHang();
-
         private int index;
 
         public FormNhaCungCap()
         {
             InitializeComponent();
-            kho.LoadData();
 
+            kho.LoadData();
             ResetTextBoxes();
         }
 
-
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-            index = dataNCC.CurrentCell.RowIndex;
-            kho.ds_ncc.RemoveAt(index);
-            dataNCC.Rows.RemoveAt(index);
-            kho.LuuDanhSachNCC();
-        }
 
 
         private NhaCungCap ncc;
@@ -33,20 +24,41 @@ namespace DoAnCK
             this.ncc = ncc;
         }
 
+        private void ResetTextBoxes()
+        {
+            txtId.Clear();
+            txtTen.Clear();
+            txtSDT.Clear();
+            txtDiaChi.Clear();
+        }
+        private void ToggleTextBoxState(bool enabled)
+        {
+            txtId.Enabled = enabled;
+            txtTen.Enabled = enabled;
+            txtSDT.Enabled = enabled;
+            txtDiaChi.Enabled = enabled;
+        }
+
+        private bool isAddingMode = false;
+
+        #region Event
         private void NhaCungCap_Load(object sender, EventArgs e)
         {
-
-
             foreach (NhaCungCap ncc in kho.ds_ncc)
             {
                 dataNCC.Rows.Add(ncc.id_ncc, ncc.ten_ncc, ncc.sdt_ncc, ncc.dia_chi_ncc);
             }
 
             dataNCC.Enabled = dataNCC.Rows.Count > 0;
-
         }
 
-        private bool isAddingMode = false;
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            index = dataNCC.CurrentCell.RowIndex;
+            kho.ds_ncc.RemoveAt(index);
+            dataNCC.Rows.RemoveAt(index);
+            kho.LuuDanhSachNCC();
+        }
 
         private void btnthem_Click(object sender, EventArgs e)
         {
@@ -79,7 +91,6 @@ namespace DoAnCK
             kho.LuuDanhSachNCC();
 
             MessageBox.Show("Cập nhật thành công!", "Thông báo");
-
             ResetTextBoxes();
         }
 
@@ -97,13 +108,9 @@ namespace DoAnCK
                 dataNCC.Rows.Add(id, ten, sdt, diaChi);
 
                 kho.LuuDanhSachNCC();
-
                 MessageBox.Show("Đã lưu thành công!", "Thông báo");
 
-
                 isAddingMode = false;
-
-
                 ResetTextBoxes();
             }
             else
@@ -111,20 +118,7 @@ namespace DoAnCK
                 MessageBox.Show("Hãy nhấn nút Thêm trước khi lưu!", "Thông báo");
             }
         }
-        private void ResetTextBoxes()
-        {
-            txtId.Clear();
-            txtTen.Clear();
-            txtSDT.Clear();
-            txtDiaChi.Clear();
-        }
-        private void ToggleTextBoxState(bool enabled)
-        {
-            txtId.Enabled = enabled;
-            txtTen.Enabled = enabled;
-            txtSDT.Enabled = enabled;
-            txtDiaChi.Enabled = enabled;
-        }
+        
         private void btnHuy_Click(object sender, EventArgs e)
         {
             txtId.Clear();
@@ -155,6 +149,6 @@ namespace DoAnCK
                 txtDiaChi.Text = row.Cells[3].Value?.ToString() ?? string.Empty;
             }
         }
-
+        #endregion
     }
 }

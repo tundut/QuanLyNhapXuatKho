@@ -19,7 +19,7 @@ namespace DoAnCK
             {
                 Application.Run(new Form());
             }
-            catch (ObjectDisposedException ex)
+            catch (ObjectDisposedException)
             {
                 return;
             }

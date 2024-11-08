@@ -20,6 +20,7 @@ namespace DoAnCK
             kho.LoadData();
         }
 
+        #region Event
         private void bt_anh_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog
@@ -89,35 +90,39 @@ namespace DoAnCK
                 {
                     if (loai_hh == "Điện tử")
                     {
-                        hh = new DienTu();
-                        hh.ten_hang = txt_ten.Text;
-                        hh.id = txt_id.Text;
-                        hh.don_gia = Convert.ToUInt64(txt_dongia.Text);
-                        hh.img = img_filepath;
+                        hh = new DienTu(
+                            txt_id.Text, 
+                            txt_ten.Text,
+                            Convert.ToUInt32(txt_soluong.Text), 
+                            Convert.ToUInt64(txt_dongia.Text), 
+                            img_filepath);
 
                         kho.them_hh(hh);
                     }
 
                     else if (loai_hh == "Gia dụng")
                     {
-                        hh = new GiaDung();
-                        hh.ten_hang = txt_ten.Text;
-                        hh.id = txt_id.Text;
-                        hh.don_gia = Convert.ToUInt64(txt_dongia.Text);
-                        hh.img = img_filepath;
+                        hh = new GiaDung(
+                            txt_id.Text,
+                            txt_ten.Text,
+                            Convert.ToUInt32(txt_soluong.Text),
+                            Convert.ToUInt64(txt_dongia.Text),
+                            img_filepath);
 
                         kho.them_hh(hh);
                     }
                     else if (loai_hh == "Thực phẩm")
                     {
-                        hh = new ThucPham();
-                        hh.ten_hang = txt_ten.Text;
-                        hh.id = txt_id.Text;
-                        hh.don_gia = Convert.ToUInt64(txt_dongia.Text);
-                        hh.img = img_filepath;
+                        hh = new ThucPham(
+                            txt_id.Text,
+                            txt_ten.Text,
+                            Convert.ToUInt32(txt_soluong.Text),
+                            Convert.ToUInt64(txt_dongia.Text),
+                            img_filepath);
 
                         kho.them_hh(hh);
                     }
+
                     formTrangChu.Reload_flp();
                     this.Close();
                 } 
@@ -182,5 +187,6 @@ namespace DoAnCK
                 xoa_btn.Visible = true;
             }
         }
+        #endregion
     }
 }

@@ -4,10 +4,7 @@ using System.Runtime.Serialization;
 [Serializable]
 public class DienTu : HangHoa
 {
-    public DienTu()
-    {
-
-    }
+    private DienTu() { }
 
     public DienTu(string id, string ten_hang, uint so_luong, ulong don_gia, string img) : base(id, ten_hang, so_luong, don_gia, img)
     {
@@ -19,7 +16,7 @@ public class DienTu : HangHoa
         base.GetObjectData(info, context);
     }
 
-    public DienTu(SerializationInfo info, StreamingContext context) : base(info, context)
+    private DienTu(SerializationInfo info, StreamingContext context) : base(info, context)
     {
 
     }

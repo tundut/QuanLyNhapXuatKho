@@ -18,6 +18,7 @@ namespace DoAnCK
 
         }
 
+        #region Event
         private void HoaDon_load(object sender, EventArgs e)
         {
             if (isnhap) 
@@ -54,7 +55,7 @@ namespace DoAnCK
                 formHoaDon.idnv_lbl.Text = "ID nhân viên lập: " + hdn.nv_lap.id_nv;
                 formHoaDon.idhd_lbl.Text = "ID hoá đơn: " + hdn.id_hoa_don;
                 formHoaDon.idncc_ch_lbl.Text = "ID nhà cung cấp: " + hdn.nha_cung_cap.id_ncc;
-                formHoaDon.them_dshd(hdn.qlnx.ds_hang_hoa);
+                formHoaDon.them_dshh(hdn.qlnx);
                 formHoaDon.Show();
             }
             else
@@ -66,9 +67,10 @@ namespace DoAnCK
                 formHoaDon.idnv_lbl.Text = "ID nhân viên lập: " + hdx.nv_lap.id_nv;
                 formHoaDon.idhd_lbl.Text = "ID hoá đơn: " + hdx.id_hoa_don;
                 formHoaDon.idncc_ch_lbl.Text = "ID nhà cung cấp: " + hdx.cua_hang.id_ch;
-                formHoaDon.them_dshd(hdx.qlnx.ds_hang_hoa);
+                formHoaDon.them_dshh(hdx.qlnx);
                 formHoaDon.Show();
             }    
         }
+        #endregion
     }
 }

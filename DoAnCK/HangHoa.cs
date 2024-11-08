@@ -5,7 +5,7 @@ using System.Xml.Serialization;
 [XmlInclude(typeof(GiaDung))]
 [XmlInclude(typeof(ThucPham))]
 [Serializable]
-public abstract class HangHoa : ICloneable, ISerializable
+public abstract class HangHoa : ISerializable, ICloneable
 {
     public string id;
     public string ten_hang;
@@ -13,10 +13,7 @@ public abstract class HangHoa : ICloneable, ISerializable
     public ulong don_gia;
     public string img;
 
-    public HangHoa()
-    {
-
-    }
+    protected HangHoa() { }
 
     public HangHoa(string id, string ten_hang, uint so_luong, ulong don_gia, string img)
     {
@@ -45,7 +42,7 @@ public abstract class HangHoa : ICloneable, ISerializable
         info.AddValue("img", img);
     }
 
-    public HangHoa(SerializationInfo info, StreamingContext context)
+    protected HangHoa(SerializationInfo info, StreamingContext context)
     {
         id = info.GetString("id");
         ten_hang = info.GetString("ten_hang");

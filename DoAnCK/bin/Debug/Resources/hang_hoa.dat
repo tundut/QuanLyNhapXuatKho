@@ -3,42 +3,42 @@
   <HangHoa xsi:type="DienTu">
     <id>DT01</id>
     <ten_hang>Bếp từ</ten_hang>
-    <so_luong>3</so_luong>
+    <so_luong>10</so_luong>
     <don_gia>1000000</don_gia>
     <img>.\Resources\hang hoa img\dien tu\Bếp từ.jpg</img>
   </HangHoa>
   <HangHoa xsi:type="DienTu">
     <id>DT02</id>
     <ten_hang>Lò vi sóng</ten_hang>
-    <so_luong>9</so_luong>
+    <so_luong>11</so_luong>
     <don_gia>2000000</don_gia>
     <img>.\Resources\hang hoa img\dien tu\Lò vi sóng.jpg</img>
   </HangHoa>
   <HangHoa xsi:type="DienTu">
     <id>DT03</id>
     <ten_hang>Máy giặt</ten_hang>
-    <so_luong>7</so_luong>
+    <so_luong>9</so_luong>
     <don_gia>3000000</don_gia>
     <img>.\Resources\hang hoa img\dien tu\Máy giặt.jpg</img>
   </HangHoa>
   <HangHoa xsi:type="DienTu">
     <id>DT04</id>
     <ten_hang>Máy in</ten_hang>
-    <so_luong>4</so_luong>
+    <so_luong>10</so_luong>
     <don_gia>2500000</don_gia>
     <img>.\Resources\hang hoa img\dien tu\Máy in.jpg</img>
   </HangHoa>
   <HangHoa xsi:type="DienTu">
     <id>DT05</id>
     <ten_hang>Nồi cơm điện</ten_hang>
-    <so_luong>5</so_luong>
+    <so_luong>7</so_luong>
     <don_gia>1500000</don_gia>
     <img>.\Resources\hang hoa img\dien tu\nồi cơm điện.jpg</img>
   </HangHoa>
   <HangHoa xsi:type="DienTu">
     <id>DT06</id>
     <ten_hang>Máy quạt</ten_hang>
-    <so_luong>5</so_luong>
+    <so_luong>7</so_luong>
     <don_gia>500000</don_gia>
     <img>.\Resources\hang hoa img\dien tu\Quạt.jpg</img>
   </HangHoa>

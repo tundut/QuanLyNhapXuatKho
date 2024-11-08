@@ -6,8 +6,9 @@ namespace DoAnCK
     public partial class FormCuaHang : System.Windows.Forms.Form
     {
         private KhoHang kho = new KhoHang();
-
         private int index;
+        private CuaHang ch;
+        private bool isAddingMode = false;
 
         public FormCuaHang()
         {
@@ -17,13 +18,27 @@ namespace DoAnCK
             ResetTextBoxes();
         }
 
-        private CuaHang ch;
         private void SetNCCInfo(CuaHang ch)
         {
             this.ch = ch;
         }
 
-        private bool isAddingMode = false;
+        private void ResetTextBoxes()
+        {
+            txtId.Clear();
+            txtTen.Clear();
+            txtSDT.Clear();
+            txtDiaChi.Clear();
+        }
+        private void ToggleTextBoxState(bool enabled)
+        {
+            txtId.Enabled = enabled;
+            txtTen.Enabled = enabled;
+            txtSDT.Enabled = enabled;
+            txtDiaChi.Enabled = enabled;
+        }
+
+        #region Event
         private void btnthem_Click(object sender, EventArgs e)
         {
             isAddingMode = true;
@@ -103,21 +118,6 @@ namespace DoAnCK
             ResetTextBoxes();
         }
 
-        private void ResetTextBoxes()
-        {
-            txtId.Clear();
-            txtTen.Clear();
-            txtSDT.Clear();
-            txtDiaChi.Clear();
-        }
-        private void ToggleTextBoxState(bool enabled)
-        {
-            txtId.Enabled = enabled;
-            txtTen.Enabled = enabled;
-            txtSDT.Enabled = enabled;
-            txtDiaChi.Enabled = enabled;
-        }
-
         private void dataCH_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0) return;
@@ -143,5 +143,6 @@ namespace DoAnCK
 
             dataCH.Enabled = dataCH.Rows.Count > 0;
         }
+        #endregion
     }
 }

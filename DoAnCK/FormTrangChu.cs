@@ -75,6 +75,7 @@ namespace DoAnCK
             }
         }
 
+        #region Event
         private void tatca_btn_Click(object sender, EventArgs e)
         {
             tatca_btn.Checked = true;
@@ -154,5 +155,6 @@ namespace DoAnCK
                 dshh_flp.Controls.Add(hh_component);
             }
         }
+        #endregion
     }
 }

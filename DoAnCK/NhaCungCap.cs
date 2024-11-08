@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Runtime.Serialization;
+
 [Serializable]
 public class NhaCungCap : ISerializable
 {
@@ -8,10 +9,7 @@ public class NhaCungCap : ISerializable
     public string sdt_ncc;
     public string dia_chi_ncc;
 
-    private NhaCungCap()
-    {
-
-    }
+    private NhaCungCap() { }
     public NhaCungCap(string id_ncc, string ten_ncc, string sdt_ncc, string dia_chi_ncc)
     {
         this.id_ncc = id_ncc;
@@ -27,7 +25,7 @@ public class NhaCungCap : ISerializable
         info.AddValue("dia_chi_ncc", dia_chi_ncc);
     }
 
-    public NhaCungCap(SerializationInfo info, StreamingContext context)
+    private NhaCungCap(SerializationInfo info, StreamingContext context)
     {
         id_ncc = info.GetString("id_ncc");
         ten_ncc = info.GetString("ten_ncc");

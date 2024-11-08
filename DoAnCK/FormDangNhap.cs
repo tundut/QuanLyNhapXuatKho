@@ -17,6 +17,7 @@ namespace DoAnCK
             kho.LoadData();
         }
 
+        #region Event
         private void btDangNhap_Click(object sender, EventArgs e)
         {
             string username = txtTenDangNhap.Text;
@@ -34,5 +35,6 @@ namespace DoAnCK
                 MessageBox.Show("Sai tên tài khoản hoặc mật khẩu. Vui lòng thử lại.", "Lỗi đăng nhập", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        #endregion
     }
 }

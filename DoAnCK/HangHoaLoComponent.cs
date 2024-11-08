@@ -21,6 +21,7 @@ namespace DoAnCK
             thanhtien_lbl.Text = String.Format("{0:N0}",hh.don_gia * hh.so_luong);
         }
 
+        #region Event
         private void xoa_btn_Click(object sender, EventArgs e)
         {
             NhapXuat.xoa_hh_lo(this);
@@ -58,5 +59,6 @@ namespace DoAnCK
                 e.Handled = true;
             }
         }
+        #endregion
     }
 }

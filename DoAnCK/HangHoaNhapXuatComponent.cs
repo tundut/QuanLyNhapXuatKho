@@ -28,8 +28,8 @@ namespace DoAnCK
             }
         }
 
-
-        private void MouseEnter(object sender, EventArgs e)
+        #region Event
+        private void Mouse_Enter(object sender, EventArgs e)
         {
             guna2Panel1.FillColor = ColorTranslator.FromHtml("#888888");
             hanghoa_ptb.BackColor = ColorTranslator.FromHtml("#888888");
@@ -37,7 +37,7 @@ namespace DoAnCK
             dongia_lbl.BackColor = ColorTranslator.FromHtml("#888888");
             soluong_lbl.BackColor = ColorTranslator.FromHtml("#888888");
         }
-        private void MouseLeave(object sender, EventArgs e)
+        private void Mouse_Leave(object sender, EventArgs e)
         {
             guna2Panel1.FillColor = ColorTranslator.FromHtml("#bbbbbb");
             hanghoa_ptb.BackColor = ColorTranslator.FromHtml("#bbbbbb");
@@ -46,9 +46,10 @@ namespace DoAnCK
             soluong_lbl.BackColor = ColorTranslator.FromHtml("#bbbbbb");
         }
 
-        private void MouseClick(object sender, EventArgs e)
+        private void Mouse_Click(object sender, EventArgs e)
         {
             NhapHang.them_hh_lo(hh);
         }
+        #endregion
     }
 }

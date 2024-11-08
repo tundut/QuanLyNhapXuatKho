@@ -8,10 +8,8 @@ public class CuaHang : ISerializable
     public string ten_ch;
     public string sdt_ch;
     public string dia_chi_ch;
-    private CuaHang()
-    {
+    private CuaHang() { }
 
-    }
     public CuaHang(string id_ch, string ten_ch, string sdt_ch, string dia_chi_ch)
     {
         this.id_ch = id_ch;
@@ -28,7 +26,7 @@ public class CuaHang : ISerializable
         info.AddValue("dia_chi_ch", dia_chi_ch);
     }
 
-    public CuaHang(SerializationInfo info, StreamingContext context)
+    private CuaHang(SerializationInfo info, StreamingContext context)
     {
         id_ch = info.GetString("id_ch");
         ten_ch = info.GetString("ten_ch");

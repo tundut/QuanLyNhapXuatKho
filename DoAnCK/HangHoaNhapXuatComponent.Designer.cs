@@ -50,9 +50,9 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(152, 202);
             this.guna2Panel1.TabIndex = 1;
-            this.guna2Panel1.Click += new System.EventHandler(this.MouseClick);
-            this.guna2Panel1.MouseEnter += new System.EventHandler(this.MouseEnter);
-            this.guna2Panel1.MouseLeave += new System.EventHandler(this.MouseLeave);
+            this.guna2Panel1.Click += new System.EventHandler(this.Mouse_Click);
+            this.guna2Panel1.MouseEnter += new System.EventHandler(this.Mouse_Enter);
+            this.guna2Panel1.MouseLeave += new System.EventHandler(this.Mouse_Leave);
             // 
             // soluong_lbl
             // 
@@ -66,9 +66,9 @@
             this.soluong_lbl.TabIndex = 3;
             this.soluong_lbl.Text = "SL: ";
             this.soluong_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.soluong_lbl.Click += new System.EventHandler(this.MouseClick);
-            this.soluong_lbl.MouseEnter += new System.EventHandler(this.MouseEnter);
-            this.soluong_lbl.MouseLeave += new System.EventHandler(this.MouseLeave);
+            this.soluong_lbl.Click += new System.EventHandler(this.Mouse_Click);
+            this.soluong_lbl.MouseEnter += new System.EventHandler(this.Mouse_Enter);
+            this.soluong_lbl.MouseLeave += new System.EventHandler(this.Mouse_Leave);
             // 
             // dongia_lbl
             // 
@@ -82,9 +82,9 @@
             this.dongia_lbl.TabIndex = 2;
             this.dongia_lbl.Text = "Don gia: ";
             this.dongia_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.dongia_lbl.Click += new System.EventHandler(this.MouseClick);
-            this.dongia_lbl.MouseEnter += new System.EventHandler(this.MouseEnter);
-            this.dongia_lbl.MouseLeave += new System.EventHandler(this.MouseLeave);
+            this.dongia_lbl.Click += new System.EventHandler(this.Mouse_Click);
+            this.dongia_lbl.MouseEnter += new System.EventHandler(this.Mouse_Enter);
+            this.dongia_lbl.MouseLeave += new System.EventHandler(this.Mouse_Leave);
             // 
             // ten_lbl
             // 
@@ -98,9 +98,9 @@
             this.ten_lbl.TabIndex = 1;
             this.ten_lbl.Text = "Ten: ";
             this.ten_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ten_lbl.Click += new System.EventHandler(this.MouseClick);
-            this.ten_lbl.MouseEnter += new System.EventHandler(this.MouseEnter);
-            this.ten_lbl.MouseLeave += new System.EventHandler(this.MouseLeave);
+            this.ten_lbl.Click += new System.EventHandler(this.Mouse_Click);
+            this.ten_lbl.MouseEnter += new System.EventHandler(this.Mouse_Enter);
+            this.ten_lbl.MouseLeave += new System.EventHandler(this.Mouse_Leave);
             // 
             // hanghoa_ptb
             // 
@@ -111,9 +111,9 @@
             this.hanghoa_ptb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.hanghoa_ptb.TabIndex = 0;
             this.hanghoa_ptb.TabStop = false;
-            this.hanghoa_ptb.Click += new System.EventHandler(this.MouseClick);
-            this.hanghoa_ptb.MouseEnter += new System.EventHandler(this.MouseEnter);
-            this.hanghoa_ptb.MouseLeave += new System.EventHandler(this.MouseLeave);
+            this.hanghoa_ptb.Click += new System.EventHandler(this.Mouse_Click);
+            this.hanghoa_ptb.MouseEnter += new System.EventHandler(this.Mouse_Enter);
+            this.hanghoa_ptb.MouseLeave += new System.EventHandler(this.Mouse_Leave);
             // 
             // HangHoaNhapXuatComponent
             // 
