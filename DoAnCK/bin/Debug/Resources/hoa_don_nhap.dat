@@ -132,4 +132,49 @@
       <dia_chi_ncc>Bình Dương</dia_chi_ncc>
     </nha_cung_cap>
   </HoaDonNhap>
+  <HoaDonNhap>
+    <id_hoa_don>HDN3</id_hoa_don>
+    <ngay_tao_don>2024-11-09T23:09:36.2067402+07:00</ngay_tao_don>
+    <qlnx>
+      <ds_hang_hoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT01</id>
+          <ten_hang>Bếp từ</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>1000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Bếp từ.jpg</img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT02</id>
+          <ten_hang>Lò vi sóng</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>2000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Lò vi sóng.jpg</img>
+        </HangHoa>
+        <HangHoa xsi:type="DienTu">
+          <id>DT03</id>
+          <ten_hang>Máy giặt</ten_hang>
+          <so_luong>1</so_luong>
+          <don_gia>3000000</don_gia>
+          <img>.\Resources\hang hoa img\dien tu\Máy giặt.jpg</img>
+        </HangHoa>
+      </ds_hang_hoa>
+    </qlnx>
+    <nv_lap>
+      <id_nv>NV01</id_nv>
+      <ten_nv>Nguyễn Phan Tuấn Đức</ten_nv>
+      <tuoi>19</tuoi>
+      <gioi_tinh>true</gioi_tinh>
+      <dia_chi_nv>Quảng Ngãi</dia_chi_nv>
+      <username>user1</username>
+      <password>pass1</password>
+    </nv_lap>
+    <tong_tien>6000000</tong_tien>
+    <nha_cung_cap>
+      <id_ncc>NCC03</id_ncc>
+      <ten_ncc>Nhà cung cấp 03</ten_ncc>
+      <sdt_ncc>0566544233</sdt_ncc>
+      <dia_chi_ncc>Bình Chánh</dia_chi_ncc>
+    </nha_cung_cap>
+  </HoaDonNhap>
 </ArrayOfHoaDonNhap>

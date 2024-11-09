@@ -172,7 +172,8 @@ namespace DoAnCK
                     
                     HoaDonNhap hoaDonNhap = new HoaDonNhap(qlnx, null, current_nv, current_ncc, qlnx.tinh_tong_tien());
                     string id_hoa_don = hoaDonNhap.SetID() + (kho.ds_hoa_don_nhap.Count + 1);
-                    
+                    hoaDonNhap.id_hoa_don = id_hoa_don;
+
                     kho.ThemHoaDonNhap(hoaDonNhap);
 
                     FormPhieuHoaDon formHoaDon = new FormPhieuHoaDon();
@@ -206,6 +207,8 @@ namespace DoAnCK
 
                         HoaDonXuat hoaDonXuat = new HoaDonXuat(qlnx, null, current_nv, current_ch, qlnx.tinh_tong_tien());
                         string id_hoa_don = hoaDonXuat.SetID() + (kho.ds_hoa_don_xuat.Count + 1);
+                        hoaDonXuat.id_hoa_don = id_hoa_don;
+
                         kho.ThemHoaDonXuat(hoaDonXuat);
 
                         FormPhieuHoaDon formHoaDon = new FormPhieuHoaDon();

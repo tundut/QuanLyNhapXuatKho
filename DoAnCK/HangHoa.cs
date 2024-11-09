@@ -33,7 +33,6 @@ public abstract class HangHoa : ISerializable, ICloneable
         return clone;
     }
 
-    public abstract HangHoa Show();
 
     public virtual void GetObjectData(SerializationInfo info, StreamingContext context)
     {

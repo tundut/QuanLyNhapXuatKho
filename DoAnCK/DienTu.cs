@@ -11,15 +11,6 @@ public class DienTu : HangHoa
 
     }
 
-    public override HangHoa Show()
-    {
-        if (this is DienTu)
-        {
-            return this;
-        }
-        return null;
-    }
-
     public override void GetObjectData(SerializationInfo info, StreamingContext context)
     {
         base.GetObjectData(info, context);
