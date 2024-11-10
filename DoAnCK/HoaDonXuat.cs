@@ -7,7 +7,7 @@ namespace DoAnCK
     [Serializable]
     public class HoaDonXuat : HoaDon
     {
-        public CuaHang cua_hang;
+        public CuaHang cua_hang { get; set; }
         private HoaDonXuat() { }
         public HoaDonXuat(QuanLyNhapXuat qlnx, string id_hoa_don, NhanVien nv_lap, CuaHang cua_hang, ulong tong_tien) : base(qlnx, id_hoa_don, nv_lap, tong_tien)
         {

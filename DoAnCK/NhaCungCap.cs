@@ -4,10 +4,10 @@ using System.Runtime.Serialization;
 [Serializable]
 public class NhaCungCap : ISerializable
 {
-    public string id_ncc;
-    public string ten_ncc;
-    public string sdt_ncc;
-    public string dia_chi_ncc;
+    public string id_ncc { get; set; }
+    public string ten_ncc { get; set; }
+    public string sdt_ncc { get; set; }
+    public string dia_chi_ncc { get; set; }
 
     private NhaCungCap() { }
     public NhaCungCap(string id_ncc, string ten_ncc, string sdt_ncc, string dia_chi_ncc)

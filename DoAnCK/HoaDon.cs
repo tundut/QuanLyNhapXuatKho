@@ -9,11 +9,11 @@ namespace DoAnCK
     [Serializable]
     public abstract class HoaDon : ISerializable
     {
-        public string id_hoa_don;
-        public DateTime ngay_tao_don;
-        public QuanLyNhapXuat qlnx;
-        public NhanVien nv_lap;
-        public ulong tong_tien;
+        public string id_hoa_don { get; set; }
+        public DateTime ngay_tao_don { get; set; }
+        public QuanLyNhapXuat qlnx { get; set; }
+        public NhanVien nv_lap { get; set; }
+        public ulong tong_tien { get; set; }
 
         protected HoaDon() { }
         public HoaDon(QuanLyNhapXuat qlnx, string id_hoa_don, NhanVien nv_lap, ulong tong_tien)

@@ -4,13 +4,13 @@ using System.Runtime.Serialization;
 [Serializable]
 public class NhanVien : ISerializable
 {
-    public string id_nv;
-    public string ten_nv;
-    public uint tuoi;
-    public bool gioi_tinh;
-    public string dia_chi_nv;
-    public string username;
-    public string password;
+    public string id_nv { get; set; }
+    public string ten_nv { get; set; }
+    public uint tuoi { get; set; }
+    public bool gioi_tinh { get; set; }
+    public string dia_chi_nv { get; set; }
+    public string username { get; set; }
+    public string password { get; set; }
 
     public NhanVien() { }
     public NhanVien(string id_nv, string ten_nv, uint tuoi, bool gioi_tinh, string dia_chi_nv, string username, string password)

@@ -7,11 +7,11 @@ using System.Xml.Serialization;
 [Serializable]
 public abstract class HangHoa : ISerializable, ICloneable
 {
-    public string id;
-    public string ten_hang;
-    public uint so_luong;
-    public ulong don_gia;
-    public string img;
+    public string id { get; set; }
+    public string ten_hang { get; set; }
+    public uint so_luong { get; set; }
+    public ulong don_gia { get; set; }
+    public string img { get; set; }
 
     protected HangHoa() { }
 

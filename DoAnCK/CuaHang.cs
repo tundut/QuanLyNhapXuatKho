@@ -4,10 +4,10 @@ using System.Runtime.Serialization;
 [Serializable]
 public class CuaHang : ISerializable
 {
-    public string id_ch;
-    public string ten_ch;
-    public string sdt_ch;
-    public string dia_chi_ch;
+    public string id_ch { get; set; }
+    public string ten_ch { get; set; }
+    public string sdt_ch { get; set; }
+    public string dia_chi_ch { get; set; }
     private CuaHang() { }
 
     public CuaHang(string id_ch, string ten_ch, string sdt_ch, string dia_chi_ch)
